@@ -579,11 +579,13 @@ input, textarea, select {
 }
 
 .hero-image img {
-    width: 100%;
+    width: 200%;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-2xl);
     border: 4px solid rgba(255, 255, 255, 0.8);
     animation: float 6s ease-in-out infinite;
+    max-width: unset;
+    
 }
 
 @keyframes float {
