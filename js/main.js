@@ -12,13 +12,13 @@
     
     const CONFIG = {
         // API endpoint for form submissions (replace with your actual endpoint)
-        formEndpoint: 'https://api.regis-app.com/contact',
+        formEndpoint: 'https://formspree.io/f/xeeljjpe',
         // Alternative: use a service like Formspree, Netlify Forms, or Google Forms
         // formEndpoint: 'https://formspree.io/f/YOUR_FORM_ID',
         
         // Analytics IDs (replace with your actual IDs)
-        googleAnalyticsId: 'G-XXXXXXXX',
-        googleTagManagerId: 'GTM-XXXXXXX',
+        googleAnalyticsId: 'G-1W3KS12KZQ',
+        //googleTagManagerId: 'GTM-XXXXXXX',
         
         // Animation settings
         animationThreshold: 0.1,
@@ -179,23 +179,38 @@
             btnLoading.hidden = false;
             submitBtn.disabled = true;
             
+            const formspreeId = form.getAttribute('data-formspree-id');
+            if (!formspreeId || formspreeId === 'YOUR_FORM_ID') {
+                showFormError(form, 'Formulaire non configuré : ajoutez votre ID Formspree dans l’attribut data-formspree-id du formulaire (voir index.html).');
+                btnText.hidden = false;
+                btnLoading.hidden = true;
+                submitBtn.disabled = false;
+                return;
+            }
+            
+            const endpoint = `https://formspree.io/f/${formspreeId}`;
+            
             try {
-                // Collect form data
+                // Collect form data (Formspree expects form-urlencoded or JSON)
                 const formData = new FormData(form);
                 const data = Object.fromEntries(formData.entries());
+                // Formspree uses _replyto to set Reply-To header so you can reply to the visitor
+                if (data.email) {
+                    data._replyto = data.email;
+                }
                 
-                // Option 1: Send to your API
-                // const response = await fetch(CONFIG.formEndpoint, {
-                //     method: 'POST',
-                //     headers: {
-                //         'Content-Type': 'application/json',
-                //     },
-                //     body: JSON.stringify(data),
-                // });
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
                 
-                // Option 2: Use mailto as fallback
-                // For demo purposes, we'll simulate a successful submission
-                await new Promise(resolve => setTimeout(resolve, 1500));
+                if (!response.ok) {
+                    const errData = await response.json().catch(() => ({}));
+                    throw new Error(errData.error || `HTTP ${response.status}`);
+                }
                 
                 // Track conversion
                 trackEvent('Lead', 'Form Submit', 'Contact Form');
@@ -204,9 +219,6 @@
                 // Show success message
                 form.reset();
                 successMessage.hidden = false;
-                
-                // Hide form fields (optional)
-                // form.querySelector('.form-fields').hidden = true;
                 
             } catch (error) {
                 console.error('Form submission error:', error);
