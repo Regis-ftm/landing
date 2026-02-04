@@ -40,7 +40,7 @@
         initLazyLoading();
         
         // Initialize analytics after consent (GDPR)
-        // initAnalytics();
+         initAnalytics();
     });
 
     // ===========================
