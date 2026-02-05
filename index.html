@@ -258,7 +258,7 @@
             </div>
         </section>
 
-        <!-- Problem / Pain Points -->
+        <!-- Problem / Pain Points --
         <section class="pain-points" aria-labelledby="pain-title">
             <div class="container">
                 <header class="section-header">
@@ -319,7 +319,7 @@
                 </div>
             </div>
         </section>
-
+    -->
         <!-- Features Section -->
         <section id="features" class="features" aria-labelledby="features-title">
             <div class="container">
@@ -331,11 +331,26 @@
                     </p>
                 </header>
                 
-                <div class="features-grid">
-                    <article class="feature-card feature-card-large">
-                        <div class="feature-content">
-                            <div class="feature-icon feature-icon-primary">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <!-- Feature 01: Suivi Financier -->
+                <div class="workflow-container" data-aos="fade-up" data-aos-delay="0">
+                    <div class="workflow-visualization">
+                        <div class="workflow-central-placeholder">
+                            <div class="placeholder-content-large">
+                                <img 
+                                    src="./images/suivibudgetaire.png" 
+                                    alt="Vue détaillée du suivi financier d'un projet"
+                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
+                                    loading="lazy"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-features">
+                        <div class="feature-number-badge">01</div>
+                        <div class="workflow-feature-item-large">
+                            <div class="workflow-feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                                     <line x1="3" y1="9" x2="21" y2="9"/>
                                     <line x1="9" y1="21" x2="9" y2="9"/>
@@ -343,130 +358,504 @@
                             </div>
                             <h3>Suivi Financier en Temps Réel</h3>
                             <p>Visualisez l'évolution de votre budget, les aléas et l'impact de chaque modification. Prenez des décisions éclairées avec des données à jour.</p>
-                            <ul class="feature-list">
+                            <ul class="feature-benefits-list">
                                 <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-                                    Vue synthétique du budget
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Vue synthétique du budget</span>
                                 </li>
                                 <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-                                    Suivi des aléas MOA/MOE
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Suivi des aléas MOA/MOE</span>
                                 </li>
                                 <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-                                    Indicateurs clés (KPI)
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Export PDF/Excel</span>
                                 </li>
                             </ul>
                         </div>
-                        <div class="feature-image">
-                            <img 
-                                src="https://firebasestorage.googleapis.com/v0/b/regis-7c1be.firebasestorage.app/o/portal%2Fproject%20detail.png?alt=media&token=f390ba8d-b7bd-42e5-8b4d-bd390f9e2067" 
-                                alt="Vue détaillée du suivi financier d'un projet"
-                                width="500"
-                                height="300"
+                    </div>
+                </div>
+
+                <!-- Feature 02: Gestion Centralisée -->
+                <div class="workflow-container workflow-container-reverse" data-aos="fade-up" data-aos-delay="100">
+                    <div class="workflow-features">
+                        <div class="feature-number-badge">02</div>
+                        <div class="workflow-feature-item-large">
+                            <div class="workflow-feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14,2 14,8 20,8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                </svg>
+                            </div>
+                            <h3>Gestion Centralisée des FTM</h3>
+                            <p>Toutes vos Fiches de Travaux Modificatifs au même endroit. De la création à la validation finale, suivez chaque étape du processus.</p>
+                            <ul class="feature-benefits-list">
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Création et modification simplifiées</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Historique complet des versions</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Recherche et filtres avancés</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-visualization">
+                        <div class="workflow-central-placeholder">
+                            <div class="placeholder-content-large">
+                                <img 
+                                    src="./images/hero.png" 
+                                    alt="Gestion centralisée des FTM"
+                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
+                                    loading="lazy"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 03: Collaboration Multi-Acteurs -->
+                <div class="workflow-container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="workflow-visualization">
+                        <div class="workflow-central-placeholder">
+                            <div class="placeholder-content-large">
+                                <img 
+                                src="./images/listentreprise.png" 
+                                alt="Liste des entreprises"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
                                 loading="lazy"
                             >
+                            </div>
                         </div>
-                    </article>
+                    </div>
                     
-                    <article class="feature-card">
-                        <div class="feature-icon feature-icon-success">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14,2 14,8 20,8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                                <polyline points="10,9 9,9 8,9"/>
-                            </svg>
+                    <div class="workflow-features">
+                        <div class="feature-number-badge">03</div>
+                        <div class="workflow-feature-item-large">
+                            <div class="workflow-feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h3>Collaboration Multi-Acteurs</h3>
+                            <p>Connectez MOA, MOE et Entreprises sur une plateforme commune. Facilitez les échanges et la communication entre toutes les parties prenantes.</p>
+                            <ul class="feature-benefits-list">
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Gestion des droits par rôle</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Messagerie intégrée</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Partage de documents sécurisé</span>
+                                </li>
+                            </ul>
                         </div>
-                        <h3>Gestion Centralisée des FTM</h3>
-                        <p>Toutes vos Fiches de Travaux Modificatifs au même endroit. De la création à la validation finale.</p>
-                    </article>
-                    
-                    <article class="feature-card">
-                        <div class="feature-icon feature-icon-warning">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
+                    </div>
+                </div>
+
+                <!-- Feature 04: Workflow de Validation -->
+                <div class="workflow-container workflow-container-reverse" data-aos="fade-up" data-aos-delay="300">
+                    <div class="workflow-features">
+                        <div class="feature-number-badge">04</div>
+                        <div class="workflow-feature-item-large">
+                            <div class="workflow-feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
+                            </div>
+                            <h3>Workflow de Validation</h3>
+                            <p>Processus structuré en 9 étapes pour chaque FTM. Assurez-vous que chaque modification est validée selon les règles définies.</p>
+                            <ul class="feature-benefits-list">
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>9 étapes de validation</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Transitions automatiques</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Règles métier personnalisables</span>
+                                </li>
+                            </ul>
                         </div>
-                        <h3>Collaboration Multi-Acteurs</h3>
-                        <p>Connectez MOA, MOE et Entreprises sur une plateforme commune. Facilitez les échanges.</p>
-                    </article>
+                    </div>
                     
-                    <article class="feature-card">
-                        <div class="feature-icon feature-icon-info">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22,4 12,14.01 9,11.01"/>
-                            </svg>
+                    <div class="workflow-visualization">
+                        <div class="workflow-central-placeholder">
+                            <div class="placeholder-content-large">
+                                <img 
+                                    src="./images/actions.png" 
+                                    alt="Workflow de validation"
+                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
+                                    loading="lazy"
+                                >
+                            </div>
                         </div>
-                        <h3>Workflow de Validation</h3>
-                        <p>Processus structuré en 9 étapes pour chaque FTM. Assurez-vous que chaque modification est validée.</p>
-                    </article>
+                    </div>
+                </div>
+
+                <!-- Feature 05: Notifications Automatisées -->
+                <div class="workflow-container" data-aos="fade-up" data-aos-delay="400">
+                    <div class="workflow-visualization">
+                        <div class="workflow-central-placeholder">
+                            <div class="placeholder-content-large">
+                                <img 
+                                    src="images/email.png" 
+                                    alt="Exemple de notification email automatique"
+                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
+                                    loading="lazy"
+                                >
+                            </div>
+                        </div>
+                    </div>
                     
-                    <article class="feature-card feature-card-large">
-                        <div class="feature-content">
-                            <div class="feature-icon feature-icon-accent">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <div class="workflow-features">
+                        <div class="feature-number-badge">05</div>
+                        <div class="workflow-feature-item-large">
+                            <div class="workflow-feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
                                     <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
                                 </svg>
                             </div>
                             <h3>Notifications Automatisées</h3>
                             <p>Ne perdez plus de temps à relancer. Le système notifie automatiquement les parties prenantes quand une action est requise.</p>
-                            <ul class="feature-list">
+                            <ul class="feature-benefits-list">
                                 <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-                                    Demandes de devis
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Demandes de devis automatiques</span>
                                 </li>
                                 <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-                                    Validations en attente
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Rappels de validations en attente</span>
                                 </li>
                                 <li>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20,6 9,17 4,12"/></svg>
-                                    Alertes budget
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Alertes de dépassement budget</span>
                                 </li>
                             </ul>
                         </div>
-                        <div class="feature-image">
-                            <img 
-                                src="https://firebasestorage.googleapis.com/v0/b/regis-7c1be.firebasestorage.app/o/portal%2Femail.png?alt=media&token=7293bf79-e40d-4735-ab7f-7b59e2803918" 
-                                alt="Exemple de notification email automatique"
-                                width="500"
-                                height="300"
-                                loading="lazy"
-                            >
+                    </div>
+                </div>
+
+                <!-- Feature 06: Gestion des Lots -->
+                <div class="workflow-container workflow-container-reverse" data-aos="fade-up" data-aos-delay="500">
+                    <div class="workflow-features">
+                        <div class="feature-number-badge">06</div>
+                        <div class="workflow-feature-item-large">
+                            <div class="workflow-feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </div>
+                            <h3>Espace dédié aux entreprises</h3>
+                            <p>Les entreprises répondant aux FTM peuvent accéder à leur espace dédié pour suivre et modifier leurs devis.</p>
+                            <ul class="feature-benefits-list">
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Suivi des devis</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Modification des devis</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Export PDF/Excel</span>
+                                </li>
+                            </ul>
                         </div>
-                    </article>
+                    </div>
                     
-                    <article class="feature-card">
-                        <div class="feature-icon feature-icon-primary">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                            </svg>
+                    <div class="workflow-visualization">
+                        <div class="workflow-central-placeholder">
+                            <div class="placeholder-content-large">
+                                <img 
+                                    src="./images/espaceentrprise.png" 
+                                    alt="Vue détaillée du suivi financier d'un projet"
+                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
+                                    loading="lazy"
+                                >
+                            </div>
                         </div>
-                        <h3>Gestion des Lots</h3>
-                        <p>Organisez vos projets par lots. Attribuez les entreprises et gérez les responsabilités facilement.</p>
-                    </article>
+                    </div>
+                </div>
+
+                <!-- Feature 07: Export & Rapports --
+                <div class="workflow-container" data-aos="fade-up" data-aos-delay="600">
+                    <div class="workflow-visualization">
+                        <div class="workflow-central-placeholder">
+                            <div class="placeholder-content-large">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <path d="M21 15l-5-5L5 21"/>
+                                </svg>
+                                <span>Image placeholder</span>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <article class="feature-card">
-                        <div class="feature-icon feature-icon-success">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                <polyline points="7,10 12,15 17,10"/>
-                                <line x1="12" y1="15" x2="12" y2="3"/>
-                            </svg>
+                    <div class="workflow-features">
+                        <div class="feature-number-badge">07</div>
+                        <div class="workflow-feature-item-large">
+                            <div class="workflow-feature-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </div>
+                            <h3>Export & Rapports</h3>
+                            <p>Générez des rapports Excel et PDF en un clic. Partagez facilement avec vos équipes et gardez une trace documentée de tous vos projets.</p>
+                            <ul class="feature-benefits-list">
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Export Excel et PDF</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Rapports personnalisables</span>
+                                </li>
+                                <li>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span>Génération automatique</span>
+                                </li>
+                            </ul>
                         </div>
-                        <h3>Export & Rapports</h3>
-                        <p>Générez des rapports Excel et PDF en un clic. Partagez facilement avec vos équipes.</p>
-                    </article>
+                    </div>
+                </div>-->
+            </div>
+        </section>
+
+        <!-- FTM Workflow Section -->
+        <section class="ftm-workflow" aria-labelledby="workflow-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag">Workflow FTM</span>
+                    <h2 id="workflow-title">Le cycle de vie d'une FTM</h2>
+                    <p class="section-subtitle">
+                        9 étapes structurées pour une validation complète et transparente
+                    </p>
+                </header>
+                
+                <div class="workflow-container">
+                    <div class="workflow-visualization">
+                        <!-- Central workflow image placeholder --
+                        <div class="workflow-central-placeholder">
+                            <div class="placeholder-content-large">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                                <span>Workflow Diagram</span>
+                                <p>Visualisation du processus de validation</p>
+                            </div>
+                        </div>-->
+                        
+                        <!-- Workflow Steps Cards -->
+                        <div class="workflow-steps-grid">
+                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="0">
+                                <div class="workflow-step-icon workflow-icon-1">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                                    </svg>
+                                </div>
+                                <h4>1. Création</h4>
+                                <p>Rédaction initiale de la FTM</p>
+                            </div>
+                            
+                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="50">
+                                <div class="workflow-step-icon workflow-icon-2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                        <polyline points="22,4 12,14.01 9,11.01"/>
+                                    </svg>
+                                </div>
+                                <h4>2. Validation MOE</h4>
+                                <p>Contrôle technique</p>
+                            </div>
+                            
+                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="100">
+                                <div class="workflow-step-icon workflow-icon-3">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 3h18v18H3zM21 9H3M21 15H3"/>
+                                    </svg>
+                                </div>
+                                <h4>3. Demande devis</h4>
+                                <p>Envoi aux entreprises</p>
+                            </div>
+                            
+                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="150">
+                                <div class="workflow-step-icon workflow-icon-4">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <polyline points="14,2 14,8 20,8"/>
+                                    </svg>
+                                </div>
+                                <h4>4. Réponse entreprise</h4>
+                                <p>Chiffrage des travaux</p>
+                            </div>
+                            
+                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="workflow-step-icon workflow-icon-5">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 11l3 3L22 4"/>
+                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                                    </svg>
+                                </div>
+                                <h4>5. Analyse MOE</h4>
+                                <p>Vérification du devis</p>
+                            </div>
+                            
+                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="250">
+                                <div class="workflow-step-icon workflow-icon-6">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 6v6l4 2"/>
+                                    </svg>
+                                </div>
+                                <h4>6. Décision MOA</h4>
+                                <p>Acceptation ou refus</p>
+                            </div>
+                            
+                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="300">
+                                <div class="workflow-step-icon workflow-icon-7">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="8.5" cy="7" r="4"/>
+                                        <polyline points="17,11 19,13 23,9"/>
+                                    </svg>
+                                </div>
+                                <h4>7. Accord entreprise</h4>
+                                <p>Confirmation finale</p>
+                            </div>
+                            
+                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="350">
+                                <div class="workflow-step-icon workflow-icon-8">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                                    </svg>
+                                </div>
+                                <h4>8. Réalisation</h4>
+                                <p>Exécution des travaux</p>
+                            </div>
+                            
+                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="400">
+                                <div class="workflow-step-icon workflow-icon-9">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+                                        <polyline points="22,12 18,12 15,21"/>
+                                    </svg>
+                                </div>
+                                <h4>9. Clôture</h4>
+                                <p>Archivage et bilan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-features">
+                        <div class="workflow-feature-item" data-aos="fade-left" data-aos-delay="0">
+                            <div class="workflow-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Notifications automatiques</h4>
+                                <p>Alertes à chaque changement d'étape</p>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow-feature-item" data-aos="fade-left" data-aos-delay="100">
+                            <div class="workflow-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Traçabilité complète</h4>
+                                <p>Historique détaillé de chaque action</p>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow-feature-item" data-aos="fade-left" data-aos-delay="200">
+                            <div class="workflow-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Suivi temps réel</h4>
+                                <p>Visualisez l'avancement instantanément</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -510,9 +899,9 @@
             </div>
         </section>
 
-        <!-- How it Works -->
+        <!-- How it Works - Vertical Timeline -->
         <section id="how-it-works" class="how-it-works" aria-labelledby="how-title">
-            <div class="container">
+            <div class="container-narrow">
                 <header class="section-header">
                     <span class="section-tag">Processus</span>
                     <h2 id="how-title">Comment ça marche ?</h2>
@@ -521,50 +910,210 @@
                     </p>
                 </header>
                 
-                <div class="steps-grid">
-                    <article class="step-card">
-                        <div class="step-number">1</div>
-                        <h3>Créez votre espace</h3>
-                        <p>Inscrivez-vous et configurez votre équipe en quelques clics. Aucune installation requise.</p>
+                <div class="timeline-wrapper">
+                    <div class="timeline-line" aria-hidden="true"></div>
+                    
+                    <article class="timeline-step timeline-step-left" data-aos="fade-right" data-aos-delay="0">
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="timeline-step-badge">
+                                    <span class="timeline-step-number">01</span>
+                                </div>
+                                <div class="timeline-card-inner">
+                                    <div class="timeline-icon timeline-icon-primary">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="12" cy="7" r="4"/>
+                                        </svg>
+                                    </div>
+                                    <h3>Créez votre espace</h3>
+                                    <p>Inscrivez-vous et configurez votre équipe en quelques clics. Aucune installation requise, tout se fait en ligne.</p>
+                                    <div class="timeline-tags">
+                                        <span class="timeline-tag">2 min</span>
+                                        <span class="timeline-tag">Simple</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-image-placeholder">
+                                <div class="placeholder-content">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <path d="M21 15l-5-5L5 21"/>
+                                    </svg>
+                                    <span>Image placeholder</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-dot" aria-hidden="true"></div>
                     </article>
                     
-                    <div class="step-connector" aria-hidden="true">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"/>
-                            <polyline points="12,5 19,12 12,19"/>
-                        </svg>
-                    </div>
-                    
-                    <article class="step-card">
-                        <div class="step-number">2</div>
-                        <h3>Ajoutez vos projets</h3>
-                        <p>Importez vos projets existants ou créez-en de nouveaux. Définissez les lots et les budgets.</p>
+                    <article class="timeline-step timeline-step-right" data-aos="fade-left" data-aos-delay="100">
+                        <div class="timeline-content">
+                            <div class="timeline-image-placeholder">
+                                <div class="placeholder-content">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <path d="M21 15l-5-5L5 21"/>
+                                    </svg>
+                                    <span>Image placeholder</span>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="timeline-step-badge">
+                                    <span class="timeline-step-number">02</span>
+                                </div>
+                                <div class="timeline-card-inner">
+                                    <div class="timeline-icon timeline-icon-success">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                            <polyline points="9,22 9,12 15,12 15,22"/>
+                                        </svg>
+                                    </div>
+                                    <h3>Ajoutez vos projets</h3>
+                                    <p>Créez vos projets de construction avec tous les détails : équipe, budget initial, lots et entreprises attributaires.</p>
+                                    <div class="timeline-tags">
+                                        <span class="timeline-tag">Rapide</span>
+                                        <span class="timeline-tag">Flexible</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-dot" aria-hidden="true"></div>
                     </article>
                     
-                    <div class="step-connector" aria-hidden="true">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"/>
-                            <polyline points="12,5 19,12 12,19"/>
-                        </svg>
-                    </div>
-                    
-                    <article class="step-card">
-                        <div class="step-number">3</div>
-                        <h3>Invitez vos partenaires</h3>
-                        <p>Ajoutez les entreprises, MOA et MOE concernés. Chacun accède à ce qui le concerne.</p>
+                    <article class="timeline-step timeline-step-left" data-aos="fade-right" data-aos-delay="200">
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="timeline-step-badge">
+                                    <span class="timeline-step-number">03</span>
+                                </div>
+                                <div class="timeline-card-inner">
+                                    <div class="timeline-icon timeline-icon-warning">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="9" cy="7" r="4"/>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                        </svg>
+                                    </div>
+                                    <h3>Invitez vos partenaires</h3>
+                                    <p>Collaborez avec toutes les parties prenantes : MOA, MOE, entreprises. Chacun reçoit un accès personnalisé selon son rôle et ses responsabilités.</p>
+                                    <div class="timeline-tags">
+                                        <span class="timeline-tag">Multi-acteurs</span>
+                                        <span class="timeline-tag">Sécurisé</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-image-placeholder">
+                                <div class="placeholder-content">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <path d="M21 15l-5-5L5 21"/>
+                                    </svg>
+                                    <span>Image placeholder</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-dot" aria-hidden="true"></div>
                     </article>
                     
-                    <div class="step-connector" aria-hidden="true">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"/>
-                            <polyline points="12,5 19,12 12,19"/>
-                        </svg>
-                    </div>
+                    <article class="timeline-step timeline-step-right" data-aos="fade-left" data-aos-delay="300">
+                        <div class="timeline-content">
+                            <div class="timeline-image-placeholder">
+                                <div class="placeholder-content">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <path d="M21 15l-5-5L5 21"/>
+                                    </svg>
+                                    <span>Image placeholder</span>
+                                </div>
+                            </div>
+                            <div class="timeline-card">
+                                <div class="timeline-step-badge">
+                                    <span class="timeline-step-number">04</span>
+                                </div>
+                                <div class="timeline-card-inner">
+                                    <div class="timeline-icon timeline-icon-info">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <polyline points="14,2 14,8 20,8"/>
+                                            <line x1="16" y1="13" x2="8" y2="13"/>
+                                            <line x1="16" y1="17" x2="8" y2="17"/>
+                                        </svg>
+                                    </div>
+                                    <h3>Créez vos FTM</h3>
+                                    <p>Initiez vos Fiches de Travaux Modificatifs directement dans l'application. Le workflow de validation se met automatiquement en route.</p>
+                                    <div class="timeline-tags">
+                                        <span class="timeline-tag">9 étapes</span>
+                                        <span class="timeline-tag">Automatisé</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                    </article>
                     
-                    <article class="step-card">
-                        <div class="step-number">4</div>
-                        <h3>Pilotez vos FTM</h3>
-                        <p>Créez, validez et suivez vos travaux modificatifs. Le système fait le reste.</p>
+                    <article class="timeline-step timeline-step-left" data-aos="fade-right" data-aos-delay="400">
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="timeline-step-badge">
+                                    <span class="timeline-step-number">05</span>
+                                </div>
+                                <div class="timeline-card-inner">
+                                    <div class="timeline-icon timeline-icon-accent">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                                        </svg>
+                                    </div>
+                                    <h3>Suivez en temps réel</h3>
+                                    <p>Visualisez l'évolution de vos budgets, suivez les validations en cours et anticipez les dépassements. Tableaux de bord intuitifs et rapports détaillés.</p>
+                                    <div class="timeline-tags">
+                                        <span class="timeline-tag">Dashboard</span>
+                                        <span class="timeline-tag">Analytics</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-image-placeholder">
+                                <div class="placeholder-content">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                                        <path d="M21 15l-5-5L5 21"/>
+                                    </svg>
+                                    <span>Image placeholder</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                    </article>
+                    
+                    <article class="timeline-step timeline-step-center timeline-step-final" data-aos="fade-up" data-aos-delay="500">
+                        <div class="timeline-content" style="z-index:5">
+                            <div class="timeline-card timeline-card-highlight">
+                                <div class="timeline-success-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                        <polyline points="22,4 12,14.01 9,11.01"/>
+                                    </svg>
+                                </div>
+                                <h3>Pilotez avec sérénité</h3>
+                                <p>Tous vos travaux modificatifs sont maîtrisés, vos budgets sous contrôle, et votre équipe alignée. Concentrez-vous sur l'essentiel : faire avancer vos projets.</p>
+                                <div class="timeline-cta">
+                                    <a href="#contact" class="btn btn-primary btn-lg">
+                                        <span>Commencer maintenant</span>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="5" y1="12" x2="19" y2="12"/>
+                                            <polyline points="12,5 19,12 12,19"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-dot timeline-dot-final" aria-hidden="true"></div>
                     </article>
                 </div>
             </div>
@@ -594,7 +1143,7 @@
                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                                     <polyline points="22,4 12,14.01 9,11.01"/>
                                 </svg>
-                                <span>Tarif préférentiel à vie (-50%)</span>
+                                <span>Tarif préférentiel à vie</span>
                             </li>
                             <li>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">

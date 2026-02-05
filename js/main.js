@@ -38,6 +38,7 @@
         initFaqAccessibility();
         updateCurrentYear();
         initLazyLoading();
+        initScrollAnimations();
         
         // Initialize analytics after consent (GDPR)
          initAnalytics();
@@ -533,28 +534,40 @@
     // ===========================
     
     function initScrollAnimations() {
-        const animatedElements = document.querySelectorAll('[data-animate]');
+        const animatedElements = document.querySelectorAll('[data-aos], [data-animate]');
         
         if (!animatedElements.length) return;
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                    observer.unobserve(entry.target);
+                    const element = entry.target;
+                    const delay = element.getAttribute('data-aos-delay') || 0;
+                    
+                    setTimeout(() => {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                        element.classList.add('animated');
+                    }, delay);
+                    
+                    observer.unobserve(element);
                 }
             });
         }, {
-            threshold: CONFIG.animationThreshold,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.1,
+            rootMargin: '0px 0px -80px 0px'
         });
         
-        animatedElements.forEach(el => observer.observe(el));
+        // Set initial state for animated elements
+        animatedElements.forEach(el => {
+            if (el.hasAttribute('data-aos')) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            }
+            observer.observe(el);
+        });
     }
-
-    // ===========================
-    // COOKIE CONSENT (GDPR)
-    // ===========================
     
     function initCookieConsent() {
         // Check if consent was already given
@@ -566,7 +579,7 @@
         }
         
         if (consent === 'declined') {
-            return;
+           return;
         }
         
         // Show cookie banner
