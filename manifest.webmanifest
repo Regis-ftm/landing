@@ -1,0 +1,10 @@
+{
+  "name": "BatiPrisme",
+  "short_name": "BatiPrisme",
+  "description": "La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a0e1a",
+  "lang": "fr"
+}

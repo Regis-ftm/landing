@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0e1a" />
+
+  <title>Logiciel de gestion des Travaux Modificatifs (FTM) — Muto | BatiPrisme</title>
+  <meta name="description" content="Muto pilote le cycle complet des Fiches de Travaux Modificatifs : demande, chiffrage, validation MOEX/MOA. Workflow 9 étapes et portail entreprise." />
+  <meta name="keywords" content="FTM, fiche de travaux modificatifs, logiciel travaux modificatifs, gestion FTM, MOEX, MOA, avenant chantier, workflow validation construction" />
+  <meta name="author" content="BatiPrisme" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.batiprisme.fr/logiciel-travaux-modificatifs/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BatiPrisme" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Logiciel de gestion des Travaux Modificatifs (FTM) — Muto | BatiPrisme" />
+  <meta property="og:description" content="Muto pilote le cycle complet des Fiches de Travaux Modificatifs : demande, chiffrage, validation MOEX/MOA. Workflow 9 étapes et portail entreprise." />
+  <meta property="og:url" content="https://www.batiprisme.fr/logiciel-travaux-modificatifs/" />
+  <meta property="og:image" content="https://www.batiprisme.fr/images/og-image.png" />
+  <meta property="og:image:alt" content="BatiPrisme — La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Logiciel de gestion des Travaux Modificatifs (FTM) — Muto | BatiPrisme" />
+  <meta name="twitter:description" content="Muto pilote le cycle complet des Fiches de Travaux Modificatifs : demande, chiffrage, validation MOEX/MOA. Workflow 9 étapes et portail entreprise." />
+  <meta name="twitter:image" content="https://www.batiprisme.fr/images/og-image.png" />
+
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.batiprisme.fr/#organization",
+      "name": "BatiPrisme",
+      "url": "https://www.batiprisme.fr/",
+      "description": "La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.",
+      "logo": "https://www.batiprisme.fr/images/logo.png",
+      "areaServed": "FR",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Naughty Software"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@batiprisme.fr",
+        "availableLanguage": "French"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Muto — Travaux Modificatifs",
+  "alternateName": "Muto",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Travaux Modificatifs",
+  "operatingSystem": "Web",
+  "url": "https://www.batiprisme.fr/logiciel-travaux-modificatifs/",
+  "description": "Muto pilote le cycle complet des Fiches de Travaux Modificatifs : demande, chiffrage, validation MOEX/MOA. Workflow 9 étapes et portail entreprise.",
+  "softwareHelp": "https://www.batiprisme.fr/logiciel-travaux-modificatifs/#faq",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Naughty Software"
+  },
+  "isPartOf": {
+    "@type": "SoftwareApplication",
+    "name": "BatiPrisme",
+    "url": "https://www.batiprisme.fr/"
+  },
+  "featureList": [
+    "Suivi financier en temps réel",
+    "Gestion centralisée des FTM",
+    "Collaboration multi-acteurs",
+    "Workflow de validation",
+    "Notifications automatisées",
+    "Espace dédié aux entreprises"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.batiprisme.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Muto — Travaux Modificatifs",
+      "item": "https://www.batiprisme.fr/logiciel-travaux-modificatifs/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce qu'une Fiche de Travaux Modificatifs (FTM) ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une FTM est un document utilisé dans le secteur de la construction pour formaliser et suivre les modifications apportées à un projet initial. Elle permet de tracer les changements, leurs impacts financiers et les validations nécessaires par les différentes parties prenantes (MOA, MOE, entreprises)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muto est-il adapté aux petites structures ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Vous pouvez démarrer avec le socle BatiPrisme et le seul module Muto, ou activer Muto sur une opération unique via la licence au projet, sans engagement annuel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps faut-il pour déployer Muto ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Muto est une solution SaaS accessible immédiatement. Vous créez votre compte et commencez à travailler en quelques minutes ; aucune installation locale n'est nécessaire. Un accompagnement est proposé pour les déploiements complexes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les entreprises doivent-elles créer un compte ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Les entreprises consultées répondent depuis un espace dédié accessible par lien, où elles suivent et modifient leurs devis sans avoir à gérer un compte sur la plateforme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je importer mes projets existants ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, l'import de projets existants se fait via fichiers Excel. Un service d'accompagnement est disponible pour migrer vos données historiques."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mes données sont-elles sécurisées ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vos données sont hébergées sur des serveurs situés en Europe et conformes au RGPD. Les communications sont chiffrées en SSL/TLS et des sauvegardes quotidiennes sont réalisées. Vos données restent votre propriété et ne sont jamais revendues."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Accueil BatiPrisme">
+        <span class="brand__mark">
+  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></span>
+        <span class="brand__word"><b>Bati</b>Prisme</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <button class="site-nav__toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="site-nav__menu" id="primary-menu">
+          <li><a href="/#apps">Applications</a></li>
+          <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
+          <li><a href="/#etapes">Comment ça marche</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li class="site-nav__cta"><a href="https://app.batiprisme.fr/login">Se connecter</a></li>
+          <li class="site-nav__cta"><a href="https://app.batiprisme.fr/signup">Essai gratuit</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--ghost" href="https://app.batiprisme.fr/login">Se connecter</a>
+        <a class="btn btn--primary" href="https://app.batiprisme.fr/signup">Essai gratuit</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" style="--accent:var(--brand-muto); --accent-dark:var(--brand-muto-on-dark)">
+
+    <section class="app-hero" aria-labelledby="hero-title">
+      <div class="app-hero__glow" aria-hidden="true"></div>
+      <div class="container app-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'ariane">
+          <ol>
+            <li><a href="/">BatiPrisme</a></li>
+            <li aria-current="page">Muto</li>
+          </ol>
+        </nav>
+
+        <p class="app-hero__eyebrow">
+          <span class="app-hero__abbr">FTM</span>
+          <span class="app-hero__domain">Travaux Modificatifs</span>
+          <span class="badge badge--ok badge--on-dark">Disponible</span>
+        </p>
+
+        <h1 id="hero-title">Gérez vos Travaux Modificatifs en toute sérénité</h1>
+        <p class="app-hero__lead">Muto formalise chaque modification de projet et la conduit de la demande à la clôture : chiffrage par les entreprises, analyse MOE, décision MOA, traçabilité complète. Fini les FTM qui traînent en pièce jointe.</p>
+
+        <div class="app-hero__cta">
+          <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Démarrer gratuitement</a>
+          <a class="btn btn--ghost-light btn--lg" href="#fonctionnalites">Voir les fonctionnalités</a>
+        </div>
+
+        <ul class="app-hero__points">
+          <li>Workflow en 9 étapes</li>
+          <li>Suivi budgétaire temps réel</li>
+          <li>Portail entreprise inclus</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pains" aria-labelledby="pains-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Le problème</p>
+          <h2 id="pains-title">Les défis de la gestion des FTM</h2>
+          <p class="section-head__lead">Sans outil adapté, la gestion des travaux modificatifs devient un cauchemar administratif.</p>
+        </header>
+        <div class="pain-grid">
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+            <h3>Documents éparpillés</h3>
+            <p>Emails, Excel, papiers… Les informations sont dispersées et difficiles à retrouver.</p>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>Validations interminables</h3>
+            <p>Les circuits de validation manuels ralentissent les projets et créent des goulots d'étranglement.</p>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Budget incontrôlé</h3>
+            <p>Sans suivi en temps réel, les dépassements budgétaires sont découverts trop tard.</p>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Communication difficile</h3>
+            <p>MOA, MOE et entreprises peinent à collaborer efficacement sur les modifications.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-features" id="fonctionnalites" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Fonctionnalités</p>
+          <h2 id="features-title">Tout ce dont vous avez besoin</h2>
+          <p class="section-head__lead">Six briques qui couvrent la vie complète d'une fiche de travaux modificatifs.</p>
+        </header>
+
+        <div class="feature-rows">
+          <article class="feature-row">
+            <div class="feature-row__copy">
+              <span class="feature-row__badge">01</span>
+              <h3>Suivi financier en temps réel</h3>
+              <p>Visualisez l'évolution de votre budget, les aléas et l'impact de chaque modification. Prenez des décisions éclairées avec des données à jour.</p>
+              <ul class="feature-row__list">
+              <li>Vue synthétique du budget</li>
+              <li>Suivi des aléas MOA/MOE</li>
+              <li>Export PDF/Excel</li>
+              </ul>
+            </div>
+            <div class="feature-row__media">
+              <img src="/images/suivibudgetaire.png" alt="Tableau de bord de suivi budgétaire Muto, montrant l'évolution du budget et les aléas" width="1200" height="750" loading="lazy" decoding="async" />
+            </div>
+          </article>
+          <article class="feature-row feature-row--reverse">
+            <div class="feature-row__copy">
+              <span class="feature-row__badge">02</span>
+              <h3>Gestion centralisée des FTM</h3>
+              <p>Toutes vos Fiches de Travaux Modificatifs au même endroit. De la création à la validation finale, suivez chaque étape du processus.</p>
+              <ul class="feature-row__list">
+              <li>Création et modification simplifiées</li>
+              <li>Historique complet des versions</li>
+              <li>Recherche et filtres avancés</li>
+              </ul>
+            </div>
+            <div class="feature-row__media">
+              <img src="/images/hero.png" alt="Liste centralisée des fiches de travaux modificatifs dans Muto" width="1200" height="750" loading="lazy" decoding="async" />
+            </div>
+          </article>
+          <article class="feature-row">
+            <div class="feature-row__copy">
+              <span class="feature-row__badge">03</span>
+              <h3>Collaboration multi-acteurs</h3>
+              <p>Connectez MOA, MOE et entreprises sur une plateforme commune. Facilitez les échanges et la communication entre toutes les parties prenantes.</p>
+              <ul class="feature-row__list">
+              <li>Gestion des droits par rôle</li>
+              <li>Messagerie intégrée</li>
+              <li>Partage de documents sécurisé</li>
+              </ul>
+            </div>
+            <div class="feature-row__media">
+              <img src="/images/listentreprise.png" alt="Annuaire des entreprises intervenant sur un projet dans Muto" width="1200" height="750" loading="lazy" decoding="async" />
+            </div>
+          </article>
+          <article class="feature-row feature-row--reverse">
+            <div class="feature-row__copy">
+              <span class="feature-row__badge">04</span>
+              <h3>Workflow de validation</h3>
+              <p>Processus structuré en 9 étapes pour chaque FTM. Assurez-vous que chaque modification est validée selon les règles définies.</p>
+              <ul class="feature-row__list">
+              <li>9 étapes de validation</li>
+              <li>Transitions automatiques</li>
+              <li>Règles métier personnalisables</li>
+              </ul>
+            </div>
+            <div class="feature-row__media">
+              <img src="/images/actions.png" alt="Actions de validation disponibles sur une FTM selon l'étape du workflow" width="1200" height="750" loading="lazy" decoding="async" />
+            </div>
+          </article>
+          <article class="feature-row">
+            <div class="feature-row__copy">
+              <span class="feature-row__badge">05</span>
+              <h3>Notifications automatisées</h3>
+              <p>Ne perdez plus de temps à relancer. Le système notifie automatiquement les parties prenantes quand une action est requise.</p>
+              <ul class="feature-row__list">
+              <li>Demandes de devis automatiques</li>
+              <li>Rappels de validations en attente</li>
+              <li>Alertes de dépassement budget</li>
+              </ul>
+            </div>
+            <div class="feature-row__media">
+              <img src="/images/email.png" alt="Exemple d'email de notification automatique envoyé par Muto" width="1200" height="750" loading="lazy" decoding="async" />
+            </div>
+          </article>
+          <article class="feature-row feature-row--reverse">
+            <div class="feature-row__copy">
+              <span class="feature-row__badge">06</span>
+              <h3>Espace dédié aux entreprises</h3>
+              <p>Les entreprises répondant aux FTM accèdent à leur propre espace pour suivre et modifier leurs devis, sans compte à créer côté maîtrise d'œuvre.</p>
+              <ul class="feature-row__list">
+              <li>Suivi des devis</li>
+              <li>Modification des devis</li>
+              <li>Export PDF/Excel</li>
+              </ul>
+            </div>
+            <div class="feature-row__media">
+              <img src="/images/espaceentrprise.png" alt="Espace entreprise de Muto permettant de répondre à une demande de devis" width="1200" height="750" loading="lazy" decoding="async" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lifecycle" id="workflow" aria-labelledby="lifecycle-title">
+      <div class="container">
+        <header class="section-head section-head--light">
+          <p class="eyebrow eyebrow--light">Le workflow</p>
+          <h2 id="lifecycle-title">Le cycle de vie d'une FTM</h2>
+          <p class="section-head__lead">9 étapes structurées, de la demande initiale à l'archivage — chaque transition tracée et notifiée.</p>
+        </header>
+
+        <div class="lifecycle__body">
+          <ol class="lifecycle__steps">
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">1</span>
+              <h3>Création</h3>
+              <p>Rédaction initiale de la FTM</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">2</span>
+              <h3>Validation MOE</h3>
+              <p>Contrôle technique</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">3</span>
+              <h3>Demande devis</h3>
+              <p>Envoi aux entreprises</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">4</span>
+              <h3>Réponse entreprise</h3>
+              <p>Chiffrage des travaux</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">5</span>
+              <h3>Analyse MOE</h3>
+              <p>Vérification du devis</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">6</span>
+              <h3>Décision MOA</h3>
+              <p>Acceptation ou refus</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">7</span>
+              <h3>Accord entreprise</h3>
+              <p>Confirmation finale</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">8</span>
+              <h3>Réalisation</h3>
+              <p>Exécution des travaux</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">9</span>
+              <h3>Clôture</h3>
+              <p>Archivage et bilan</p>
+            </li>
+          </ol>
+
+          <ul class="lifecycle__asides">
+            <li class="lifecycle-aside">
+              <span class="lifecycle-aside__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><h3>Notifications automatiques</h3><p>Alertes à chaque changement d'étape</p></div>
+            </li>
+            <li class="lifecycle-aside">
+              <span class="lifecycle-aside__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><h3>Traçabilité complète</h3><p>Historique détaillé de chaque action</p></div>
+            </li>
+            <li class="lifecycle-aside">
+              <span class="lifecycle-aside__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><h3>Suivi temps réel</h3><p>Visualisez l'avancement instantanément</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Les bénéfices</p>
+          <h2 id="benefits-title">Pourquoi les équipes adoptent Muto</h2>
+        </header>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">01</span>
+            <h3>Gain de temps significatif</h3>
+            <p>Réduisez le temps consacré à la gestion administrative des FTM grâce à l'automatisation des relances et des transitions.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">02</span>
+            <h3>Zéro perte d'information</h3>
+            <p>Toutes les données sont centralisées et historisées. Plus jamais de document perdu ou de version obsolète.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">03</span>
+            <h3>Maîtrise budgétaire totale</h3>
+            <p>Anticipez les dépassements avant qu'ils ne surviennent grâce au suivi en temps réel.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">04</span>
+            <h3>Collaboration fluide</h3>
+            <p>MOA, MOE et entreprises travaillent ensemble sur une plateforme unique et transparente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform" id="plateforme" aria-labelledby="platform-title">
+      <div class="container">
+        <div class="platform__intro">
+          <div class="platform__mark" aria-hidden="true">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></div>
+          <div>
+            <p class="eyebrow">La plateforme</p>
+            <h2 id="platform-title">Muto fait partie de BatiPrisme</h2>
+            <p>Vos projets, vos sociétés et vos équipes sont partagés avec les autres modules de la
+            plateforme. Une seule connexion, un seul annuaire, aucune ressaisie d'une application à l'autre.</p>
+          </div>
+        </div>
+
+        <ul class="platform__apps">
+          <li class="platform-app" style="--accent:var(--brand-quantify)">
+            <a href="/chiffrage-moe-amo/">
+              <span class="platform-app__icon">QTY</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Quantify</span>
+                <span class="platform-app__domain">Chiffrage MOE/AMO</span>
+              </span>
+              <span class="badge badge--soon">Bientôt disponible</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-empreinte)">
+            <a href="/empreinte-carbone-renovation/">
+              <span class="platform-app__icon">CO₂</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Empreinte</span>
+                <span class="platform-app__domain">Carbone rénovation</span>
+              </span>
+              <span class="badge badge--warn">Bêta</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-atlas)">
+            <a href="/ged-documentaire-batiment/">
+              <span class="platform-app__icon">GED</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Atlas</span>
+                <span class="platform-app__domain">GED documentaire</span>
+              </span>
+              <span class="badge badge--warn">Bêta</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-solvo)">
+            <a href="/suivi-financier-chantier/">
+              <span class="platform-app__icon">SFC</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Solvo</span>
+                <span class="platform-app__domain">Suivi Financier de Chantier</span>
+              </span>
+              <span class="badge badge--ok">Disponible</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-cautio)">
+            <a href="/garantie-parfait-achevement/">
+              <span class="platform-app__icon">GPA</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Cautio</span>
+                <span class="platform-app__domain">Garantie de Parfait Achèvement</span>
+              </span>
+              <span class="badge badge--soon">Bientôt disponible</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="platform__cta"><a class="btn btn--outline" href="/">Découvrir la plateforme complète</a></p>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section-head">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2 id="faq-title">Muto en questions</h2>
+        </header>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Qu'est-ce qu'une Fiche de Travaux Modificatifs (FTM) ?</summary>
+            <p>Une FTM est un document utilisé dans le secteur de la construction pour formaliser et suivre les modifications apportées à un projet initial. Elle permet de tracer les changements, leurs impacts financiers et les validations nécessaires par les différentes parties prenantes (MOA, MOE, entreprises).</p>
+          </details>
+          <details class="faq__item">
+            <summary>Muto est-il adapté aux petites structures ?</summary>
+            <p>Oui. Vous pouvez démarrer avec le socle BatiPrisme et le seul module Muto, ou activer Muto sur une opération unique via la licence au projet, sans engagement annuel.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Combien de temps faut-il pour déployer Muto ?</summary>
+            <p>Muto est une solution SaaS accessible immédiatement. Vous créez votre compte et commencez à travailler en quelques minutes ; aucune installation locale n'est nécessaire. Un accompagnement est proposé pour les déploiements complexes.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Les entreprises doivent-elles créer un compte ?</summary>
+            <p>Non. Les entreprises consultées répondent depuis un espace dédié accessible par lien, où elles suivent et modifient leurs devis sans avoir à gérer un compte sur la plateforme.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Puis-je importer mes projets existants ?</summary>
+            <p>Oui, l'import de projets existants se fait via fichiers Excel. Un service d'accompagnement est disponible pour migrer vos données historiques.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Mes données sont-elles sécurisées ?</summary>
+            <p>Vos données sont hébergées sur des serveurs situés en Europe et conformes au RGPD. Les communications sont chiffrées en SSL/TLS et des sauvegardes quotidiennes sont réalisées. Vos données restent votre propriété et ne sont jamais revendues.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Parlons de Muto</h2>
+          <p class="contact__lead">Décrivez votre besoin en deux lignes — nous répondons sous un jour ouvré.</p>
+          <ul class="contact__meta">
+            <li><svg class="contact__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><circle cx="18" cy="6" r="2.4"/><path d="M8.2 7.1 15.8 16.9M8.4 6H15.6"/></svg><a href="mailto:contact@batiprisme.fr">contact@batiprisme.fr</a></li>
+            <li><svg class="contact__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M4 20h16"/><rect x="9" y="13" width="6" height="7"/><path d="M8 9.5h.01M12 9.5h.01M16 9.5h.01"/></svg>Paris, France</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-formspree-id="xeeljjpe" novalidate>
+          <input type="hidden" name="_subject" value="Muto — Travaux Modificatifs" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Nom <span aria-hidden="true">*</span></label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err" />
+              <span class="error-message" id="cf-name-err" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-company">Société <span aria-hidden="true">*</span></label>
+              <input id="cf-company" name="company" type="text" autocomplete="organization" required aria-describedby="cf-company-err" />
+              <span class="error-message" id="cf-company-err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-email">Email <span aria-hidden="true">*</span></label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-err" />
+              <span class="error-message" id="cf-email-err" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Téléphone</label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="cf-phone-err" />
+              <span class="error-message" id="cf-phone-err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-role">Vous êtes</label>
+            <select id="cf-role" name="role">
+              <option value="moa">Maîtrise d'ouvrage (MOA)</option>
+              <option value="moe">Maîtrise d'œuvre (MOE / MOEX)</option>
+              <option value="amo">Assistance à maîtrise d'ouvrage (AMO)</option>
+              <option value="entreprise">Entreprise</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Votre besoin <span aria-hidden="true">*</span></label>
+            <textarea id="cf-message" name="message" rows="4" required aria-describedby="cf-message-err"></textarea>
+            <span class="error-message" id="cf-message-err" aria-live="polite"></span>
+          </div>
+          <div class="form-checkbox">
+            <input id="cf-privacy" name="privacy" type="checkbox" required aria-describedby="cf-privacy-err" />
+            <label for="cf-privacy">J'accepte que mes données soient utilisées pour répondre à ma demande, conformément à la <a href="/confidentialite/">politique de confidentialité</a>.</label>
+            <span class="error-message" id="cf-privacy-err" aria-live="polite"></span>
+          </div>
+          <button class="btn btn--primary btn--lg btn--block" type="submit">
+            <span class="btn-text">Envoyer</span>
+            <span class="btn-loading" hidden><span class="spinner" aria-hidden="true"></span>Envoi…</span>
+          </button>
+          <p class="form-success" role="status" hidden>Message envoyé. Nous revenons vers vous sous un jour ouvré.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta-final" aria-labelledby="cta-title">
+      <div class="container cta-final__inner">
+        <h2 id="cta-title">Prêt à démarrer avec Muto ?</h2>
+        <p>Créez votre espace BatiPrisme et activez le module en quelques minutes.</p>
+        <div class="cta-final__actions">
+          <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Démarrer gratuitement</a>
+          <a class="btn btn--ghost-light btn--lg" href="/tarifs/">Voir les tarifs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="/" aria-label="Accueil BatiPrisme">
+          <span class="brand__mark">
+  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></span>
+          <span class="brand__word"><b>Bati</b>Prisme</span>
+        </a>
+        <p>La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.</p>
+        <p class="site-footer__publisher">Édité par Naughty Software.</p>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Applications">
+        <h2>Applications</h2>
+        <ul>
+          <li><a href="/logiciel-travaux-modificatifs/">Muto — Travaux Modificatifs</a></li>
+          <li><a href="/chiffrage-moe-amo/">Quantify — Chiffrage MOE/AMO</a></li>
+          <li><a href="/empreinte-carbone-renovation/">Empreinte — Carbone rénovation</a></li>
+          <li><a href="/ged-documentaire-batiment/">Atlas — GED documentaire</a></li>
+          <li><a href="/suivi-financier-chantier/">Solvo — Suivi Financier de Chantier</a></li>
+          <li><a href="/garantie-parfait-achevement/">Cautio — Garantie de Parfait Achèvement</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Plateforme">
+        <h2>Plateforme</h2>
+        <ul>
+          <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
+          <li><a href="/#etapes">Comment ça marche</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Compte et contact">
+        <h2>Commencer</h2>
+        <ul>
+          <li><a href="https://app.batiprisme.fr/login">Se connecter</a></li>
+          <li><a href="https://app.batiprisme.fr/signup">Créer un compte</a></li>
+          <li><a href="mailto:contact@batiprisme.fr">Nous contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>© 2026 Naughty Software. BatiPrisme est une marque de Naughty Software.</p>
+      <p class="site-footer__legal"><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/cgu/">CGU</a></p>
+    </div>
+  </footer>
+  
+  <div class="consent" id="consent-banner" role="dialog" aria-labelledby="consent-title" aria-describedby="consent-text" hidden>
+    <div class="consent__inner">
+      <div>
+        <p class="consent__title" id="consent-title">Cookies de mesure d'audience</p>
+        <p class="consent__text" id="consent-text">
+          Nous utilisons Google Analytics pour comprendre l'usage du site. Aucun cookie de mesure
+          n'est déposé sans votre accord. <a href="/confidentialite/">En savoir plus</a>.
+        </p>
+      </div>
+      <div class="consent__actions">
+        <button class="btn btn--outline" type="button" data-consent="declined">Refuser</button>
+        <button class="btn btn--primary" type="button" data-consent="accepted">Accepter</button>
+      </div>
+    </div>
+  </div>
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

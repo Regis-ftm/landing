@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0e1a" />
+
+  <title>Logiciel de suivi financier de chantier — Solvo | BatiPrisme</title>
+  <meta name="description" content="Solvo pilote la vie financière de vos marchés : situations, certificats de paiement, avenants et ordres de service, avec cascade automatique." />
+  <meta name="keywords" content="suivi financier chantier, situation de travaux, certificat de paiement, avenant marché travaux, ordre de service, logiciel WinCHANT, décompte général" />
+  <meta name="author" content="BatiPrisme" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.batiprisme.fr/suivi-financier-chantier/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BatiPrisme" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Logiciel de suivi financier de chantier — Solvo | BatiPrisme" />
+  <meta property="og:description" content="Solvo pilote la vie financière de vos marchés : situations, certificats de paiement, avenants et ordres de service, avec cascade automatique." />
+  <meta property="og:url" content="https://www.batiprisme.fr/suivi-financier-chantier/" />
+  <meta property="og:image" content="https://www.batiprisme.fr/images/og-image.png" />
+  <meta property="og:image:alt" content="BatiPrisme — La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Logiciel de suivi financier de chantier — Solvo | BatiPrisme" />
+  <meta name="twitter:description" content="Solvo pilote la vie financière de vos marchés : situations, certificats de paiement, avenants et ordres de service, avec cascade automatique." />
+  <meta name="twitter:image" content="https://www.batiprisme.fr/images/og-image.png" />
+
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.batiprisme.fr/#organization",
+      "name": "BatiPrisme",
+      "url": "https://www.batiprisme.fr/",
+      "description": "La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.",
+      "logo": "https://www.batiprisme.fr/images/logo.png",
+      "areaServed": "FR",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Naughty Software"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@batiprisme.fr",
+        "availableLanguage": "French"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Solvo — Suivi Financier de Chantier",
+  "alternateName": "Solvo",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Suivi Financier de Chantier",
+  "operatingSystem": "Web",
+  "url": "https://www.batiprisme.fr/suivi-financier-chantier/",
+  "description": "Solvo pilote la vie financière de vos marchés : situations, certificats de paiement, avenants et ordres de service, avec cascade automatique.",
+  "softwareHelp": "https://www.batiprisme.fr/suivi-financier-chantier/#faq",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Naughty Software"
+  },
+  "isPartOf": {
+    "@type": "SoftwareApplication",
+    "name": "BatiPrisme",
+    "url": "https://www.batiprisme.fr/"
+  },
+  "featureList": [
+    "Situations de travaux",
+    "Certificats de paiement",
+    "Avenants et ordres de service"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.batiprisme.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solvo — Suivi Financier de Chantier",
+      "item": "https://www.batiprisme.fr/suivi-financier-chantier/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Solvo remplace-t-il WinCHANT ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Solvo reprend le périmètre fonctionnel de WinCHANT — situations, certificats de paiement, avenants, ordres de service — dans une application web accessible depuis n'importe quel poste, sans installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'appelle-t-on la cascade des montants ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lorsqu'un montant change en amont — un avenant, une révision de prix — toutes les pièces qui en dépendent sont recalculées automatiquement : situations suivantes, certificats de paiement et décompte. C'est ce que le tableur ne sait pas faire de façon fiable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je gérer plusieurs lots et plusieurs entreprises ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, une opération peut comporter autant de lots et d'entreprises que nécessaire, chacun avec son marché, ses avenants et ses situations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Solvo communique-t-il avec Muto ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les deux modules partagent le même socle de projets et de sociétés. Un projet créé une fois est disponible dans les deux applications, avec le même annuaire d'entreprises."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Accueil BatiPrisme">
+        <span class="brand__mark">
+  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></span>
+        <span class="brand__word"><b>Bati</b>Prisme</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <button class="site-nav__toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="site-nav__menu" id="primary-menu">
+          <li><a href="/#apps">Applications</a></li>
+          <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
+          <li><a href="/#etapes">Comment ça marche</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li class="site-nav__cta"><a href="https://app.batiprisme.fr/login">Se connecter</a></li>
+          <li class="site-nav__cta"><a href="https://app.batiprisme.fr/signup">Essai gratuit</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--ghost" href="https://app.batiprisme.fr/login">Se connecter</a>
+        <a class="btn btn--primary" href="https://app.batiprisme.fr/signup">Essai gratuit</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" style="--accent:var(--brand-solvo); --accent-dark:var(--brand-solvo-on-dark)">
+
+    <section class="app-hero" aria-labelledby="hero-title">
+      <div class="app-hero__glow" aria-hidden="true"></div>
+      <div class="container app-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'ariane">
+          <ol>
+            <li><a href="/">BatiPrisme</a></li>
+            <li aria-current="page">Solvo</li>
+          </ol>
+        </nav>
+
+        <p class="app-hero__eyebrow">
+          <span class="app-hero__abbr">SFC</span>
+          <span class="app-hero__domain">Suivi Financier de Chantier</span>
+          <span class="badge badge--ok badge--on-dark">Disponible</span>
+        </p>
+
+        <h1 id="hero-title">Le suivi financier de vos marchés de travaux, enfin sous contrôle</h1>
+        <p class="app-hero__lead">Situations mensuelles, certificats de paiement, avenants et ordres de service : Solvo tient la comptabilité de chantier à jour et recalcule seul tout ce qui dépend d'un montant que vous venez de changer.</p>
+
+        <div class="app-hero__cta">
+          <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Démarrer gratuitement</a>
+          <a class="btn btn--ghost-light btn--lg" href="#fonctionnalites">Voir les fonctionnalités</a>
+        </div>
+
+        <ul class="app-hero__points">
+          <li>Situations et certificats</li>
+          <li>Cascade automatique</li>
+          <li>Avenants et OS</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pains" aria-labelledby="pains-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Le problème</p>
+          <h2 id="pains-title">Quand le tableur devient le maillon faible</h2>
+          <p class="section-head__lead">La comptabilité de chantier vit encore trop souvent dans un classeur Excel que personne n'ose toucher.</p>
+        </header>
+        <div class="pain-grid">
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+            <h3>Formules fragiles</h3>
+            <p>Un avenant saisi au mauvais endroit et c'est tout le décompte qui part de travers, sans que personne ne le voie.</p>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>Ressaisie permanente</h3>
+            <p>Chaque situation impose de reporter à la main des montants déjà saisis ailleurs dans le classeur.</p>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Écarts découverts tard</h3>
+            <p>Les écarts entre marché initial, avenants et travaux réalisés n'apparaissent qu'au décompte général.</p>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Versions concurrentes</h3>
+            <p>Trois personnes, trois copies du fichier, et plus personne ne sait laquelle fait foi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-features" id="fonctionnalites" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Fonctionnalités</p>
+          <h2 id="features-title">La chaîne financière complète</h2>
+          <p class="section-head__lead">Du marché initial au décompte, chaque pièce découle de la précédente.</p>
+        </header>
+
+        <div class="feature-rows">
+          <article class="feature-row">
+            <div class="feature-row__copy">
+              <span class="feature-row__badge">01</span>
+              <h3>Situations de travaux</h3>
+              <p>Établissez les situations mensuelles par lot et par entreprise, avec avancement, retenue de garantie et révision de prix calculés automatiquement.</p>
+              <ul class="feature-row__list">
+              <li>Avancement par poste</li>
+              <li>Retenue de garantie</li>
+              <li>Révision de prix</li>
+              </ul>
+            </div>
+            <div class="feature-row__media">
+              <img src="/images/suivifinancier.png" alt="Écran de suivi financier de chantier dans Solvo, avec situations par lot" width="1200" height="750" loading="lazy" decoding="async" />
+            </div>
+          </article>
+          <article class="feature-row feature-row--reverse">
+            <div class="feature-row__copy">
+              <span class="feature-row__badge">02</span>
+              <h3>Certificats de paiement</h3>
+              <p>Le certificat de paiement se déduit de la situation validée. Plus de recopie, plus d'écart entre ce qui est constaté et ce qui est payé.</p>
+              <ul class="feature-row__list">
+              <li>Génération depuis la situation</li>
+              <li>Historique des versements</li>
+              <li>Export PDF</li>
+              </ul>
+            </div>
+            <div class="feature-row__media">
+              <img src="/images/financier.png" alt="Certificat de paiement généré depuis une situation de travaux dans Solvo" width="1200" height="750" loading="lazy" decoding="async" />
+            </div>
+          </article>
+          <article class="feature-row">
+            <div class="feature-row__copy">
+              <span class="feature-row__badge">03</span>
+              <h3>Avenants et ordres de service</h3>
+              <p>Chaque avenant et chaque OS modifie le montant du marché — et Solvo répercute le changement sur toutes les pièces en aval, immédiatement.</p>
+              <ul class="feature-row__list">
+              <li>Avenants au marché</li>
+              <li>Ordres de service</li>
+              <li>Cascade sur les pièces en aval</li>
+              </ul>
+            </div>
+            <div class="feature-row__media">
+              <img src="/images/projetcreation-financier.png" alt="Saisie du volet financier d'une opération dans Solvo" width="1200" height="750" loading="lazy" decoding="async" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lifecycle" id="workflow" aria-labelledby="lifecycle-title">
+      <div class="container">
+        <header class="section-head section-head--light">
+          <p class="eyebrow eyebrow--light">Le cycle</p>
+          <h2 id="lifecycle-title">Du marché au décompte général</h2>
+          <p class="section-head__lead">Chaque étape s'appuie sur la précédente : vous saisissez une fois, la chaîne se recalcule.</p>
+        </header>
+
+        <div class="lifecycle__body">
+          <ol class="lifecycle__steps">
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">1</span>
+              <h3>Marché initial</h3>
+              <p>Lots, entreprises, montants</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">2</span>
+              <h3>Avenants</h3>
+              <p>Modifications du marché</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">3</span>
+              <h3>Situation</h3>
+              <p>Avancement mensuel</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">4</span>
+              <h3>Certificat</h3>
+              <p>Paiement constaté</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">5</span>
+              <h3>Décompte</h3>
+              <p>Solde de l'opération</p>
+            </li>
+          </ol>
+
+          <ul class="lifecycle__asides">
+            <li class="lifecycle-aside">
+              <span class="lifecycle-aside__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><h3>Cascade automatique</h3><p>Un montant modifié se propage en aval</p></div>
+            </li>
+            <li class="lifecycle-aside">
+              <span class="lifecycle-aside__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><h3>Multi-lots</h3><p>Autant de lots et d'entreprises que nécessaire</p></div>
+            </li>
+            <li class="lifecycle-aside">
+              <span class="lifecycle-aside__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><h3>Piste d'audit</h3><p>Qui a changé quoi, et quand</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Les bénéfices</p>
+          <h2 id="benefits-title">Ce que Solvo change au quotidien</h2>
+        </header>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">01</span>
+            <h3>Plus de recalcul manuel</h3>
+            <p>Un avenant saisi une fois se répercute sur les situations, les certificats et le décompte.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">02</span>
+            <h3>Une seule version</h3>
+            <p>Fini les copies concurrentes du classeur : l'état financier de l'opération est unique et partagé.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">03</span>
+            <h3>Écarts visibles tôt</h3>
+            <p>L'écart entre marché, avenants et réalisé est lisible à tout moment, pas seulement au décompte.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">04</span>
+            <h3>Reprise de l'existant</h3>
+            <p>Solvo reprend les usages de WinCHANT, avec lesquels les équipes travaillent depuis des années.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform" id="plateforme" aria-labelledby="platform-title">
+      <div class="container">
+        <div class="platform__intro">
+          <div class="platform__mark" aria-hidden="true">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></div>
+          <div>
+            <p class="eyebrow">La plateforme</p>
+            <h2 id="platform-title">Solvo fait partie de BatiPrisme</h2>
+            <p>Vos projets, vos sociétés et vos équipes sont partagés avec les autres modules de la
+            plateforme. Une seule connexion, un seul annuaire, aucune ressaisie d'une application à l'autre.</p>
+          </div>
+        </div>
+
+        <ul class="platform__apps">
+          <li class="platform-app" style="--accent:var(--brand-muto)">
+            <a href="/logiciel-travaux-modificatifs/">
+              <span class="platform-app__icon">FTM</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Muto</span>
+                <span class="platform-app__domain">Travaux Modificatifs</span>
+              </span>
+              <span class="badge badge--ok">Disponible</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-quantify)">
+            <a href="/chiffrage-moe-amo/">
+              <span class="platform-app__icon">QTY</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Quantify</span>
+                <span class="platform-app__domain">Chiffrage MOE/AMO</span>
+              </span>
+              <span class="badge badge--soon">Bientôt disponible</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-empreinte)">
+            <a href="/empreinte-carbone-renovation/">
+              <span class="platform-app__icon">CO₂</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Empreinte</span>
+                <span class="platform-app__domain">Carbone rénovation</span>
+              </span>
+              <span class="badge badge--warn">Bêta</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-atlas)">
+            <a href="/ged-documentaire-batiment/">
+              <span class="platform-app__icon">GED</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Atlas</span>
+                <span class="platform-app__domain">GED documentaire</span>
+              </span>
+              <span class="badge badge--warn">Bêta</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-cautio)">
+            <a href="/garantie-parfait-achevement/">
+              <span class="platform-app__icon">GPA</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Cautio</span>
+                <span class="platform-app__domain">Garantie de Parfait Achèvement</span>
+              </span>
+              <span class="badge badge--soon">Bientôt disponible</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="platform__cta"><a class="btn btn--outline" href="/">Découvrir la plateforme complète</a></p>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section-head">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2 id="faq-title">Solvo en questions</h2>
+        </header>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Solvo remplace-t-il WinCHANT ?</summary>
+            <p>Oui. Solvo reprend le périmètre fonctionnel de WinCHANT — situations, certificats de paiement, avenants, ordres de service — dans une application web accessible depuis n'importe quel poste, sans installation.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Qu'appelle-t-on la cascade des montants ?</summary>
+            <p>Lorsqu'un montant change en amont — un avenant, une révision de prix — toutes les pièces qui en dépendent sont recalculées automatiquement : situations suivantes, certificats de paiement et décompte. C'est ce que le tableur ne sait pas faire de façon fiable.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Puis-je gérer plusieurs lots et plusieurs entreprises ?</summary>
+            <p>Oui, une opération peut comporter autant de lots et d'entreprises que nécessaire, chacun avec son marché, ses avenants et ses situations.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Solvo communique-t-il avec Muto ?</summary>
+            <p>Les deux modules partagent le même socle de projets et de sociétés. Un projet créé une fois est disponible dans les deux applications, avec le même annuaire d'entreprises.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Parlons de Solvo</h2>
+          <p class="contact__lead">Décrivez votre besoin en deux lignes — nous répondons sous un jour ouvré.</p>
+          <ul class="contact__meta">
+            <li><svg class="contact__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><circle cx="18" cy="6" r="2.4"/><path d="M8.2 7.1 15.8 16.9M8.4 6H15.6"/></svg><a href="mailto:contact@batiprisme.fr">contact@batiprisme.fr</a></li>
+            <li><svg class="contact__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M4 20h16"/><rect x="9" y="13" width="6" height="7"/><path d="M8 9.5h.01M12 9.5h.01M16 9.5h.01"/></svg>Paris, France</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-formspree-id="xeeljjpe" novalidate>
+          <input type="hidden" name="_subject" value="Solvo — Suivi Financier de Chantier" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Nom <span aria-hidden="true">*</span></label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err" />
+              <span class="error-message" id="cf-name-err" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-company">Société <span aria-hidden="true">*</span></label>
+              <input id="cf-company" name="company" type="text" autocomplete="organization" required aria-describedby="cf-company-err" />
+              <span class="error-message" id="cf-company-err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-email">Email <span aria-hidden="true">*</span></label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-err" />
+              <span class="error-message" id="cf-email-err" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Téléphone</label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="cf-phone-err" />
+              <span class="error-message" id="cf-phone-err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-role">Vous êtes</label>
+            <select id="cf-role" name="role">
+              <option value="moa">Maîtrise d'ouvrage (MOA)</option>
+              <option value="moe">Maîtrise d'œuvre (MOE / MOEX)</option>
+              <option value="amo">Assistance à maîtrise d'ouvrage (AMO)</option>
+              <option value="entreprise">Entreprise</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Votre besoin <span aria-hidden="true">*</span></label>
+            <textarea id="cf-message" name="message" rows="4" required aria-describedby="cf-message-err"></textarea>
+            <span class="error-message" id="cf-message-err" aria-live="polite"></span>
+          </div>
+          <div class="form-checkbox">
+            <input id="cf-privacy" name="privacy" type="checkbox" required aria-describedby="cf-privacy-err" />
+            <label for="cf-privacy">J'accepte que mes données soient utilisées pour répondre à ma demande, conformément à la <a href="/confidentialite/">politique de confidentialité</a>.</label>
+            <span class="error-message" id="cf-privacy-err" aria-live="polite"></span>
+          </div>
+          <button class="btn btn--primary btn--lg btn--block" type="submit">
+            <span class="btn-text">Envoyer</span>
+            <span class="btn-loading" hidden><span class="spinner" aria-hidden="true"></span>Envoi…</span>
+          </button>
+          <p class="form-success" role="status" hidden>Message envoyé. Nous revenons vers vous sous un jour ouvré.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta-final" aria-labelledby="cta-title">
+      <div class="container cta-final__inner">
+        <h2 id="cta-title">Prêt à démarrer avec Solvo ?</h2>
+        <p>Créez votre espace BatiPrisme et activez le module en quelques minutes.</p>
+        <div class="cta-final__actions">
+          <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Démarrer gratuitement</a>
+          <a class="btn btn--ghost-light btn--lg" href="/tarifs/">Voir les tarifs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="/" aria-label="Accueil BatiPrisme">
+          <span class="brand__mark">
+  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></span>
+          <span class="brand__word"><b>Bati</b>Prisme</span>
+        </a>
+        <p>La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.</p>
+        <p class="site-footer__publisher">Édité par Naughty Software.</p>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Applications">
+        <h2>Applications</h2>
+        <ul>
+          <li><a href="/logiciel-travaux-modificatifs/">Muto — Travaux Modificatifs</a></li>
+          <li><a href="/chiffrage-moe-amo/">Quantify — Chiffrage MOE/AMO</a></li>
+          <li><a href="/empreinte-carbone-renovation/">Empreinte — Carbone rénovation</a></li>
+          <li><a href="/ged-documentaire-batiment/">Atlas — GED documentaire</a></li>
+          <li><a href="/suivi-financier-chantier/">Solvo — Suivi Financier de Chantier</a></li>
+          <li><a href="/garantie-parfait-achevement/">Cautio — Garantie de Parfait Achèvement</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Plateforme">
+        <h2>Plateforme</h2>
+        <ul>
+          <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
+          <li><a href="/#etapes">Comment ça marche</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Compte et contact">
+        <h2>Commencer</h2>
+        <ul>
+          <li><a href="https://app.batiprisme.fr/login">Se connecter</a></li>
+          <li><a href="https://app.batiprisme.fr/signup">Créer un compte</a></li>
+          <li><a href="mailto:contact@batiprisme.fr">Nous contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>© 2026 Naughty Software. BatiPrisme est une marque de Naughty Software.</p>
+      <p class="site-footer__legal"><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/cgu/">CGU</a></p>
+    </div>
+  </footer>
+  
+  <div class="consent" id="consent-banner" role="dialog" aria-labelledby="consent-title" aria-describedby="consent-text" hidden>
+    <div class="consent__inner">
+      <div>
+        <p class="consent__title" id="consent-title">Cookies de mesure d'audience</p>
+        <p class="consent__text" id="consent-text">
+          Nous utilisons Google Analytics pour comprendre l'usage du site. Aucun cookie de mesure
+          n'est déposé sans votre accord. <a href="/confidentialite/">En savoir plus</a>.
+        </p>
+      </div>
+      <div class="consent__actions">
+        <button class="btn btn--outline" type="button" data-consent="declined">Refuser</button>
+        <button class="btn btn--primary" type="button" data-consent="accepted">Accepter</button>
+      </div>
+    </div>
+  </div>
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

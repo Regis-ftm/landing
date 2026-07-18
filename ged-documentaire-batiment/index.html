@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0e1a" />
+
+  <title>GED documentaire pour le bâtiment — Atlas | BatiPrisme</title>
+  <meta name="description" content="Atlas centralise la documentation de projet : codification paramétrable, visas annotés, diffusions avec accusé de réception et journal d'audit." />
+  <meta name="keywords" content="GED bâtiment, gestion électronique documentaire construction, visa de plans, codification documentaire, diffusion plans, accusé de réception, journal d'audit" />
+  <meta name="author" content="BatiPrisme" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.batiprisme.fr/ged-documentaire-batiment/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BatiPrisme" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="GED documentaire pour le bâtiment — Atlas | BatiPrisme" />
+  <meta property="og:description" content="Atlas centralise la documentation de projet : codification paramétrable, visas annotés, diffusions avec accusé de réception et journal d'audit." />
+  <meta property="og:url" content="https://www.batiprisme.fr/ged-documentaire-batiment/" />
+  <meta property="og:image" content="https://www.batiprisme.fr/images/og-image.png" />
+  <meta property="og:image:alt" content="BatiPrisme — La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GED documentaire pour le bâtiment — Atlas | BatiPrisme" />
+  <meta name="twitter:description" content="Atlas centralise la documentation de projet : codification paramétrable, visas annotés, diffusions avec accusé de réception et journal d'audit." />
+  <meta name="twitter:image" content="https://www.batiprisme.fr/images/og-image.png" />
+
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.batiprisme.fr/#organization",
+      "name": "BatiPrisme",
+      "url": "https://www.batiprisme.fr/",
+      "description": "La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.",
+      "logo": "https://www.batiprisme.fr/images/logo.png",
+      "areaServed": "FR",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Naughty Software"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@batiprisme.fr",
+        "availableLanguage": "French"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Atlas — GED documentaire",
+  "alternateName": "Atlas",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "GED documentaire",
+  "operatingSystem": "Web",
+  "url": "https://www.batiprisme.fr/ged-documentaire-batiment/",
+  "description": "Atlas centralise la documentation de projet : codification paramétrable, visas annotés, diffusions avec accusé de réception et journal d'audit.",
+  "softwareHelp": "https://www.batiprisme.fr/ged-documentaire-batiment/#faq",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Naughty Software"
+  },
+  "isPartOf": {
+    "@type": "SoftwareApplication",
+    "name": "BatiPrisme",
+    "url": "https://www.batiprisme.fr/"
+  },
+  "featureList": [
+    "Codification paramétrable",
+    "Visas annotés",
+    "Diffusions avec accusé"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.batiprisme.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Atlas — GED documentaire",
+      "item": "https://www.batiprisme.fr/ged-documentaire-batiment/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne la codification ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous définissez pour chaque opération un gabarit de codification (phase, lot, émetteur, type de document, indice). Atlas assemble le code à partir des métadonnées saisies et refuse les documents qui ne respectent pas le gabarit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les visas modifient-ils le document d'origine ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Le document déposé reste intact ; les annotations de visa sont aplaties dans une version visée, distincte, qui devient la pièce de référence pour la diffusion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment Atlas est-il facturé ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atlas est piloté par le volume documentaire, donc facturé au stockage : 110 € HT par mois pour 0 à 10 Go, puis 25 € HT par tranche de 5 Go supplémentaires. Il peut aussi être activé au projet, à 2 000 € HT pour la durée de l'opération."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel est le statut d'Atlas aujourd'hui ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atlas est en bêta : le socle documentaire, la codification, les visas et les diffusions sont opérationnels et utilisés sur de vraies opérations. Certaines fonctions périphériques évoluent encore."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Accueil BatiPrisme">
+        <span class="brand__mark">
+  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></span>
+        <span class="brand__word"><b>Bati</b>Prisme</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <button class="site-nav__toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="site-nav__menu" id="primary-menu">
+          <li><a href="/#apps">Applications</a></li>
+          <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
+          <li><a href="/#etapes">Comment ça marche</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li class="site-nav__cta"><a href="https://app.batiprisme.fr/login">Se connecter</a></li>
+          <li class="site-nav__cta"><a href="https://app.batiprisme.fr/signup">Essai gratuit</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--ghost" href="https://app.batiprisme.fr/login">Se connecter</a>
+        <a class="btn btn--primary" href="https://app.batiprisme.fr/signup">Essai gratuit</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" style="--accent:var(--brand-atlas); --accent-dark:var(--brand-atlas-on-dark)">
+
+    <section class="app-hero" aria-labelledby="hero-title">
+      <div class="app-hero__glow" aria-hidden="true"></div>
+      <div class="container app-hero__inner">
+        <nav class="breadcrumb" aria-label="Fil d'ariane">
+          <ol>
+            <li><a href="/">BatiPrisme</a></li>
+            <li aria-current="page">Atlas</li>
+          </ol>
+        </nav>
+
+        <p class="app-hero__eyebrow">
+          <span class="app-hero__abbr">GED</span>
+          <span class="app-hero__domain">GED documentaire</span>
+          <span class="badge badge--warn badge--on-dark">Bêta</span>
+        </p>
+
+        <h1 id="hero-title">La documentation de projet, codifiée et traçable</h1>
+        <p class="app-hero__lead">Atlas donne à chaque document un code, un cycle de visa et une diffusion tracée. Vous savez qui a reçu quel indice, qui l'a visé, et quand — sans reconstituer l'historique depuis vos boîtes mail.</p>
+
+        <div class="app-hero__cta">
+          <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Démarrer gratuitement</a>
+          <a class="btn btn--ghost-light btn--lg" href="#fonctionnalites">Voir les fonctionnalités</a>
+        </div>
+
+        <ul class="app-hero__points">
+          <li>Codification paramétrable</li>
+          <li>Visas annotés</li>
+          <li>Accusés de réception</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pains" aria-labelledby="pains-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Le problème</p>
+          <h2 id="pains-title">Quand la GED est une boîte mail</h2>
+          <p class="section-head__lead">Sur un projet de construction, le document circule plus vite que la preuve qu'il a circulé.</p>
+        </header>
+        <div class="pain-grid">
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+            <h3>Indices incertains</h3>
+            <p>Personne ne sait avec certitude si l'entreprise travaille sur le dernier indice du plan.</p>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>Visas dispersés</h3>
+            <p>Les observations arrivent en PDF annoté par mail, sans jamais rejoindre le document d'origine.</p>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Diffusions sans preuve</h3>
+            <p>En cas de litige, impossible de prouver qui a reçu quoi et à quelle date.</p>
+          </article>
+          <article class="pain-card">
+            <div class="pain-card__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6z"/></svg></div>
+            <h3>Nommage anarchique</h3>
+            <p>Chaque intervenant nomme ses fichiers à sa façon, et le classement devient ingérable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-features" id="fonctionnalites" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Fonctionnalités</p>
+          <h2 id="features-title">Une GED pensée pour le chantier</h2>
+          <p class="section-head__lead">La codification, le visa et la diffusion — les trois choses qu'un partage de fichiers générique ne sait pas faire.</p>
+        </header>
+
+        <div class="feature-tiles">
+          <article class="feature-tile"><div class="feature-row__copy">
+              <span class="feature-row__badge">01</span>
+              <h3>Codification paramétrable</h3>
+              <p>Définissez le gabarit de codification de l'opération — phase, lot, émetteur, type, indice — et Atlas assemble et valide le code de chaque document déposé.</p>
+              <ul class="feature-row__list">
+              <li>Gabarit par opération</li>
+              <li>Validation à l'import</li>
+              <li>Arborescence dérivée du code</li>
+              </ul>
+            </div></article>
+          <article class="feature-tile"><div class="feature-row__copy">
+              <span class="feature-row__badge">02</span>
+              <h3>Visas annotés</h3>
+              <p>Le viseur annote directement le PDF dans le navigateur ; les annotations sont aplaties dans le document visé, qui devient la pièce de référence.</p>
+              <ul class="feature-row__list">
+              <li>Annotation dans le navigateur</li>
+              <li>Aplatissement au visa</li>
+              <li>Cycles et règles automatiques</li>
+              </ul>
+            </div></article>
+          <article class="feature-tile"><div class="feature-row__copy">
+              <span class="feature-row__badge">03</span>
+              <h3>Diffusions avec accusé</h3>
+              <p>Chaque diffusion liste ses destinataires et enregistre les accusés de réception. Le journal d'audit conserve l'intégralité des mouvements.</p>
+              <ul class="feature-row__list">
+              <li>Listes de diffusion</li>
+              <li>Accusé de réception horodaté</li>
+              <li>Journal d'audit complet</li>
+              </ul>
+            </div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lifecycle" id="workflow" aria-labelledby="lifecycle-title">
+      <div class="container">
+        <header class="section-head section-head--light">
+          <p class="eyebrow eyebrow--light">Le cycle</p>
+          <h2 id="lifecycle-title">Du dépôt à la diffusion</h2>
+          <p class="section-head__lead">Chaque document suit le même chemin, quel que soit son émetteur.</p>
+        </header>
+
+        <div class="lifecycle__body">
+          <ol class="lifecycle__steps">
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">1</span>
+              <h3>Dépôt</h3>
+              <p>Import du document</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">2</span>
+              <h3>Codification</h3>
+              <p>Assemblage et contrôle du code</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">3</span>
+              <h3>Visa</h3>
+              <p>Annotation et validation</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">4</span>
+              <h3>Diffusion</h3>
+              <p>Envoi aux destinataires</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">5</span>
+              <h3>Accusé</h3>
+              <p>Réception horodatée</p>
+            </li>
+            <li class="lifecycle-step">
+              <span class="lifecycle-step__n" aria-hidden="true">6</span>
+              <h3>Archivage</h3>
+              <p>Journal d'audit</p>
+            </li>
+          </ol>
+
+          <ul class="lifecycle__asides">
+            <li class="lifecycle-aside">
+              <span class="lifecycle-aside__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><h3>Indices maîtrisés</h3><p>Le dernier indice est toujours identifiable</p></div>
+            </li>
+            <li class="lifecycle-aside">
+              <span class="lifecycle-aside__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><h3>Preuve de diffusion</h3><p>Accusés horodatés opposables</p></div>
+            </li>
+            <li class="lifecycle-aside">
+              <span class="lifecycle-aside__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><h3>Facturation au volume</h3><p>Vous payez le stockage réellement utilisé</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Les bénéfices</p>
+          <h2 id="benefits-title">Ce qu'Atlas sécurise</h2>
+        </header>
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">01</span>
+            <h3>Un seul référentiel</h3>
+            <p>Tous les documents de l'opération au même endroit, codifiés selon la même règle.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">02</span>
+            <h3>Des visas opposables</h3>
+            <p>L'observation est dans le document, pas dans un mail perdu.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">03</span>
+            <h3>La preuve du reçu</h3>
+            <p>Les accusés de réception horodatés tiennent en cas de litige.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-card__n" aria-hidden="true">04</span>
+            <h3>Un coût lisible</h3>
+            <p>Atlas est facturé au stockage, pas au nombre d'utilisateurs — la GED ne pénalise pas l'ouverture aux intervenants.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform" id="plateforme" aria-labelledby="platform-title">
+      <div class="container">
+        <div class="platform__intro">
+          <div class="platform__mark" aria-hidden="true">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></div>
+          <div>
+            <p class="eyebrow">La plateforme</p>
+            <h2 id="platform-title">Atlas fait partie de BatiPrisme</h2>
+            <p>Vos projets, vos sociétés et vos équipes sont partagés avec les autres modules de la
+            plateforme. Une seule connexion, un seul annuaire, aucune ressaisie d'une application à l'autre.</p>
+          </div>
+        </div>
+
+        <ul class="platform__apps">
+          <li class="platform-app" style="--accent:var(--brand-muto)">
+            <a href="/logiciel-travaux-modificatifs/">
+              <span class="platform-app__icon">FTM</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Muto</span>
+                <span class="platform-app__domain">Travaux Modificatifs</span>
+              </span>
+              <span class="badge badge--ok">Disponible</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-quantify)">
+            <a href="/chiffrage-moe-amo/">
+              <span class="platform-app__icon">QTY</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Quantify</span>
+                <span class="platform-app__domain">Chiffrage MOE/AMO</span>
+              </span>
+              <span class="badge badge--soon">Bientôt disponible</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-empreinte)">
+            <a href="/empreinte-carbone-renovation/">
+              <span class="platform-app__icon">CO₂</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Empreinte</span>
+                <span class="platform-app__domain">Carbone rénovation</span>
+              </span>
+              <span class="badge badge--warn">Bêta</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-solvo)">
+            <a href="/suivi-financier-chantier/">
+              <span class="platform-app__icon">SFC</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Solvo</span>
+                <span class="platform-app__domain">Suivi Financier de Chantier</span>
+              </span>
+              <span class="badge badge--ok">Disponible</span>
+            </a>
+          </li>
+          <li class="platform-app" style="--accent:var(--brand-cautio)">
+            <a href="/garantie-parfait-achevement/">
+              <span class="platform-app__icon">GPA</span>
+              <span class="platform-app__body">
+                <span class="platform-app__name">Cautio</span>
+                <span class="platform-app__domain">Garantie de Parfait Achèvement</span>
+              </span>
+              <span class="badge badge--soon">Bientôt disponible</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="platform__cta"><a class="btn btn--outline" href="/">Découvrir la plateforme complète</a></p>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section-head">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2 id="faq-title">Atlas en questions</h2>
+        </header>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Comment fonctionne la codification ?</summary>
+            <p>Vous définissez pour chaque opération un gabarit de codification (phase, lot, émetteur, type de document, indice). Atlas assemble le code à partir des métadonnées saisies et refuse les documents qui ne respectent pas le gabarit.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Les visas modifient-ils le document d'origine ?</summary>
+            <p>Non. Le document déposé reste intact ; les annotations de visa sont aplaties dans une version visée, distincte, qui devient la pièce de référence pour la diffusion.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Comment Atlas est-il facturé ?</summary>
+            <p>Atlas est piloté par le volume documentaire, donc facturé au stockage : 110 € HT par mois pour 0 à 10 Go, puis 25 € HT par tranche de 5 Go supplémentaires. Il peut aussi être activé au projet, à 2 000 € HT pour la durée de l'opération.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Quel est le statut d'Atlas aujourd'hui ?</summary>
+            <p>Atlas est en bêta : le socle documentaire, la codification, les visas et les diffusions sont opérationnels et utilisés sur de vraies opérations. Certaines fonctions périphériques évoluent encore.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Parlons de Atlas</h2>
+          <p class="contact__lead">Décrivez votre besoin en deux lignes — nous répondons sous un jour ouvré.</p>
+          <ul class="contact__meta">
+            <li><svg class="contact__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><circle cx="18" cy="6" r="2.4"/><path d="M8.2 7.1 15.8 16.9M8.4 6H15.6"/></svg><a href="mailto:contact@batiprisme.fr">contact@batiprisme.fr</a></li>
+            <li><svg class="contact__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M4 20h16"/><rect x="9" y="13" width="6" height="7"/><path d="M8 9.5h.01M12 9.5h.01M16 9.5h.01"/></svg>Paris, France</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-formspree-id="xeeljjpe" novalidate>
+          <input type="hidden" name="_subject" value="Atlas — GED documentaire" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Nom <span aria-hidden="true">*</span></label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err" />
+              <span class="error-message" id="cf-name-err" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-company">Société <span aria-hidden="true">*</span></label>
+              <input id="cf-company" name="company" type="text" autocomplete="organization" required aria-describedby="cf-company-err" />
+              <span class="error-message" id="cf-company-err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-email">Email <span aria-hidden="true">*</span></label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-err" />
+              <span class="error-message" id="cf-email-err" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Téléphone</label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="cf-phone-err" />
+              <span class="error-message" id="cf-phone-err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-role">Vous êtes</label>
+            <select id="cf-role" name="role">
+              <option value="moa">Maîtrise d'ouvrage (MOA)</option>
+              <option value="moe">Maîtrise d'œuvre (MOE / MOEX)</option>
+              <option value="amo">Assistance à maîtrise d'ouvrage (AMO)</option>
+              <option value="entreprise">Entreprise</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Votre besoin <span aria-hidden="true">*</span></label>
+            <textarea id="cf-message" name="message" rows="4" required aria-describedby="cf-message-err"></textarea>
+            <span class="error-message" id="cf-message-err" aria-live="polite"></span>
+          </div>
+          <div class="form-checkbox">
+            <input id="cf-privacy" name="privacy" type="checkbox" required aria-describedby="cf-privacy-err" />
+            <label for="cf-privacy">J'accepte que mes données soient utilisées pour répondre à ma demande, conformément à la <a href="/confidentialite/">politique de confidentialité</a>.</label>
+            <span class="error-message" id="cf-privacy-err" aria-live="polite"></span>
+          </div>
+          <button class="btn btn--primary btn--lg btn--block" type="submit">
+            <span class="btn-text">Envoyer</span>
+            <span class="btn-loading" hidden><span class="spinner" aria-hidden="true"></span>Envoi…</span>
+          </button>
+          <p class="form-success" role="status" hidden>Message envoyé. Nous revenons vers vous sous un jour ouvré.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta-final" aria-labelledby="cta-title">
+      <div class="container cta-final__inner">
+        <h2 id="cta-title">Prêt à démarrer avec Atlas ?</h2>
+        <p>Créez votre espace BatiPrisme et activez le module en quelques minutes.</p>
+        <div class="cta-final__actions">
+          <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Démarrer gratuitement</a>
+          <a class="btn btn--ghost-light btn--lg" href="/tarifs/">Voir les tarifs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="/" aria-label="Accueil BatiPrisme">
+          <span class="brand__mark">
+  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></span>
+          <span class="brand__word"><b>Bati</b>Prisme</span>
+        </a>
+        <p>La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.</p>
+        <p class="site-footer__publisher">Édité par Naughty Software.</p>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Applications">
+        <h2>Applications</h2>
+        <ul>
+          <li><a href="/logiciel-travaux-modificatifs/">Muto — Travaux Modificatifs</a></li>
+          <li><a href="/chiffrage-moe-amo/">Quantify — Chiffrage MOE/AMO</a></li>
+          <li><a href="/empreinte-carbone-renovation/">Empreinte — Carbone rénovation</a></li>
+          <li><a href="/ged-documentaire-batiment/">Atlas — GED documentaire</a></li>
+          <li><a href="/suivi-financier-chantier/">Solvo — Suivi Financier de Chantier</a></li>
+          <li><a href="/garantie-parfait-achevement/">Cautio — Garantie de Parfait Achèvement</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Plateforme">
+        <h2>Plateforme</h2>
+        <ul>
+          <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
+          <li><a href="/#etapes">Comment ça marche</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Compte et contact">
+        <h2>Commencer</h2>
+        <ul>
+          <li><a href="https://app.batiprisme.fr/login">Se connecter</a></li>
+          <li><a href="https://app.batiprisme.fr/signup">Créer un compte</a></li>
+          <li><a href="mailto:contact@batiprisme.fr">Nous contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>© 2026 Naughty Software. BatiPrisme est une marque de Naughty Software.</p>
+      <p class="site-footer__legal"><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/cgu/">CGU</a></p>
+    </div>
+  </footer>
+  
+  <div class="consent" id="consent-banner" role="dialog" aria-labelledby="consent-title" aria-describedby="consent-text" hidden>
+    <div class="consent__inner">
+      <div>
+        <p class="consent__title" id="consent-title">Cookies de mesure d'audience</p>
+        <p class="consent__text" id="consent-text">
+          Nous utilisons Google Analytics pour comprendre l'usage du site. Aucun cookie de mesure
+          n'est déposé sans votre accord. <a href="/confidentialite/">En savoir plus</a>.
+        </p>
+      </div>
+      <div class="consent__actions">
+        <button class="btn btn--outline" type="button" data-consent="declined">Refuser</button>
+        <button class="btn btn--primary" type="button" data-consent="accepted">Accepter</button>
+      </div>
+    </div>
+  </div>
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

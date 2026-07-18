@@ -1,1479 +1,696 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Primary Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <title>BatiPrisme - Gestion des Travaux Modificatifs | Logiciel FTM Construction</title>
-    <meta name="title" content="BatiPrisme - Gestion des Travaux Modificatifs | Logiciel FTM Construction">
-    <meta name="description" content="BatiPrisme est la solution complète pour gérer vos Fiches de Travaux Modificatifs (FTM). Centralisez, validez et maîtrisez vos budgets de construction. Essai gratuit disponible.">
-    <meta name="keywords" content="FTM, Fiches Travaux Modificatifs, gestion construction, logiciel BTP, MOA, MOE, suivi chantier, budget construction, travaux modificatifs">
-    <meta name="author" content="BatiPrisme">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="French">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://batiprisme.fr/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://batiprisme.fr/">
-    <meta property="og:title" content="BatiPrisme - Gestion des Travaux Modificatifs | Logiciel FTM Construction">
-    <meta property="og:description" content="La solution complète pour gérer vos Fiches de Travaux Modificatifs. Centralisez, validez et maîtrisez vos budgets de construction.">
-    <meta property="og:image" content="https://batiprisme.fr/images/og-image.png">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:site_name" content="BatiPrisme">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://batiprisme.fr/">
-    <meta property="twitter:title" content="BatiPrisme - Gestion des Travaux Modificatifs">
-    <meta property="twitter:description" content="La solution complète pour gérer vos Fiches de Travaux Modificatifs. Centralisez, validez et maîtrisez vos budgets de construction.">
-    <meta property="twitter:image" content="https://batiprisme.fr/images/og-image.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Structured Data - Organization -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "BatiPrisme",
-        "description": "Solution de gestion des Fiches de Travaux Modificatifs pour le secteur de la construction",
-        "url": "https://batiprisme.fr",
-        "logo": "https://batiprisme.fr/images/logo.png",
-        "sameAs": [
-            "https://www.linkedin.com/company/regis-ftm",
-            "https://twitter.com/regis_ftm"
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "sales",
-            "email": "contact@batiprisme.fr",
-            "availableLanguage": "French"
-        }
-    }
-    </script>
-    
-    <!-- Structured Data - SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "BatiPrisme",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "description": "Logiciel de gestion des Fiches de Travaux Modificatifs (FTM) pour le secteur de la construction. Centralisez, validez et maîtrisez vos budgets.",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR",
-            "description": "Essai gratuit disponible"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "50"
-        }
-    }
-    </script>
-    
-    <!-- Structured Data - FAQ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Qu'est-ce qu'une Fiche de Travaux Modificatifs (FTM) ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Une FTM est un document utilisé dans le secteur de la construction pour formaliser et suivre les modifications apportées à un projet initial. Elle permet de tracer les changements, leurs impacts financiers et les validations nécessaires."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "BatiPrisme est-il adapté aux petites entreprises ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Oui, BatiPrisme propose des formules adaptées à toutes les tailles d'entreprises, des petits artisans aux grands groupes de construction. Notre tarification est flexible et basée sur le nombre de projets."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Combien de temps faut-il pour déployer BatiPrisme ?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "BatiPrisme est une solution SaaS accessible immédiatement. Vous pouvez créer votre compte et commencer à utiliser la plateforme en quelques minutes. Notre équipe propose également un accompagnement personnalisé pour les déploiements complexes."
-                }
-            }
-        ]
-    }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0e1a" />
 
-    <!-- Google Tag Manager (placeholder - replace with your ID) -->
-    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+  <title>BatiPrisme — La plateforme des métiers de la maîtrise d'œuvre</title>
+  <meta name="description" content="BatiPrisme réunit six applications métier du bâtiment derrière une seule connexion : travaux modificatifs, chantier, chiffrage, GPA, carbone et GED." />
+  <meta name="keywords" content="logiciel bâtiment, maîtrise d'œuvre, MOEX, MOA, travaux modificatifs, suivi financier de chantier, situations de travaux, chiffrage, empreinte carbone, GED, garantie de parfait achèvement, BatiPrisme" />
+  <meta name="author" content="BatiPrisme" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.batiprisme.fr/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BatiPrisme" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="BatiPrisme — La plateforme des métiers de la maîtrise d'œuvre" />
+  <meta property="og:description" content="BatiPrisme réunit six applications métier du bâtiment derrière une seule connexion : travaux modificatifs, chantier, chiffrage, GPA, carbone et GED." />
+  <meta property="og:url" content="https://www.batiprisme.fr/" />
+  <meta property="og:image" content="https://www.batiprisme.fr/images/og-image.png" />
+  <meta property="og:image:alt" content="BatiPrisme — La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BatiPrisme — La plateforme des métiers de la maîtrise d'œuvre" />
+  <meta name="twitter:description" content="BatiPrisme réunit six applications métier du bâtiment derrière une seule connexion : travaux modificatifs, chantier, chiffrage, GPA, carbone et GED." />
+  <meta name="twitter:image" content="https://www.batiprisme.fr/images/og-image.png" />
+
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.batiprisme.fr/#organization",
+      "name": "BatiPrisme",
+      "url": "https://www.batiprisme.fr/",
+      "description": "La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.",
+      "logo": "https://www.batiprisme.fr/images/logo.png",
+      "areaServed": "FR",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Naughty Software"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@batiprisme.fr",
+        "availableLanguage": "French"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "BatiPrisme",
+      "operatingSystem": "Web",
+      "applicationCategory": "BusinessApplication",
+      "url": "https://www.batiprisme.fr/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Naughty Software"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": "980",
+        "highPrice": "2500",
+        "offerCount": 2,
+        "description": "Licence annuelle (socle 2 500 € HT/an + modules et licences) ou licence au projet pour Atlas et Muto."
+      },
+      "featureList": [
+        "Muto — Travaux Modificatifs",
+        "Quantify — Chiffrage MOE/AMO",
+        "Empreinte — Carbone rénovation",
+        "Atlas — GED documentaire",
+        "Solvo — Suivi Financier de Chantier",
+        "Cautio — Garantie de Parfait Achèvement"
+      ]
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que BatiPrisme ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BatiPrisme est une plateforme qui réunit six applications métier du bâtiment derrière une seule connexion : travaux modificatifs (Muto), suivi financier de chantier (Solvo), chiffrage (Quantify), garantie de parfait achèvement (Cautio), empreinte carbone (Empreinte) et gestion électronique documentaire (Atlas)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne la facturation ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deux modes coexistent. En licence annuelle, vous prenez le socle BatiPrisme à 2 500 € HT par an — plateforme, comptes, annuaire et un premier module inclus — puis 500 € HT par an par module supplémentaire et 650 € HT par an et par licence nominative. En licence au projet, disponible pour Atlas et Muto, vous activez le module sur une opération pour sa durée, sans socle ni engagement annuel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ai-je besoin de plusieurs comptes ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Une seule connexion donne accès à toutes les applications auxquelles vous avez souscrit, et vos projets comme votre annuaire de sociétés sont partagés d'une application à l'autre."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je n’utiliser qu’une seule application ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Le socle inclut un premier module de votre choix ; vous n'ajoutez les autres que si vous en avez besoin. Pour Atlas et Muto, la licence au projet permet même de se passer entièrement du socle annuel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pour qui est conçu BatiPrisme ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour les acteurs de la maîtrise d'œuvre et d'ouvrage : MOEX, MOA, AMO et entreprises qui collaborent sur des projets de construction et de rénovation."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) - uncomment when ready -->
-    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="Accueil BatiPrisme">
+        <span class="brand__mark">
+  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></span>
+        <span class="brand__word"><b>Bati</b>Prisme</span>
+      </a>
 
-    <!-- Skip to main content (accessibility) -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <button class="site-nav__toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="site-nav__menu" id="primary-menu">
+          <li><a href="/#apps">Applications</a></li>
+          <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
+          <li><a href="/#etapes">Comment ça marche</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li class="site-nav__cta"><a href="https://app.batiprisme.fr/login">Se connecter</a></li>
+          <li class="site-nav__cta"><a href="https://app.batiprisme.fr/signup">Essai gratuit</a></li>
+        </ul>
+      </nav>
 
-    <!-- Header -->
-    <header class="header" role="banner">
-        <div class="container header-content">
-            <a href="/" class="logo" aria-label="BatiPrisme - Accueil">
-                <div class="logo-icon" aria-hidden="true">BP</div>
-                <span class="logo-text">BatiPrisme</span>
-            </a>
-            
-            <nav class="nav-desktop" role="navigation" aria-label="Navigation principale">
-                <ul class="nav-links">
-                    <li><a href="#features">Fonctionnalités</a></li>
-                    <li><a href="#benefits">Avantages</a></li>
-                    <li><a href="#how-it-works">Comment ça marche</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact" class="btn btn-outline">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                <span class="hamburger"></span>
-            </button>
+      <div class="site-header__actions">
+        <a class="btn btn--ghost" href="https://app.batiprisme.fr/login">Se connecter</a>
+        <a class="btn btn--primary" href="https://app.batiprisme.fr/signup">Essai gratuit</a>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow eyebrow--light">Plateforme métier du bâtiment</p>
+          <h1 id="hero-title">Une lumière entre,<br /><span class="hl">six métiers en sortent.</span></h1>
+          <p class="hero__lead">
+            Comme un prisme décompose la lumière, BatiPrisme décompose votre projet en six applications
+            connectées — du chiffrage à la garantie de parfait achèvement. Une seule connexion ; vos
+            projets, sociétés et équipes circulent de l'une à l'autre, sans ressaisie.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Créer mon espace</a>
+            <a class="btn btn--ghost-light btn--lg" href="#apps">Découvrir les applications</a>
+          </div>
+          <ul class="hero__points">
+            <li>Six modules, un seul compte</li>
+            <li>Licence annuelle ou au projet</li>
+            <li>Vos projets partagés entre les apps</li>
+          </ul>
         </div>
-        
-        <!-- Mobile Navigation -->
-        <nav class="nav-mobile" role="navigation" aria-label="Navigation mobile" hidden>
-            <ul class="nav-links-mobile">
-                <li><a href="#features">Fonctionnalités</a></li>
-                <li><a href="#benefits">Avantages</a></li>
-                <li><a href="#how-it-works">Comment ça marche</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-             <!--   <li><a href="https://batiprisme.fr/auth/login" class="btn btn-primary btn-full">Connexion</a></li>-->
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="prism-stage">
+          <svg class="prism-svg" viewBox="0 0 640 480" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".28" />
+                <stop offset="1" stop-color="#ffffff" stop-opacity=".04" />
+              </linearGradient>
+              <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#ffffff" stop-opacity="0" />
+                <stop offset="1" stop-color="#ffffff" stop-opacity=".85" />
+              </linearGradient>
+              <radialGradient id="atmoGrad" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#3a3f6b" stop-opacity=".55" />
+                <stop offset="1" stop-color="#3a3f6b" stop-opacity="0" />
+              </radialGradient>
+              <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="4" result="b" />
+                <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+              <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="9" />
+              </filter>
+            </defs>
+
+            <ellipse class="atmo" cx="248" cy="234" rx="200" ry="200" fill="url(#atmoGrad)" />
+
+            <g class="beam-in">
+              <polygon points="0,216 208,227 208,241 0,252" fill="url(#beamGrad)" filter="url(#glow)" />
+              <line x1="0" y1="234" x2="208" y2="234" stroke="#ffffff" stroke-width="2" filter="url(#glow)" />
+            </g>
+
+            <g class="rays">
+            <g class="app" style="--i:0">
+              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="84" stroke="var(--brand-muto-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+              <line class="hit" x1="292" y1="240" x2="470" y2="84" />
+              <circle class="node-dot" cx="470" cy="84" r="5" fill="var(--brand-muto-on-dark)" />
+              <text class="node-label" x="486" y="89" fill="var(--brand-muto-on-dark)">Muto</text>
+            </g>
+            <g class="app" style="--i:1">
+              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="146" stroke="var(--brand-quantify-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+              <line class="hit" x1="292" y1="240" x2="470" y2="146" />
+              <circle class="node-dot" cx="470" cy="146" r="5" fill="var(--brand-quantify-on-dark)" />
+              <text class="node-label" x="486" y="151" fill="var(--brand-quantify-on-dark)">Quantify</text>
+            </g>
+            <g class="app" style="--i:2">
+              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="208" stroke="var(--brand-empreinte-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+              <line class="hit" x1="292" y1="240" x2="470" y2="208" />
+              <circle class="node-dot" cx="470" cy="208" r="5" fill="var(--brand-empreinte-on-dark)" />
+              <text class="node-label" x="486" y="213" fill="var(--brand-empreinte-on-dark)">Empreinte</text>
+            </g>
+            <g class="app" style="--i:3">
+              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="270" stroke="var(--brand-atlas-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+              <line class="hit" x1="292" y1="240" x2="470" y2="270" />
+              <circle class="node-dot" cx="470" cy="270" r="5" fill="var(--brand-atlas-on-dark)" />
+              <text class="node-label" x="486" y="275" fill="var(--brand-atlas-on-dark)">Atlas</text>
+            </g>
+            <g class="app" style="--i:4">
+              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="332" stroke="var(--brand-solvo-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+              <line class="hit" x1="292" y1="240" x2="470" y2="332" />
+              <circle class="node-dot" cx="470" cy="332" r="5" fill="var(--brand-solvo-on-dark)" />
+              <text class="node-label" x="486" y="337" fill="var(--brand-solvo-on-dark)">Solvo</text>
+            </g>
+            <g class="app" style="--i:5">
+              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="394" stroke="var(--brand-cautio-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+              <line class="hit" x1="292" y1="240" x2="470" y2="394" />
+              <circle class="node-dot" cx="470" cy="394" r="5" fill="var(--brand-cautio-on-dark)" />
+              <text class="node-label" x="486" y="399" fill="var(--brand-cautio-on-dark)">Cautio</text>
+            </g>
+            </g>
+
+            <g class="prism">
+              <polygon points="248,146 328,322 168,322" fill="url(#glassGrad)" stroke="rgba(255,255,255,.6)" stroke-width="1.5" stroke-linejoin="round" filter="url(#softGlow)" />
+              <polygon points="248,146 328,322 168,322" fill="url(#glassGrad)" stroke="rgba(255,255,255,.85)" stroke-width="1.5" stroke-linejoin="round" />
+              <line x1="248" y1="146" x2="168" y2="322" stroke="#ffffff" stroke-width="1.5" opacity=".7" />
+            </g>
+          </svg>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="spectrum-strip" aria-label="Les six applications de la plateforme">
+      <div class="container spectrum-strip__inner">
+        <p class="spectrum-strip__lead">Une plateforme, <strong>six métiers</strong>, un seul socle.</p>
+        <ul class="spectrum-legend">
+          <li style="--c:var(--brand-muto)"><a href="/logiciel-travaux-modificatifs/">Muto</a></li>
+          <li style="--c:var(--brand-quantify)"><a href="/chiffrage-moe-amo/">Quantify</a></li>
+          <li style="--c:var(--brand-empreinte)"><a href="/empreinte-carbone-renovation/">Empreinte</a></li>
+          <li style="--c:var(--brand-atlas)"><a href="/ged-documentaire-batiment/">Atlas</a></li>
+          <li style="--c:var(--brand-solvo)"><a href="/suivi-financier-chantier/">Solvo</a></li>
+          <li style="--c:var(--brand-cautio)"><a href="/garantie-parfait-achevement/">Cautio</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="apps" id="apps" aria-labelledby="apps-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Les applications</p>
+          <h2 id="apps-title">Un outil pour chaque étape du projet</h2>
+          <p class="section-head__lead">De la conception au parfait achèvement, chaque métier dispose de son application dédiée — toutes reliées par le même socle de projets et de sociétés.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card" style="--accent:var(--brand-muto)">
+            <div class="card__head">
+              <span class="card__icon">FTM</span>
+              <span class="badge badge--ok">Disponible</span>
+            </div>
+            <h3 class="card__title"><a href="/logiciel-travaux-modificatifs/">Muto — Travaux Modificatifs</a></h3>
+            <p class="card__desc">Gérez le workflow complet des Fiches de Travaux Modificatifs : demande, chiffrage et validation entre MOEX, MOA et entreprises, avec une traçabilité complète.</p>
+            <ul class="card__list">
+              <li>Cycle demande → chiffrage → validation</li>
+              <li>Portail entreprise pour les devis</li>
+              <li>Signature et historique des révisions</li>
             </ul>
-        </nav>
-    </header>
-
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <!-- Beta Badge -->
-                    <div class="beta-badge" role="status">
-                        <span class="pulse"></span>
-                        <span>Programme Early Adopter - Places limitées</span>
-                    </div>
-                    
-                    <h1 id="hero-title">Gérez vos Travaux Modificatifs en toute sérénité</h1>
-                    <p class="hero-subtitle">
-                        La solution complète pour la gestion financière et le suivi des FTM de vos projets de construction.
-                        <strong>Centralisez, validez et maîtrisez vos budgets.</strong>
-                    </p>
-                    
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary btn-lg">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-                            </svg>
-                            Rejoindre le programme Beta
-                        </a>
-                        <a href="#features" class="btn btn-ghost btn-lg">
-                            Découvrir les fonctionnalités
-                        </a>
-                    </div>
-                    
-                    <div class="hero-trust">
-                        <p>Rejoint par des professionnels de la construction</p>
-                        <div class="trust-logos">
-                            <span class="trust-item">Maitre d'ouvrage</span>
-                            <span class="trust-item">Maitre d'oeuvre</span>
-                            <span class="trust-item">Entreprise</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-image">
-                    <div class="image-wrapper">
-                        <img 
-                            src="https://firebasestorage.googleapis.com/v0/b/regis-7c1be.firebasestorage.app/o/portal%2Fmain.png?alt=media&token=dd4e32e6-e019-4728-a7b2-efe684d06eff" 
-                            alt="Tableau de bord BatiPrisme montrant le suivi des projets et budgets"
-                            
-                            loading="eager"
-                        >
-                    </div>
-                </div>
+            <a class="card__link" href="/logiciel-travaux-modificatifs/">Découvrir Muto<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" style="--accent:var(--brand-quantify)">
+            <div class="card__head">
+              <span class="card__icon">QTY</span>
+              <span class="badge badge--soon">Bientôt disponible</span>
             </div>
-            
-            <!-- Decorative elements -->
-            <div class="hero-bg-gradient" aria-hidden="true"></div>
-        </section>
-
-        <!-- Social Proof / Stats -->
-        <section class="stats" aria-label="Statistiques">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
-                        <span class="stat-label">Visibilité sur vos budgets</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="50">0</span><span class="stat-suffix">%</span>
-                        <span class="stat-label">Temps gagné sur les validations</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="0">0</span>
-                        <span class="stat-label">Dépassement budgétaire imprévu</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="24">0</span><span class="stat-suffix">/7</span>
-                        <span class="stat-label">Accès à vos données</span>
-                    </div>
-                </div>
+            <h3 class="card__title"><a href="/chiffrage-moe-amo/">Quantify — Chiffrage MOE/AMO</a></h3>
+            <p class="card__desc">Estimez et chiffrez vos opérations de rénovation : matrice de chiffrage, zones, aléas et remises, versions et résumés — le successeur moderne de Quanto.</p>
+            <ul class="card__list">
+              <li>Matrice de chiffrage détaillée</li>
+              <li>Zones, aléas, révisions générales</li>
+              <li>Versions et synthèse d'opération</li>
+            </ul>
+            <a class="card__link" href="/chiffrage-moe-amo/">Découvrir Quantify<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" style="--accent:var(--brand-empreinte)">
+            <div class="card__head">
+              <span class="card__icon">CO₂</span>
+              <span class="badge badge--warn">Bêta</span>
             </div>
-        </section>
-
-        <!-- Problem / Pain Points --
-        <section class="pain-points" aria-labelledby="pain-title">
-            <div class="container">
-                <header class="section-header">
-                    <span class="section-tag">Le problème</span>
-                    <h2 id="pain-title">Les défis de la gestion des FTM</h2>
-                    <p class="section-subtitle">
-                        Sans outil adapté, la gestion des travaux modificatifs devient un cauchemar administratif
-                    </p>
-                </header>
-                
-                <div class="pain-grid">
-                    <article class="pain-card">
-                        <div class="pain-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14,2 14,8 20,8"/>
-                                <line x1="9" y1="15" x2="15" y2="15"/>
-                            </svg>
-                        </div>
-                        <h3>Documents éparpillés</h3>
-                        <p>Emails, Excel, papiers... Les informations sont dispersées et difficiles à retrouver.</p>
-                    </article>
-                    
-                    <article class="pain-card">
-                        <div class="pain-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
-                        </div>
-                        <h3>Validations interminables</h3>
-                        <p>Les circuits de validation manuels ralentissent les projets et créent des goulots d'étranglement.</p>
-                    </article>
-                    
-                    <article class="pain-card">
-                        <div class="pain-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <line x1="12" y1="1" x2="12" y2="23"/>
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                            </svg>
-                        </div>
-                        <h3>Budget incontrôlé</h3>
-                        <p>Sans suivi en temps réel, les dépassements budgétaires sont découverts trop tard.</p>
-                    </article>
-                    
-                    <article class="pain-card">
-                        <div class="pain-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
-                        <h3>Communication difficile</h3>
-                        <p>MOA, MOE et entreprises peinent à collaborer efficacement sur les modifications.</p>
-                    </article>
-                </div>
+            <h3 class="card__title"><a href="/empreinte-carbone-renovation/">Empreinte — Carbone rénovation</a></h3>
+            <p class="card__desc">Mesurez l'empreinte carbone de vos rénovations : import de devis, matching automatique FDES/INIES, enrichissement par IA et rapport CO₂ prêt à partager.</p>
+            <ul class="card__list">
+              <li>Import de devis et matching FDES/INIES</li>
+              <li>Enrichissement assisté par IA</li>
+              <li>Rapport d'empreinte carbone</li>
+            </ul>
+            <a class="card__link" href="/empreinte-carbone-renovation/">Découvrir Empreinte<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" style="--accent:var(--brand-atlas)">
+            <div class="card__head">
+              <span class="card__icon">GED</span>
+              <span class="badge badge--warn">Bêta</span>
             </div>
-        </section>
-    -->
-        <!-- Features Section -->
-        <section id="features" class="features" aria-labelledby="features-title">
-            <div class="container">
-                <header class="section-header">
-                    <span class="section-tag">Fonctionnalités</span>
-                    <h2 id="features-title">Tout ce dont vous avez besoin</h2>
-                    <p class="section-subtitle">
-                        Une plateforme complète conçue par et pour les professionnels de la construction
-                    </p>
-                </header>
-                
-                <!-- Feature 01: Suivi Financier -->
-                <div class="workflow-container" data-aos="fade-up" data-aos-delay="0">
-                    <div class="workflow-visualization">
-                        <div class="workflow-central-placeholder">
-                            <div class="placeholder-content-large">
-                                <img 
-                                    src="./images/suivibudgetaire.png" 
-                                    alt="Vue détaillée du suivi financier d'un projet"
-                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
-                                    loading="lazy"
-                                >
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-features">
-                        <div class="feature-number-badge">01</div>
-                        <div class="workflow-feature-item-large">
-                            <div class="workflow-feature-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                    <line x1="3" y1="9" x2="21" y2="9"/>
-                                    <line x1="9" y1="21" x2="9" y2="9"/>
-                                </svg>
-                            </div>
-                            <h3>Suivi Financier en Temps Réel</h3>
-                            <p>Visualisez l'évolution de votre budget, les aléas et l'impact de chaque modification. Prenez des décisions éclairées avec des données à jour.</p>
-                            <ul class="feature-benefits-list">
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Vue synthétique du budget</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Suivi des aléas MOA/MOE</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Export PDF/Excel</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature 02: Gestion Centralisée -->
-                <div class="workflow-container workflow-container-reverse" data-aos="fade-up" data-aos-delay="100">
-                    <div class="workflow-features">
-                        <div class="feature-number-badge">02</div>
-                        <div class="workflow-feature-item-large">
-                            <div class="workflow-feature-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                    <polyline points="14,2 14,8 20,8"/>
-                                    <line x1="16" y1="13" x2="8" y2="13"/>
-                                    <line x1="16" y1="17" x2="8" y2="17"/>
-                                </svg>
-                            </div>
-                            <h3>Gestion Centralisée des FTM</h3>
-                            <p>Toutes vos Fiches de Travaux Modificatifs au même endroit. De la création à la validation finale, suivez chaque étape du processus.</p>
-                            <ul class="feature-benefits-list">
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Création et modification simplifiées</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Historique complet des versions</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Recherche et filtres avancés</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-visualization">
-                        <div class="workflow-central-placeholder">
-                            <div class="placeholder-content-large">
-                                <img 
-                                    src="./images/hero.png" 
-                                    alt="Gestion centralisée des FTM"
-                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
-                                    loading="lazy"
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature 03: Collaboration Multi-Acteurs -->
-                <div class="workflow-container" data-aos="fade-up" data-aos-delay="200">
-                    <div class="workflow-visualization">
-                        <div class="workflow-central-placeholder">
-                            <div class="placeholder-content-large">
-                                <img 
-                                src="./images/listentreprise.png" 
-                                alt="Liste des entreprises"
-                                style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
-                                loading="lazy"
-                            >
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-features">
-                        <div class="feature-number-badge">03</div>
-                        <div class="workflow-feature-item-large">
-                            <div class="workflow-feature-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                </svg>
-                            </div>
-                            <h3>Collaboration Multi-Acteurs</h3>
-                            <p>Connectez MOA, MOE et Entreprises sur une plateforme commune. Facilitez les échanges et la communication entre toutes les parties prenantes.</p>
-                            <ul class="feature-benefits-list">
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Gestion des droits par rôle</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Messagerie intégrée</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Partage de documents sécurisé</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature 04: Workflow de Validation -->
-                <div class="workflow-container workflow-container-reverse" data-aos="fade-up" data-aos-delay="300">
-                    <div class="workflow-features">
-                        <div class="feature-number-badge">04</div>
-                        <div class="workflow-feature-item-large">
-                            <div class="workflow-feature-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                    <polyline points="22,4 12,14.01 9,11.01"/>
-                                </svg>
-                            </div>
-                            <h3>Workflow de Validation</h3>
-                            <p>Processus structuré en 9 étapes pour chaque FTM. Assurez-vous que chaque modification est validée selon les règles définies.</p>
-                            <ul class="feature-benefits-list">
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>9 étapes de validation</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Transitions automatiques</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Règles métier personnalisables</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-visualization">
-                        <div class="workflow-central-placeholder">
-                            <div class="placeholder-content-large">
-                                <img 
-                                    src="./images/actions.png" 
-                                    alt="Workflow de validation"
-                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
-                                    loading="lazy"
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature 05: Notifications Automatisées -->
-                <div class="workflow-container" data-aos="fade-up" data-aos-delay="400">
-                    <div class="workflow-visualization">
-                        <div class="workflow-central-placeholder">
-                            <div class="placeholder-content-large">
-                                <img 
-                                    src="images/email.png" 
-                                    alt="Exemple de notification email automatique"
-                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
-                                    loading="lazy"
-                                >
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-features">
-                        <div class="feature-number-badge">05</div>
-                        <div class="workflow-feature-item-large">
-                            <div class="workflow-feature-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-                                </svg>
-                            </div>
-                            <h3>Notifications Automatisées</h3>
-                            <p>Ne perdez plus de temps à relancer. Le système notifie automatiquement les parties prenantes quand une action est requise.</p>
-                            <ul class="feature-benefits-list">
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Demandes de devis automatiques</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Rappels de validations en attente</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Alertes de dépassement budget</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature 06: Gestion des Lots -->
-                <div class="workflow-container workflow-container-reverse" data-aos="fade-up" data-aos-delay="500">
-                    <div class="workflow-features">
-                        <div class="feature-number-badge">06</div>
-                        <div class="workflow-feature-item-large">
-                            <div class="workflow-feature-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                    <line x1="16" y1="2" x2="16" y2="6"/>
-                                    <line x1="8" y1="2" x2="8" y2="6"/>
-                                    <line x1="3" y1="10" x2="21" y2="10"/>
-                                </svg>
-                            </div>
-                            <h3>Espace dédié aux entreprises</h3>
-                            <p>Les entreprises répondant aux FTM peuvent accéder à leur espace dédié pour suivre et modifier leurs devis.</p>
-                            <ul class="feature-benefits-list">
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Suivi des devis</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Modification des devis</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Export PDF/Excel</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-visualization">
-                        <div class="workflow-central-placeholder">
-                            <div class="placeholder-content-large">
-                                <img 
-                                    src="./images/espaceentrprise.png" 
-                                    alt="Vue détaillée du suivi financier d'un projet"
-                                    style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);"
-                                    loading="lazy"
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature 07: Export & Rapports --
-                <div class="workflow-container" data-aos="fade-up" data-aos-delay="600">
-                    <div class="workflow-visualization">
-                        <div class="workflow-central-placeholder">
-                            <div class="placeholder-content-large">
-                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                                    <path d="M21 15l-5-5L5 21"/>
-                                </svg>
-                                <span>Image placeholder</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-features">
-                        <div class="feature-number-badge">07</div>
-                        <div class="workflow-feature-item-large">
-                            <div class="workflow-feature-icon">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                    <polyline points="7,10 12,15 17,10"/>
-                                    <line x1="12" y1="15" x2="12" y2="3"/>
-                                </svg>
-                            </div>
-                            <h3>Export & Rapports</h3>
-                            <p>Générez des rapports Excel et PDF en un clic. Partagez facilement avec vos équipes et gardez une trace documentée de tous vos projets.</p>
-                            <ul class="feature-benefits-list">
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Export Excel et PDF</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Rapports personnalisables</span>
-                                </li>
-                                <li>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="20,6 9,17 4,12"/>
-                                    </svg>
-                                    <span>Génération automatique</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>-->
+            <h3 class="card__title"><a href="/ged-documentaire-batiment/">Atlas — GED documentaire</a></h3>
+            <p class="card__desc">Centralisez la documentation de vos projets : codification paramétrable, dépôt de plans, visas annotés, diffusions avec accusé de réception et journal d'audit.</p>
+            <ul class="card__list">
+              <li>Codification et arborescence paramétrables</li>
+              <li>Visas annotés et cycles de validation</li>
+              <li>Diffusions avec accusé de réception</li>
+            </ul>
+            <a class="card__link" href="/ged-documentaire-batiment/">Découvrir Atlas<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" style="--accent:var(--brand-solvo)">
+            <div class="card__head">
+              <span class="card__icon">SFC</span>
+              <span class="badge badge--ok">Disponible</span>
             </div>
-        </section>
-
-        <!-- FTM Workflow Section -->
-        <section class="ftm-workflow" aria-labelledby="workflow-title">
-            <div class="container">
-                <header class="section-header">
-                    <span class="section-tag">Workflow FTM</span>
-                    <h2 id="workflow-title">Le cycle de vie d'une FTM</h2>
-                    <p class="section-subtitle">
-                        9 étapes structurées pour une validation complète et transparente
-                    </p>
-                </header>
-                
-                <div class="workflow-container">
-                    <div class="workflow-visualization">
-                        <!-- Central workflow image placeholder --
-                        <div class="workflow-central-placeholder">
-                            <div class="placeholder-content-large">
-                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12,6 12,12 16,14"/>
-                                </svg>
-                                <span>Workflow Diagram</span>
-                                <p>Visualisation du processus de validation</p>
-                            </div>
-                        </div>-->
-                        
-                        <!-- Workflow Steps Cards -->
-                        <div class="workflow-steps-grid">
-                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="0">
-                                <div class="workflow-step-icon workflow-icon-1">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-                                    </svg>
-                                </div>
-                                <h4>1. Création</h4>
-                                <p>Rédaction initiale de la FTM</p>
-                            </div>
-                            
-                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="50">
-                                <div class="workflow-step-icon workflow-icon-2">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                        <polyline points="22,4 12,14.01 9,11.01"/>
-                                    </svg>
-                                </div>
-                                <h4>2. Validation MOE</h4>
-                                <p>Contrôle technique</p>
-                            </div>
-                            
-                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="100">
-                                <div class="workflow-step-icon workflow-icon-3">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M3 3h18v18H3zM21 9H3M21 15H3"/>
-                                    </svg>
-                                </div>
-                                <h4>3. Demande devis</h4>
-                                <p>Envoi aux entreprises</p>
-                            </div>
-                            
-                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="150">
-                                <div class="workflow-step-icon workflow-icon-4">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                        <polyline points="14,2 14,8 20,8"/>
-                                    </svg>
-                                </div>
-                                <h4>4. Réponse entreprise</h4>
-                                <p>Chiffrage des travaux</p>
-                            </div>
-                            
-                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="200">
-                                <div class="workflow-step-icon workflow-icon-5">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 11l3 3L22 4"/>
-                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                                    </svg>
-                                </div>
-                                <h4>5. Analyse MOE</h4>
-                                <p>Vérification du devis</p>
-                            </div>
-                            
-                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="250">
-                                <div class="workflow-step-icon workflow-icon-6">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <path d="M12 6v6l4 2"/>
-                                    </svg>
-                                </div>
-                                <h4>6. Décision MOA</h4>
-                                <p>Acceptation ou refus</p>
-                            </div>
-                            
-                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="300">
-                                <div class="workflow-step-icon workflow-icon-7">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="8.5" cy="7" r="4"/>
-                                        <polyline points="17,11 19,13 23,9"/>
-                                    </svg>
-                                </div>
-                                <h4>7. Accord entreprise</h4>
-                                <p>Confirmation finale</p>
-                            </div>
-                            
-                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="350">
-                                <div class="workflow-step-icon workflow-icon-8">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                                    </svg>
-                                </div>
-                                <h4>8. Réalisation</h4>
-                                <p>Exécution des travaux</p>
-                            </div>
-                            
-                            <div class="workflow-step-card" data-aos="fade-up" data-aos-delay="400">
-                                <div class="workflow-step-icon workflow-icon-9">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
-                                        <polyline points="22,12 18,12 15,21"/>
-                                    </svg>
-                                </div>
-                                <h4>9. Clôture</h4>
-                                <p>Archivage et bilan</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="workflow-features">
-                        <div class="workflow-feature-item" data-aos="fade-left" data-aos-delay="0">
-                            <div class="workflow-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Notifications automatiques</h4>
-                                <p>Alertes à chaque changement d'étape</p>
-                            </div>
-                        </div>
-                        
-                        <div class="workflow-feature-item" data-aos="fade-left" data-aos-delay="100">
-                            <div class="workflow-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Traçabilité complète</h4>
-                                <p>Historique détaillé de chaque action</p>
-                            </div>
-                        </div>
-                        
-                        <div class="workflow-feature-item" data-aos="fade-left" data-aos-delay="200">
-                            <div class="workflow-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Suivi temps réel</h4>
-                                <p>Visualisez l'avancement instantanément</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="card__title"><a href="/suivi-financier-chantier/">Solvo — Suivi Financier de Chantier</a></h3>
+            <p class="card__desc">Pilotez la vie financière de vos marchés : situations de travaux, certificats de paiement, avenants et ordres de service, avec cascade automatique des montants.</p>
+            <ul class="card__list">
+              <li>Situations et certificats de paiement</li>
+              <li>Avenants et ordres de service</li>
+              <li>Cascade des montants automatisée</li>
+            </ul>
+            <a class="card__link" href="/suivi-financier-chantier/">Découvrir Solvo<span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" style="--accent:var(--brand-cautio)">
+            <div class="card__head">
+              <span class="card__icon">GPA</span>
+              <span class="badge badge--soon">Bientôt disponible</span>
             </div>
-        </section>
-
-        <!-- Benefits Section -->
-        <section id="benefits" class="benefits" aria-labelledby="benefits-title">
-            <div class="container">
-                <header class="section-header section-header-light">
-                    <span class="section-tag section-tag-light">Avantages</span>
-                    <h2 id="benefits-title">Pourquoi choisir BatiPrisme ?</h2>
-                    <p class="section-subtitle section-subtitle-light">
-                        Une solution conçue pour simplifier votre quotidien
-                    </p>
-                </header>
-                
-                <div class="benefits-grid">
-                    <article class="benefit-card">
-                        <div class="benefit-number">01</div>
-                        <h3>Gain de temps significatif</h3>
-                        <p>Réduisez de 50% le temps consacré à la gestion administrative des FTM grâce à l'automatisation.</p>
-                    </article>
-                    
-                    <article class="benefit-card">
-                        <div class="benefit-number">02</div>
-                        <h3>Zéro perte d'information</h3>
-                        <p>Toutes les données sont centralisées et historisées. Plus jamais de document perdu ou de version obsolète.</p>
-                    </article>
-                    
-                    <article class="benefit-card">
-                        <div class="benefit-number">03</div>
-                        <h3>Maîtrise budgétaire totale</h3>
-                        <p>Anticipez les dépassements avant qu'ils ne surviennent grâce au suivi en temps réel.</p>
-                    </article>
-                    
-                    <article class="benefit-card">
-                        <div class="benefit-number">04</div>
-                        <h3>Collaboration fluide</h3>
-                        <p>MOA, MOE et entreprises travaillent ensemble sur une plateforme unique et transparente.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- How it Works - Vertical Timeline -->
-        <section id="how-it-works" class="how-it-works" aria-labelledby="how-title">
-            <div class="container-narrow">
-                <header class="section-header">
-                    <span class="section-tag">Processus</span>
-                    <h2 id="how-title">Comment ça marche ?</h2>
-                    <p class="section-subtitle">
-                        Démarrez en quelques minutes, pas en semaines
-                    </p>
-                </header>
-                
-                <div class="timeline-wrapper">
-                    <div class="timeline-line" aria-hidden="true"></div>
-                    
-                    <article class="timeline-step timeline-step-left" data-aos="fade-right" data-aos-delay="0">
-                        <div class="timeline-content">
-                            <div class="timeline-card">
-                                <div class="timeline-step-badge">
-                                    <span class="timeline-step-number">01</span>
-                                </div>
-                                <div class="timeline-card-inner">
-                                    <div class="timeline-icon timeline-icon-primary">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                            <circle cx="12" cy="7" r="4"/>
-                                        </svg>
-                                    </div>
-                                    <h3>Créez votre espace</h3>
-                                    <p>Inscrivez-vous et configurez votre équipe en quelques clics. Aucune installation requise, tout se fait en ligne.</p>
-                                    <div class="timeline-tags">
-                                        <span class="timeline-tag">2 min</span>
-                                        <span class="timeline-tag">Simple</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="timeline-image-placeholder">
-                                <div class="placeholder-content">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                        <circle cx="8.5" cy="8.5" r="1.5"/>
-                                        <path d="M21 15l-5-5L5 21"/>
-                                    </svg>
-                                    <span>Image placeholder</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                    </article>
-                    
-                    <article class="timeline-step timeline-step-right" data-aos="fade-left" data-aos-delay="100">
-                        <div class="timeline-content">
-                            <div class="timeline-image-placeholder">
-                                <div class="placeholder-content">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                        <circle cx="8.5" cy="8.5" r="1.5"/>
-                                        <path d="M21 15l-5-5L5 21"/>
-                                    </svg>
-                                    <span>Image placeholder</span>
-                                </div>
-                            </div>
-                            <div class="timeline-card">
-                                <div class="timeline-step-badge">
-                                    <span class="timeline-step-number">02</span>
-                                </div>
-                                <div class="timeline-card-inner">
-                                    <div class="timeline-icon timeline-icon-success">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                            <polyline points="9,22 9,12 15,12 15,22"/>
-                                        </svg>
-                                    </div>
-                                    <h3>Ajoutez vos projets</h3>
-                                    <p>Créez vos projets de construction avec tous les détails : équipe, budget initial, lots et entreprises attributaires.</p>
-                                    <div class="timeline-tags">
-                                        <span class="timeline-tag">Rapide</span>
-                                        <span class="timeline-tag">Flexible</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                    </article>
-                    
-                    <article class="timeline-step timeline-step-left" data-aos="fade-right" data-aos-delay="200">
-                        <div class="timeline-content">
-                            <div class="timeline-card">
-                                <div class="timeline-step-badge">
-                                    <span class="timeline-step-number">03</span>
-                                </div>
-                                <div class="timeline-card-inner">
-                                    <div class="timeline-icon timeline-icon-warning">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                            <circle cx="9" cy="7" r="4"/>
-                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                        </svg>
-                                    </div>
-                                    <h3>Invitez vos partenaires</h3>
-                                    <p>Collaborez avec toutes les parties prenantes : MOA, MOE, entreprises. Chacun reçoit un accès personnalisé selon son rôle et ses responsabilités.</p>
-                                    <div class="timeline-tags">
-                                        <span class="timeline-tag">Multi-acteurs</span>
-                                        <span class="timeline-tag">Sécurisé</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="timeline-image-placeholder">
-                                <div class="placeholder-content">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                        <circle cx="8.5" cy="8.5" r="1.5"/>
-                                        <path d="M21 15l-5-5L5 21"/>
-                                    </svg>
-                                    <span>Image placeholder</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                    </article>
-                    
-                    <article class="timeline-step timeline-step-right" data-aos="fade-left" data-aos-delay="300">
-                        <div class="timeline-content">
-                            <div class="timeline-image-placeholder">
-                                <div class="placeholder-content">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                        <circle cx="8.5" cy="8.5" r="1.5"/>
-                                        <path d="M21 15l-5-5L5 21"/>
-                                    </svg>
-                                    <span>Image placeholder</span>
-                                </div>
-                            </div>
-                            <div class="timeline-card">
-                                <div class="timeline-step-badge">
-                                    <span class="timeline-step-number">04</span>
-                                </div>
-                                <div class="timeline-card-inner">
-                                    <div class="timeline-icon timeline-icon-info">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                            <polyline points="14,2 14,8 20,8"/>
-                                            <line x1="16" y1="13" x2="8" y2="13"/>
-                                            <line x1="16" y1="17" x2="8" y2="17"/>
-                                        </svg>
-                                    </div>
-                                    <h3>Créez vos FTM</h3>
-                                    <p>Initiez vos Fiches de Travaux Modificatifs directement dans l'application. Le workflow de validation se met automatiquement en route.</p>
-                                    <div class="timeline-tags">
-                                        <span class="timeline-tag">9 étapes</span>
-                                        <span class="timeline-tag">Automatisé</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                    </article>
-                    
-                    <article class="timeline-step timeline-step-left" data-aos="fade-right" data-aos-delay="400">
-                        <div class="timeline-content">
-                            <div class="timeline-card">
-                                <div class="timeline-step-badge">
-                                    <span class="timeline-step-number">05</span>
-                                </div>
-                                <div class="timeline-card-inner">
-                                    <div class="timeline-icon timeline-icon-accent">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
-                                        </svg>
-                                    </div>
-                                    <h3>Suivez en temps réel</h3>
-                                    <p>Visualisez l'évolution de vos budgets, suivez les validations en cours et anticipez les dépassements. Tableaux de bord intuitifs et rapports détaillés.</p>
-                                    <div class="timeline-tags">
-                                        <span class="timeline-tag">Dashboard</span>
-                                        <span class="timeline-tag">Analytics</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="timeline-image-placeholder">
-                                <div class="placeholder-content">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                        <circle cx="8.5" cy="8.5" r="1.5"/>
-                                        <path d="M21 15l-5-5L5 21"/>
-                                    </svg>
-                                    <span>Image placeholder</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                    </article>
-                    
-                    <article class="timeline-step timeline-step-center timeline-step-final" data-aos="fade-up" data-aos-delay="500">
-                        <div class="timeline-content" style="z-index:5">
-                            <div class="timeline-card timeline-card-highlight">
-                                <div class="timeline-success-icon">
-                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                        <polyline points="22,4 12,14.01 9,11.01"/>
-                                    </svg>
-                                </div>
-                                <h3>Pilotez avec sérénité</h3>
-                                <p>Tous vos travaux modificatifs sont maîtrisés, vos budgets sous contrôle, et votre équipe alignée. Concentrez-vous sur l'essentiel : faire avancer vos projets.</p>
-                                <div class="timeline-cta">
-                                    <a href="#contact" class="btn btn-primary btn-lg">
-                                        <span>Commencer maintenant</span>
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <line x1="5" y1="12" x2="19" y2="12"/>
-                                            <polyline points="12,5 19,12 12,19"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="timeline-dot timeline-dot-final" aria-hidden="true"></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials / Early Adopter CTA -->
-        <section class="early-adopter" aria-labelledby="early-title">
-            <div class="container">
-                <div class="early-adopter-content">
-                    <div class="early-adopter-text">
-                        <span class="section-tag section-tag-light">Programme Beta</span>
-                        <h2 id="early-title">Devenez Early Adopter</h2>
-                        <p>
-                            Nous recherchons des professionnels de la construction pour nous aider à perfectionner BatiPrisme.
-                            En tant qu'Early Adopter, vous bénéficierez :
-                        </p>
-                        <ul class="early-benefits">
-                            <li>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                    <polyline points="22,4 12,14.01 9,11.01"/>
-                                </svg>
-                                <span>Accès gratuit pendant la phase beta</span>
-                            </li>
-                            <li>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                    <polyline points="22,4 12,14.01 9,11.01"/>
-                                </svg>
-                                <span>Tarif préférentiel à vie</span>
-                            </li>
-                            <li>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                    <polyline points="22,4 12,14.01 9,11.01"/>
-                                </svg>
-                                <span>Accompagnement personnalisé</span>
-                            </li>
-                            <li>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                    <polyline points="22,4 12,14.01 9,11.01"/>
-                                </svg>
-                                <span>Influence sur les futures fonctionnalités</span>
-                            </li>
-                        </ul>
-                        <a href="#contact" class="btn btn-primary btn-lg">
-                            Candidater maintenant
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <line x1="5" y1="12" x2="19" y2="12"/>
-                                <polyline points="12,5 19,12 12,19"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="early-adopter-image">
-                        <img 
-                            src="https://firebasestorage.googleapis.com/v0/b/regis-7c1be.firebasestorage.app/o/portal%2FFTM.png?alt=media&token=18c31fcb-98ef-432d-8b95-9658bada18ca" 
-                            alt="Interface de gestion des FTM dans BatiPrisme"
-                            width="500"
-                            height="350"
-                            loading="lazy"
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="faq" aria-labelledby="faq-title">
-            <div class="container">
-                <header class="section-header">
-                    <span class="section-tag">FAQ</span>
-                    <h2 id="faq-title">Questions fréquentes</h2>
-                </header>
-                
-                <div class="faq-list">
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Qu'est-ce qu'une Fiche de Travaux Modificatifs (FTM) ?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <polyline points="6,9 12,15 18,9"/>
-                            </svg>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Une FTM est un document utilisé dans le secteur de la construction pour formaliser et suivre les modifications apportées à un projet initial. Elle permet de tracer les changements, leurs impacts financiers et les validations nécessaires par les différentes parties prenantes (MOA, MOE, Entreprises).</p>
-                        </div>
-                    </details>
-                    
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>BatiPrisme est-il adapté aux petites entreprises ?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <polyline points="6,9 12,15 18,9"/>
-                            </svg>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Oui, BatiPrisme propose des formules adaptées à toutes les tailles d'entreprises, des petits artisans aux grands groupes de construction. Notre tarification est flexible et basée sur le nombre de projets actifs.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Combien de temps faut-il pour déployer BatiPrisme ?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <polyline points="6,9 12,15 18,9"/>
-                            </svg>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>BatiPrisme est une solution SaaS accessible immédiatement. Vous pouvez créer votre compte et commencer à utiliser la plateforme en quelques minutes. Aucune installation locale n'est nécessaire. Notre équipe propose également un accompagnement personnalisé pour les déploiements complexes.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Mes données sont-elles sécurisées ?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <polyline points="6,9 12,15 18,9"/>
-                            </svg>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Absolument. Vos données sont hébergées sur des serveurs sécurisés en Europe, conformes au RGPD. Nous utilisons un chiffrement SSL/TLS pour toutes les communications et effectuons des sauvegardes quotidiennes. Vos données restent votre propriété et ne sont jamais partagées.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Puis-je importer mes projets existants ?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <polyline points="6,9 12,15 18,9"/>
-                            </svg>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Oui, BatiPrisme permet d'importer vos projets existants via fichiers Excel. Nous proposons également un service d'accompagnement pour vous aider à migrer vos données historiques.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Quand BatiPrisme sera-t-il disponible ?</span>
-                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <polyline points="6,9 12,15 18,9"/>
-                            </svg>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>BatiPrisme est actuellement en phase beta privée. Nous acceptons de nouveaux Early Adopters sur candidature. Inscrivez-vous dès maintenant pour rejoindre le programme et bénéficier d'avantages exclusifs.</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact" aria-labelledby="contact-title">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <span class="section-tag section-tag-light">Contact</span>
-                        <h2 id="contact-title">Prêt à optimiser vos projets ?</h2>
-                        <p>
-                            Rejoignez notre programme Early Adopter et soyez parmi les premiers à bénéficier de BatiPrisme.
-                            Remplissez le formulaire et notre équipe vous contactera sous 24h.
-                        </p>
-                        
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
-                                <a href="mailto:contact@batiprisme.fr">contact@batiprisme.fr</a>
-                            </div>
-                            <div class="contact-item">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                    <circle cx="12" cy="10" r="3"/>
-                                </svg>
-                                <span>Paris, France</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Formspree: replace YOUR_FORM_ID with your Formspree form ID from https://formspree.io -->
-                    <form class="contact-form" id="contact-form" action="#" method="POST" novalidate data-formspree-id="xeeljjpe">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Nom complet <span class="required">*</span></label>
-                                <input 
-                                    type="text" 
-                                    id="name" 
-                                    name="name" 
-                                    required 
-                                    autocomplete="name"
-                                    placeholder="Jean Dupont"
-                                >
-                                <span class="error-message" aria-live="polite"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Entreprise <span class="required">*</span></label>
-                                <input 
-                                    type="text" 
-                                    id="company" 
-                                    name="company" 
-                                    required
-                                    placeholder="Votre entreprise"
-                                >
-                                <span class="error-message" aria-live="polite"></span>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email professionnel <span class="required">*</span></label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email" 
-                                    required 
-                                    autocomplete="email"
-                                    placeholder="jean.dupont@entreprise.com"
-                                >
-                                <span class="error-message" aria-live="polite"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Téléphone</label>
-                                <input 
-                                    type="tel" 
-                                    id="phone" 
-                                    name="phone"
-                                    autocomplete="tel"
-                                    placeholder="+33 6 12 34 56 78"
-                                >
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="role">Votre rôle</label>
-                            <select id="role" name="role">
-                                <option value="">Sélectionnez votre rôle</option>
-                                <option value="moa">Maître d'Ouvrage (MOA)</option>
-                                <option value="moe">Maître d'Œuvre (MOE)</option>
-                                <option value="entreprise">Entreprise</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message <span class="required">*</span></label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                rows="4" 
-                                required
-                                placeholder="Parlez-nous de vos besoins et de vos projets..."
-                            ></textarea>
-                            <span class="error-message" aria-live="polite"></span>
-                        </div>
-                        
-                        <div class="form-group form-checkbox">
-                            <input type="checkbox" id="privacy" name="privacy" required>
-                            <label for="privacy">
-                                J'accepte la <a href="/privacy.html" target="_blank">politique de confidentialité</a> <span class="required">*</span>
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-lg btn-full">
-                            <span class="btn-text">Envoyer ma candidature</span>
-                            <span class="btn-loading" hidden>
-                                <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                    <circle cx="12" cy="12" r="10" stroke-opacity="0.25"/>
-                                    <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/>
-                                </svg>
-                                Envoi en cours...
-                            </span>
-                        </button>
-                        
-                        <div class="form-success" hidden>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22,4 12,14.01 9,11.01"/>
-                            </svg>
-                            <p>Merci pour votre candidature ! Notre équipe vous contactera sous 24h.</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="logo" aria-label="BatiPrisme - Accueil">
-                        <div class="logo-icon" aria-hidden="true">BP</div>
-                        <span class="logo-text">BatiPrisme</span>
-                    </a>
-                    <p>La solution de gestion des Travaux Modificatifs pour le secteur de la construction.</p>
-                   <!--<div class="footer-social">
-                        <a href="https://linkedin.com/company/regis-ftm" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                <rect x="2" y="9" width="4" height="12"/>
-                                <circle cx="4" cy="4" r="2"/>
-                            </svg>
-                        </a>
-                        <a href="https://twitter.com/regis_ftm" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-                            </svg>
-                        </a>
-                    </div>--> 
-                </div>
-                
-                <div class="footer-links-group">
-                    <h4>Produit</h4>
-                    <ul>
-                        <li><a href="#features">Fonctionnalités</a></li>
-                        <li><a href="#benefits">Avantages</a></li>
-                        <li><a href="#how-it-works">Comment ça marche</a></li>
-                        <!-- <li><a href="/pricing.html">Tarifs</a></li> -->
-                    </ul>
-                </div>
-                
-                <div class="footer-links-group">
-                    <h4>Ressources</h4>
-                    <ul>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="https://batiprisme.fr/auth/login">Connexion</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links-group">
-                    <h4>Légal</h4>
-                    <ul>
-                        <li><a href="/mentions-legales.html">Mentions légales</a></li>
-                        <li><a href="/privacy.html">Politique de confidentialité</a></li>
-                        <li><a href="/cgu.html">CGU</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2026</span> BatiPrisme. Tous droits réservés.</p>
-                <p class="footer-made">Conçu avec ❤️ à Paris pour les professionnels de la construction</p>
-            </div>
+            <h3 class="card__title"><a href="/garantie-parfait-achevement/">Cautio — Garantie de Parfait Achèvement</a></h3>
+            <p class="card__desc">Maîtrisez l'année de garantie : levée des réserves, désordres signalés, relances des entreprises et procès-verbaux, jusqu'à la clôture de la GPA.</p>
+            <ul class="card__list">
+              <li>Levée des réserves et désordres</li>
+              <li>Relances automatisées des entreprises</li>
+              <li>Procès-verbaux et suivi de clôture</li>
+            </ul>
+            <a class="card__link" href="/garantie-parfait-achevement/">Découvrir Cautio<span aria-hidden="true">→</span></a>
+          </article>
         </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="js/main.js" defer></script>
-    
-    <!-- Google Analytics (placeholder - replace with your ID) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXX');
-    </script> -->
+        <div class="apps__hub">
+          <div class="apps__hub-mark" aria-hidden="true">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></div>
+          <div class="apps__hub-copy">
+            <h3>Le Portail BatiPrisme, votre point d'entrée unique</h3>
+            <p>Une seule connexion, un lanceur d'applications, la gestion de vos équipes et une facturation centralisée. Vos projets et votre annuaire de sociétés circulent d'une application à l'autre sans ressaisie.</p>
+          </div>
+          <a class="btn btn--primary" href="https://app.batiprisme.fr/signup">Ouvrir mon espace</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="why" id="pourquoi" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Pourquoi BatiPrisme</p>
+          <h2 id="why-title">Une plateforme, pas une pile de logiciels</h2>
+        </header>
+
+        <div class="features">
+          <article class="feature" style="--c:var(--brand-muto)">
+            <div class="feature__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><circle cx="18" cy="6" r="2.4"/><path d="M8.2 7.1 15.8 16.9M8.4 6H15.6"/></svg></div>
+            <h3>Vos données circulent</h3>
+            <p>Projets, sociétés, contacts et équipes sont partagés entre toutes les applications. Créez un projet une fois, retrouvez-le partout.</p>
+          </article>
+          <article class="feature" style="--c:var(--brand-quantify)">
+            <div class="feature__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="4"/><path d="M11.4 11.4 20 20M16.5 16.5l2-2M14 14l2-2"/></svg></div>
+            <h3>Une seule connexion</h3>
+            <p>Un identifiant unique et sécurisé ouvre l'ensemble de la plateforme. Fini les dizaines de mots de passe et de comptes isolés.</p>
+          </article>
+          <article class="feature" style="--c:var(--brand-empreinte)">
+            <div class="feature__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="2.6"/><circle cx="16.5" cy="9.5" r="2.1"/><path d="M4.5 18v-1a4.5 4.5 0 0 1 9 0v1M14.5 18v-1a4 4 0 0 1 5-3.9"/></svg></div>
+            <h3>Pensée pour la collaboration</h3>
+            <p>MOEX, MOA, AMO et entreprises travaillent sur les mêmes affaires, chacun avec les droits adaptés à son rôle.</p>
+          </article>
+          <article class="feature" style="--c:var(--brand-atlas)">
+            <div class="feature__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.4"/><rect x="13" y="13" width="7" height="7" rx="1.4"/><path d="M13 6.5h4.2A1.8 1.8 0 0 1 19 8.3v2.2M11 17.5H6.8A1.8 1.8 0 0 1 5 15.7v-2.2"/></svg></div>
+            <h3>Modulaire</h3>
+            <p>Le socle inclut un premier module ; vous ajoutez les suivants au rythme de vos besoins, sans forfait rigide.</p>
+          </article>
+          <article class="feature" style="--c:var(--brand-solvo)">
+            <div class="feature__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M4 20h16"/><rect x="9" y="13" width="6" height="7"/><path d="M8 9.5h.01M12 9.5h.01M16 9.5h.01"/></svg></div>
+            <h3>Adaptée au bâtiment français</h3>
+            <p>FTM, situations de travaux, certificats de paiement, GPA, FDES/INIES : les concepts métier sont natifs, pas bricolés.</p>
+          </article>
+          <article class="feature" style="--c:var(--brand-cautio)">
+            <div class="feature__icon"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3 5 13h6l-1 8 8-10h-6z"/></svg></div>
+            <h3>Rapide à adopter</h3>
+            <p>Interface claire et cohérente d'une application à l'autre. Vos équipes s'y retrouvent immédiatement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="etapes" aria-labelledby="steps-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Comment ça marche</p>
+          <h2 id="steps-title">Opérationnel en trois étapes</h2>
+        </header>
+        <ol class="steps__list">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3>Créez votre compte</h3>
+            <p>Inscrivez-vous en quelques minutes et invitez votre équipe. Une seule connexion pour toute la plateforme.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3>Ajoutez votre projet</h3>
+            <p>Renseignez une affaire une seule fois : elle devient disponible dans toutes les applications que vous activez.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3>Activez vos modules</h3>
+            <p>Chiffrage, FTM, suivi de chantier, GPA, carbone, GED — lancez ce dont vous avez besoin, quand vous en avez besoin.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="pricing-teaser" id="tarifs" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Principe de facturation</p>
+          <h2 id="pricing-title">Deux modes au choix</h2>
+          <p class="section-head__lead">Deux façons d'accéder aux modules BatiPrisme — selon que l'usage est structurel ou lié à une opération.</p>
+        </header>
+
+        <div class="modes">
+          <article class="mode">
+            <header class="mode__head">
+              <span class="mode__n" aria-hidden="true">1</span>
+              <div>
+                <h3 class="mode__name">Licence annuelle</h3>
+                <p class="mode__kicker">Usage structurel, récurrent</p>
+              </div>
+            </header>
+            <dl class="mode__facts">
+              <div><dt>Modules concernés</dt><dd>Les six modules</dd></div>
+              <div><dt>Facturation</dt><dd>Socle + modules + licences</dd></div>
+              <div><dt>Rythme / engagement</dt><dd>Annuel, reconductible</dd></div>
+            </dl>
+          </article>
+          <article class="mode mode--featured">
+            <header class="mode__head">
+              <span class="mode__n" aria-hidden="true">2</span>
+              <div>
+                <h3 class="mode__name">Licence au projet</h3>
+                <p class="mode__kicker">Usage ponctuel, lié à une opération</p>
+              </div>
+            </header>
+            <dl class="mode__facts">
+              <div><dt>Modules concernés</dt><dd>Atlas et Muto uniquement</dd></div>
+              <div><dt>Facturation</dt><dd>Forfait par projet</dd></div>
+              <div><dt>Rythme / engagement</dt><dd>Le temps du projet, sans engagement</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <p class="pricing-teaser__cta">
+          <a class="btn btn--outline btn--lg" href="/tarifs/">Voir le détail des tarifs</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section-head">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2 id="faq-title">Tout ce qu'il faut savoir</h2>
+        </header>
+
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Qu'est-ce que BatiPrisme ?</summary>
+            <p>BatiPrisme est une plateforme qui réunit six applications métier du bâtiment derrière une seule connexion : travaux modificatifs (Muto), suivi financier de chantier (Solvo), chiffrage (Quantify), garantie de parfait achèvement (Cautio), empreinte carbone (Empreinte) et gestion électronique documentaire (Atlas).</p>
+          </details>
+          <details class="faq__item">
+            <summary>Comment fonctionne la facturation ?</summary>
+            <p>Deux modes coexistent. En licence annuelle, vous prenez le socle BatiPrisme à 2 500 € HT par an — plateforme, comptes, annuaire et un premier module inclus — puis 500 € HT par an par module supplémentaire et 650 € HT par an et par licence nominative. En licence au projet, disponible pour Atlas et Muto, vous activez le module sur une opération pour sa durée, sans socle ni engagement annuel.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Ai-je besoin de plusieurs comptes ?</summary>
+            <p>Non. Une seule connexion donne accès à toutes les applications auxquelles vous avez souscrit, et vos projets comme votre annuaire de sociétés sont partagés d'une application à l'autre.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Puis-je n’utiliser qu’une seule application ?</summary>
+            <p>Oui. Le socle inclut un premier module de votre choix ; vous n'ajoutez les autres que si vous en avez besoin. Pour Atlas et Muto, la licence au projet permet même de se passer entièrement du socle annuel.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Pour qui est conçu BatiPrisme ?</summary>
+            <p>Pour les acteurs de la maîtrise d'œuvre et d'ouvrage : MOEX, MOA, AMO et entreprises qui collaborent sur des projets de construction et de rénovation.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Parlons de votre organisation</h2>
+          <p class="contact__lead">Décrivez votre besoin en deux lignes — nous répondons sous un jour ouvré.</p>
+          <ul class="contact__meta">
+            <li><svg class="contact__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><circle cx="18" cy="6" r="2.4"/><path d="M8.2 7.1 15.8 16.9M8.4 6H15.6"/></svg><a href="mailto:contact@batiprisme.fr">contact@batiprisme.fr</a></li>
+            <li><svg class="contact__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M4 20h16"/><rect x="9" y="13" width="6" height="7"/><path d="M8 9.5h.01M12 9.5h.01M16 9.5h.01"/></svg>Paris, France</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-formspree-id="xeeljjpe" novalidate>
+          <input type="hidden" name="_subject" value="Plateforme BatiPrisme" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Nom <span aria-hidden="true">*</span></label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err" />
+              <span class="error-message" id="cf-name-err" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-company">Société <span aria-hidden="true">*</span></label>
+              <input id="cf-company" name="company" type="text" autocomplete="organization" required aria-describedby="cf-company-err" />
+              <span class="error-message" id="cf-company-err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-email">Email <span aria-hidden="true">*</span></label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-err" />
+              <span class="error-message" id="cf-email-err" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Téléphone</label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="cf-phone-err" />
+              <span class="error-message" id="cf-phone-err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-role">Vous êtes</label>
+            <select id="cf-role" name="role">
+              <option value="moa">Maîtrise d'ouvrage (MOA)</option>
+              <option value="moe">Maîtrise d'œuvre (MOE / MOEX)</option>
+              <option value="amo">Assistance à maîtrise d'ouvrage (AMO)</option>
+              <option value="entreprise">Entreprise</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Votre besoin <span aria-hidden="true">*</span></label>
+            <textarea id="cf-message" name="message" rows="4" required aria-describedby="cf-message-err"></textarea>
+            <span class="error-message" id="cf-message-err" aria-live="polite"></span>
+          </div>
+          <div class="form-checkbox">
+            <input id="cf-privacy" name="privacy" type="checkbox" required aria-describedby="cf-privacy-err" />
+            <label for="cf-privacy">J'accepte que mes données soient utilisées pour répondre à ma demande, conformément à la <a href="/confidentialite/">politique de confidentialité</a>.</label>
+            <span class="error-message" id="cf-privacy-err" aria-live="polite"></span>
+          </div>
+          <button class="btn btn--primary btn--lg btn--block" type="submit">
+            <span class="btn-text">Envoyer</span>
+            <span class="btn-loading" hidden><span class="spinner" aria-hidden="true"></span>Envoi…</span>
+          </button>
+          <p class="form-success" role="status" hidden>Message envoyé. Nous revenons vers vous sous un jour ouvré.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta-final" aria-labelledby="cta-title">
+      <div class="container cta-final__inner">
+        <h2 id="cta-title">Prêt à réunir vos outils métier ?</h2>
+        <p>Créez votre espace BatiPrisme et connectez tous vos projets en quelques minutes.</p>
+        <div class="cta-final__actions">
+          <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Créer mon espace</a>
+          <a class="btn btn--ghost-light btn--lg" href="https://app.batiprisme.fr/login">J'ai déjà un compte</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="/" aria-label="Accueil BatiPrisme">
+          <span class="brand__mark">
+  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
+    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
+  </svg></span>
+          <span class="brand__word"><b>Bati</b>Prisme</span>
+        </a>
+        <p>La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.</p>
+        <p class="site-footer__publisher">Édité par Naughty Software.</p>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Applications">
+        <h2>Applications</h2>
+        <ul>
+          <li><a href="/logiciel-travaux-modificatifs/">Muto — Travaux Modificatifs</a></li>
+          <li><a href="/chiffrage-moe-amo/">Quantify — Chiffrage MOE/AMO</a></li>
+          <li><a href="/empreinte-carbone-renovation/">Empreinte — Carbone rénovation</a></li>
+          <li><a href="/ged-documentaire-batiment/">Atlas — GED documentaire</a></li>
+          <li><a href="/suivi-financier-chantier/">Solvo — Suivi Financier de Chantier</a></li>
+          <li><a href="/garantie-parfait-achevement/">Cautio — Garantie de Parfait Achèvement</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Plateforme">
+        <h2>Plateforme</h2>
+        <ul>
+          <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
+          <li><a href="/#etapes">Comment ça marche</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Compte et contact">
+        <h2>Commencer</h2>
+        <ul>
+          <li><a href="https://app.batiprisme.fr/login">Se connecter</a></li>
+          <li><a href="https://app.batiprisme.fr/signup">Créer un compte</a></li>
+          <li><a href="mailto:contact@batiprisme.fr">Nous contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>© 2026 Naughty Software. BatiPrisme est une marque de Naughty Software.</p>
+      <p class="site-footer__legal"><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/cgu/">CGU</a></p>
+    </div>
+  </footer>
+  
+  <div class="consent" id="consent-banner" role="dialog" aria-labelledby="consent-title" aria-describedby="consent-text" hidden>
+    <div class="consent__inner">
+      <div>
+        <p class="consent__title" id="consent-title">Cookies de mesure d'audience</p>
+        <p class="consent__text" id="consent-text">
+          Nous utilisons Google Analytics pour comprendre l'usage du site. Aucun cookie de mesure
+          n'est déposé sans votre accord. <a href="/confidentialite/">En savoir plus</a>.
+        </p>
+      </div>
+      <div class="consent__actions">
+        <button class="btn btn--outline" type="button" data-consent="declined">Refuser</button>
+        <button class="btn btn--primary" type="button" data-consent="accepted">Accepter</button>
+      </div>
+    </div>
+  </div>
+  <script src="/assets/main.js" defer></script>
 </body>
 </html>
