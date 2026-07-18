@@ -160,7 +160,7 @@
     <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
     <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
   </svg></span>
-        <span class="brand__word"><b>Bati</b>Prisme</span>
+        <span class="logo brand__word" style="--ini:var(--brand-batiprisme); --ini-dark:var(--brand-batiprisme-on-dark)"><span class="logo__ini">B</span><span class="logo__rest">atiPrisme</span></span>
       </a>
 
       <nav class="site-nav" aria-label="Navigation principale">
@@ -189,32 +189,48 @@
     <section class="app-hero" aria-labelledby="hero-title">
       <div class="app-hero__glow" aria-hidden="true"></div>
       <div class="container app-hero__inner">
-        <nav class="breadcrumb" aria-label="Fil d'ariane">
-          <ol>
-            <li><a href="/">BatiPrisme</a></li>
-            <li aria-current="page">Empreinte</li>
-          </ol>
-        </nav>
+        <div class="app-hero__copy">
+          <nav class="breadcrumb" aria-label="Fil d'ariane">
+            <ol>
+              <li><a href="/">BatiPrisme</a></li>
+              <li aria-current="page">Empreinte</li>
+            </ol>
+          </nav>
 
-        <p class="app-hero__eyebrow">
-          <span class="app-hero__abbr">CO₂</span>
-          <span class="app-hero__domain">Carbone rénovation</span>
-          <span class="badge badge--warn badge--on-dark">Bêta</span>
-        </p>
+          <p class="app-hero__eyebrow">
+            <span class="app-mark app-mark--lg" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)" aria-hidden="true">E</span>
+            <span class="app-hero__ident">
+              <span class="logo logo--on-dark" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)"><span class="logo__ini">E</span><span class="logo__rest">mpreinte</span></span>
+              <span class="app-hero__domain">Carbone rénovation</span>
+            </span>
+            <span class="badge badge--warn badge--on-dark">Bêta</span>
+          </p>
 
-        <h1 id="hero-title">L'empreinte carbone d'une rénovation, à partir de vos devis</h1>
-        <p class="app-hero__lead">Importez les devis de l'opération. Empreinte rapproche chaque ligne des fiches FDES/INIES, complète ce qui manque avec l'aide de l'IA, et produit un bilan CO₂ que vous pouvez remettre au maître d'ouvrage.</p>
+          <h1 id="hero-title">L'empreinte carbone d'une rénovation, à partir de vos devis</h1>
+          <p class="app-hero__lead">Importez les devis de l'opération. Empreinte rapproche chaque ligne des fiches FDES/INIES, complète ce qui manque avec l'aide de l'IA, et produit un bilan CO₂ que vous pouvez remettre au maître d'ouvrage.</p>
 
-        <div class="app-hero__cta">
-          <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Démarrer gratuitement</a>
-          <a class="btn btn--ghost-light btn--lg" href="#fonctionnalites">Voir les fonctionnalités</a>
+          <div class="app-hero__cta">
+            <a class="btn btn--light btn--lg" href="https://app.batiprisme.fr/signup">Démarrer gratuitement</a>
+            <a class="btn btn--ghost-light btn--lg" href="#fonctionnalites">Voir les fonctionnalités</a>
+          </div>
+
+          <ul class="app-hero__points">
+            <li>Import de devis</li>
+            <li>Matching FDES/INIES</li>
+            <li>Rapport CO₂ partageable</li>
+          </ul>
         </div>
 
-        <ul class="app-hero__points">
-          <li>Import de devis</li>
-          <li>Matching FDES/INIES</li>
-          <li>Rapport CO₂ partageable</li>
-        </ul>
+        <div class="app-hero__visual">
+        <figure class="app-shot app-shot--empty">
+          <div class="app-shot__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="app-shot__placeholder">
+            <span class="app-shot__mono" aria-hidden="true">E</span>
+            <p class="app-shot__domain">Carbone rénovation</p>
+            <p class="app-shot__note">Capture d’écran à venir</p>
+          </div>
+        </figure>
+      </div>
       </div>
     </section>
 
@@ -403,9 +419,9 @@
         <ul class="platform__apps">
           <li class="platform-app" style="--accent:var(--brand-muto)">
             <a href="/logiciel-travaux-modificatifs/">
-              <span class="platform-app__icon">FTM</span>
+              <span class="app-mark" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)" aria-hidden="true">M</span>
               <span class="platform-app__body">
-                <span class="platform-app__name">Muto</span>
+                <span class="platform-app__name"><span class="logo" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)"><span class="logo__ini">M</span><span class="logo__rest">uto</span></span></span>
                 <span class="platform-app__domain">Travaux Modificatifs</span>
               </span>
               <span class="badge badge--ok">Disponible</span>
@@ -413,9 +429,9 @@
           </li>
           <li class="platform-app" style="--accent:var(--brand-quantify)">
             <a href="/chiffrage-moe-amo/">
-              <span class="platform-app__icon">QTY</span>
+              <span class="app-mark" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)" aria-hidden="true">Q</span>
               <span class="platform-app__body">
-                <span class="platform-app__name">Quantify</span>
+                <span class="platform-app__name"><span class="logo" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)"><span class="logo__ini">Q</span><span class="logo__rest">uantify</span></span></span>
                 <span class="platform-app__domain">Chiffrage MOE/AMO</span>
               </span>
               <span class="badge badge--soon">Bientôt disponible</span>
@@ -423,9 +439,9 @@
           </li>
           <li class="platform-app" style="--accent:var(--brand-atlas)">
             <a href="/ged-documentaire-batiment/">
-              <span class="platform-app__icon">GED</span>
+              <span class="app-mark" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)" aria-hidden="true">A</span>
               <span class="platform-app__body">
-                <span class="platform-app__name">Atlas</span>
+                <span class="platform-app__name"><span class="logo" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)"><span class="logo__ini">A</span><span class="logo__rest">tlas</span></span></span>
                 <span class="platform-app__domain">GED documentaire</span>
               </span>
               <span class="badge badge--warn">Bêta</span>
@@ -433,9 +449,9 @@
           </li>
           <li class="platform-app" style="--accent:var(--brand-solvo)">
             <a href="/suivi-financier-chantier/">
-              <span class="platform-app__icon">SFC</span>
+              <span class="app-mark" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)" aria-hidden="true">S</span>
               <span class="platform-app__body">
-                <span class="platform-app__name">Solvo</span>
+                <span class="platform-app__name"><span class="logo" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)"><span class="logo__ini">S</span><span class="logo__rest">olvo</span></span></span>
                 <span class="platform-app__domain">Suivi Financier de Chantier</span>
               </span>
               <span class="badge badge--ok">Disponible</span>
@@ -443,9 +459,9 @@
           </li>
           <li class="platform-app" style="--accent:var(--brand-cautio)">
             <a href="/garantie-parfait-achevement/">
-              <span class="platform-app__icon">GPA</span>
+              <span class="app-mark" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)" aria-hidden="true">C</span>
               <span class="platform-app__body">
-                <span class="platform-app__name">Cautio</span>
+                <span class="platform-app__name"><span class="logo" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)"><span class="logo__ini">C</span><span class="logo__rest">autio</span></span></span>
                 <span class="platform-app__domain">Garantie de Parfait Achèvement</span>
               </span>
               <span class="badge badge--soon">Bientôt disponible</span>
@@ -566,13 +582,13 @@
     <div class="container site-footer__inner">
       <div class="site-footer__brand">
         <a class="brand brand--footer" href="/" aria-label="Accueil BatiPrisme">
-          <span class="brand__mark">
+        <span class="brand__mark">
   <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
     <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
     <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
   </svg></span>
-          <span class="brand__word"><b>Bati</b>Prisme</span>
-        </a>
+        <span class="logo brand__word" style="--ini:var(--brand-batiprisme); --ini-dark:var(--brand-batiprisme-on-dark)"><span class="logo__ini">B</span><span class="logo__rest">atiPrisme</span></span>
+      </a>
         <p>La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.</p>
         <p class="site-footer__publisher">Édité par Naughty Software.</p>
       </div>
@@ -580,12 +596,12 @@
       <nav class="site-footer__col" aria-label="Applications">
         <h2>Applications</h2>
         <ul>
-          <li><a href="/logiciel-travaux-modificatifs/">Muto — Travaux Modificatifs</a></li>
-          <li><a href="/chiffrage-moe-amo/">Quantify — Chiffrage MOE/AMO</a></li>
-          <li><a href="/empreinte-carbone-renovation/">Empreinte — Carbone rénovation</a></li>
-          <li><a href="/ged-documentaire-batiment/">Atlas — GED documentaire</a></li>
-          <li><a href="/suivi-financier-chantier/">Solvo — Suivi Financier de Chantier</a></li>
-          <li><a href="/garantie-parfait-achevement/">Cautio — Garantie de Parfait Achèvement</a></li>
+          <li><a href="/logiciel-travaux-modificatifs/"><span class="logo" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)"><span class="logo__ini">M</span><span class="logo__rest">uto</span></span> <span class="site-footer__domain">Travaux Modificatifs</span></a></li>
+          <li><a href="/chiffrage-moe-amo/"><span class="logo" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)"><span class="logo__ini">Q</span><span class="logo__rest">uantify</span></span> <span class="site-footer__domain">Chiffrage MOE/AMO</span></a></li>
+          <li><a href="/empreinte-carbone-renovation/"><span class="logo" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)"><span class="logo__ini">E</span><span class="logo__rest">mpreinte</span></span> <span class="site-footer__domain">Carbone rénovation</span></a></li>
+          <li><a href="/ged-documentaire-batiment/"><span class="logo" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)"><span class="logo__ini">A</span><span class="logo__rest">tlas</span></span> <span class="site-footer__domain">GED documentaire</span></a></li>
+          <li><a href="/suivi-financier-chantier/"><span class="logo" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)"><span class="logo__ini">S</span><span class="logo__rest">olvo</span></span> <span class="site-footer__domain">Suivi Financier de Chantier</span></a></li>
+          <li><a href="/garantie-parfait-achevement/"><span class="logo" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)"><span class="logo__ini">C</span><span class="logo__rest">autio</span></span> <span class="site-footer__domain">Garantie de Parfait Achèvement</span></a></li>
         </ul>
       </nav>
 
