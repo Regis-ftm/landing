@@ -236,6 +236,139 @@
   });
 })();
 
+/* ===== 35-pricing-calculator.js ===== */
+/* =========================================================================
+   Simulateur de tarif — page /tarifs/.
+   Les montants viennent de `#calc-data`, un JSON dérivé de data/pricing.json
+   au build (cf. calculatorSection() dans templates/pricing.mjs) : aucun prix
+   n'est recopié à la main ici. No-op sur toute autre page (garde en tête).
+   ========================================================================= */
+(function () {
+  'use strict';
+
+  var root = document.querySelector('.calc');
+  var dataEl = document.getElementById('calc-data');
+  if (!root || !dataEl) return;
+
+  var cfg = JSON.parse(dataEl.textContent);
+  var modeBtns = Array.prototype.slice.call(root.querySelectorAll('[data-calc-mode]'));
+  var onlyFields = Array.prototype.slice.call(root.querySelectorAll('[data-calc-only]'));
+  var moduleInputs = Array.prototype.slice.call(root.querySelectorAll('.calc__module input'));
+  var usersInput = document.getElementById('calc-users');
+  var projectsInput = document.getElementById('calc-projects');
+  var totalEl = document.getElementById('calc-total');
+  var periodEl = document.getElementById('calc-period');
+  var breakdownEl = document.getElementById('calc-breakdown');
+  var noteEl = document.getElementById('calc-note');
+
+  var mode = 'annuelle';
+  var fmt = function (n) {
+    return new Intl.NumberFormat('fr-FR').format(Math.round(n));
+  };
+  var addLine = function (label, amount) {
+    var li = document.createElement('li');
+    var label_ = document.createElement('span');
+    label_.textContent = label;
+    var amount_ = document.createElement('b');
+    amount_.textContent = fmt(amount) + ' €';
+    li.appendChild(label_);
+    li.appendChild(amount_);
+    breakdownEl.appendChild(li);
+  };
+  var selectedModules = function () {
+    return moduleInputs.filter(function (i) {
+      return i.checked && !i.disabled;
+    });
+  };
+
+  function setMode(next) {
+    mode = next;
+    modeBtns.forEach(function (b) {
+      var active = b.dataset.calcMode === mode;
+      b.classList.toggle('is-active', active);
+      b.setAttribute('aria-selected', String(active));
+    });
+    onlyFields.forEach(function (f) {
+      f.hidden = f.dataset.calcOnly !== mode;
+    });
+    periodEl.textContent = mode === 'annuelle' ? '/ an' : '/ an (au projet)';
+    moduleInputs.forEach(function (input) {
+      var eligible = mode === 'annuelle' || input.dataset.projectEligible === 'true';
+      var item = input.closest('.calc__module');
+      item.classList.toggle('is-disabled', !eligible);
+      input.disabled = !eligible;
+      if (!eligible) input.checked = false;
+    });
+    render();
+  }
+
+  function render() {
+    breakdownEl.innerHTML = '';
+    var modules = selectedModules();
+    var total = 0;
+
+    if (mode === 'annuelle') {
+      var users = Math.max(1, parseInt(usersInput.value, 10) || 1);
+      if (modules.length) {
+        total += cfg.socle;
+        addLine('Socle BatiPrisme + 1er module', cfg.socle);
+
+        var extra = modules.length - 1;
+        if (extra > 0) {
+          var extraAmount = extra * cfg.moduleFee;
+          total += extraAmount;
+          addLine(extra + ' module' + (extra > 1 ? 's' : '') + ' complémentaire' + (extra > 1 ? 's' : ''), extraAmount);
+        }
+
+        var hasAtlas = modules.some(function (i) { return i.dataset.key === 'atlas'; });
+        if (hasAtlas) {
+          var atlasAmount = cfg.atlasMonthly * 12;
+          total += atlasAmount;
+          addLine('Atlas · stockage (0 à 10 Go)', atlasAmount);
+        }
+
+        var usersAmount = users * cfg.userFee;
+        total += usersAmount;
+        addLine(users + ' licence' + (users > 1 ? 's' : '') + ' utilisateur', usersAmount);
+
+        noteEl.textContent = hasAtlas
+          ? 'Estimation hors taxes. Le socle de stockage Atlas couvre 0 à 10 Go ; au-delà, un supplément de 25 € HT s’applique par tranche de 5 Go.'
+          : 'Estimation hors taxes.';
+      } else {
+        noteEl.textContent = 'Sélectionnez au moins un module pour estimer le tarif.';
+      }
+    } else {
+      var projects = Math.max(1, parseInt(projectsInput.value, 10) || 1);
+      modules.forEach(function (input) {
+        var price = cfg.projectPrices[input.dataset.key];
+        if (!price) return;
+        var amount = price * projects;
+        total += amount;
+        addLine(input.dataset.name + ' · ' + projects + ' projet' + (projects > 1 ? 's' : ''), amount);
+      });
+      noteEl.textContent = modules.length
+        ? 'Estimation hors taxes, sans socle ni engagement annuel — activation à la durée du projet.'
+        : 'Sélectionnez Muto et/ou Atlas pour estimer le tarif au projet.';
+    }
+
+    totalEl.textContent = fmt(total);
+  }
+
+  modeBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      setMode(b.dataset.calcMode);
+    });
+  });
+  [usersInput, projectsInput].forEach(function (input) {
+    if (input) input.addEventListener('input', render);
+  });
+  moduleInputs.forEach(function (input) {
+    input.addEventListener('change', render);
+  });
+
+  setMode('annuelle');
+})();
+
 /* ===== 40-contact-form.js ===== */
 /* =========================================================================
    Formulaire de contact — validation côté client puis envoi à Formspree.

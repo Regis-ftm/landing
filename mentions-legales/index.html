@@ -86,11 +86,7 @@
   <header class="site-header site-header--solid" id="top">
     <div class="container site-header__inner">
       <a class="brand" href="/" aria-label="Accueil BatiPrisme">
-        <span class="brand__mark">
-  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
-    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
-    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
-  </svg></span>
+        <span class="brand__mark"><span aria-hidden="true">BP</span></span>
         <span class="logo brand__word" style="--ini:var(--brand-batiprisme); --ini-dark:var(--brand-batiprisme-on-dark)"><span class="logo__ini">B</span><span class="logo__rest">atiPrisme</span></span>
       </a>
 
@@ -99,7 +95,55 @@
           <span></span><span></span><span></span>
         </button>
         <ul class="site-nav__menu" id="primary-menu">
-          <li><a href="/#apps">Applications</a></li>
+          <li class="site-nav__mega">
+            <a href="/#apps" aria-haspopup="true">Applications</a>
+            <div class="mega">
+        <div class="mega__grid">
+          <a class="mega__item" href="/logiciel-travaux-modificatifs/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)" aria-hidden="true">M</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)"><span class="logo__ini">M</span><span class="logo__rest">uto</span></span></span>
+                <span class="mega__desc">Gérez le workflow complet des Fiches de Travaux Modificatifs : demande, chiffrage et validation entre MOEX, MOA et entreprises, avec une traçabilité complète.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/chiffrage-moe-amo/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)" aria-hidden="true">Q</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)"><span class="logo__ini">Q</span><span class="logo__rest">uantify</span></span></span>
+                <span class="mega__desc">Estimez et chiffrez vos opérations de rénovation : matrice de chiffrage, zones, aléas et remises, versions et résumés — le successeur moderne de Quanto.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/empreinte-carbone-renovation/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)" aria-hidden="true">E</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)"><span class="logo__ini">E</span><span class="logo__rest">mpreinte</span></span></span>
+                <span class="mega__desc">Mesurez l'empreinte carbone de vos rénovations : import de devis, matching automatique FDES/INIES, enrichissement par IA et rapport CO₂ prêt à partager.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/ged-documentaire-batiment/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)" aria-hidden="true">A</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)"><span class="logo__ini">A</span><span class="logo__rest">tlas</span></span></span>
+                <span class="mega__desc">Centralisez la documentation de vos projets : codification paramétrable, dépôt de plans, visas annotés, diffusions avec accusé de réception et journal d'audit.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/suivi-financier-chantier/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)" aria-hidden="true">S</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)"><span class="logo__ini">S</span><span class="logo__rest">olvo</span></span></span>
+                <span class="mega__desc">Pilotez la vie financière de vos marchés : situations de travaux, certificats de paiement, avenants et ordres de service, avec cascade automatique des montants.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/garantie-parfait-achevement/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)" aria-hidden="true">C</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)"><span class="logo__ini">C</span><span class="logo__rest">autio</span></span></span>
+                <span class="mega__desc">Maîtrisez l'année de garantie : levée des réserves, désordres signalés, relances des entreprises et procès-verbaux, jusqu'à la clôture de la GPA.</span>
+              </span>
+            </a>
+        </div>
+      </div>
+          </li>
           <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
           <li><a href="/#etapes">Comment ça marche</a></li>
           <li><a href="/tarifs/">Tarifs</a></li>
@@ -167,11 +211,7 @@
     <div class="container site-footer__inner">
       <div class="site-footer__brand">
         <a class="brand brand--footer" href="/" aria-label="Accueil BatiPrisme">
-        <span class="brand__mark">
-  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
-    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
-    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
-  </svg></span>
+        <span class="brand__mark"><span aria-hidden="true">BP</span></span>
         <span class="logo brand__word" style="--ini:var(--brand-batiprisme); --ini-dark:var(--brand-batiprisme-on-dark)"><span class="logo__ini">B</span><span class="logo__rest">atiPrisme</span></span>
       </a>
         <p>La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.</p>

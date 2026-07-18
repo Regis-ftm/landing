@@ -141,11 +141,7 @@
   <header class="site-header" id="top">
     <div class="container site-header__inner">
       <a class="brand" href="/" aria-label="Accueil BatiPrisme">
-        <span class="brand__mark">
-  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
-    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
-    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
-  </svg></span>
+        <span class="brand__mark"><span aria-hidden="true">BP</span></span>
         <span class="logo brand__word" style="--ini:var(--brand-batiprisme); --ini-dark:var(--brand-batiprisme-on-dark)"><span class="logo__ini">B</span><span class="logo__rest">atiPrisme</span></span>
       </a>
 
@@ -154,7 +150,55 @@
           <span></span><span></span><span></span>
         </button>
         <ul class="site-nav__menu" id="primary-menu">
-          <li><a href="/#apps">Applications</a></li>
+          <li class="site-nav__mega">
+            <a href="/#apps" aria-haspopup="true">Applications</a>
+            <div class="mega">
+        <div class="mega__grid">
+          <a class="mega__item" href="/logiciel-travaux-modificatifs/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)" aria-hidden="true">M</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)"><span class="logo__ini">M</span><span class="logo__rest">uto</span></span></span>
+                <span class="mega__desc">Gérez le workflow complet des Fiches de Travaux Modificatifs : demande, chiffrage et validation entre MOEX, MOA et entreprises, avec une traçabilité complète.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/chiffrage-moe-amo/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)" aria-hidden="true">Q</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)"><span class="logo__ini">Q</span><span class="logo__rest">uantify</span></span></span>
+                <span class="mega__desc">Estimez et chiffrez vos opérations de rénovation : matrice de chiffrage, zones, aléas et remises, versions et résumés — le successeur moderne de Quanto.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/empreinte-carbone-renovation/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)" aria-hidden="true">E</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)"><span class="logo__ini">E</span><span class="logo__rest">mpreinte</span></span></span>
+                <span class="mega__desc">Mesurez l'empreinte carbone de vos rénovations : import de devis, matching automatique FDES/INIES, enrichissement par IA et rapport CO₂ prêt à partager.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/ged-documentaire-batiment/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)" aria-hidden="true">A</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)"><span class="logo__ini">A</span><span class="logo__rest">tlas</span></span></span>
+                <span class="mega__desc">Centralisez la documentation de vos projets : codification paramétrable, dépôt de plans, visas annotés, diffusions avec accusé de réception et journal d'audit.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/suivi-financier-chantier/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)" aria-hidden="true">S</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)"><span class="logo__ini">S</span><span class="logo__rest">olvo</span></span></span>
+                <span class="mega__desc">Pilotez la vie financière de vos marchés : situations de travaux, certificats de paiement, avenants et ordres de service, avec cascade automatique des montants.</span>
+              </span>
+            </a>
+          <a class="mega__item" href="/garantie-parfait-achevement/">
+              <span class="app-mark app-mark--lg" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)" aria-hidden="true">C</span>
+              <span class="mega__body">
+                <span class="mega__title"><span class="logo" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)"><span class="logo__ini">C</span><span class="logo__rest">autio</span></span></span>
+                <span class="mega__desc">Maîtrisez l'année de garantie : levée des réserves, désordres signalés, relances des entreprises et procès-verbaux, jusqu'à la clôture de la GPA.</span>
+              </span>
+            </a>
+        </div>
+      </div>
+          </li>
           <li><a href="/#pourquoi">Pourquoi BatiPrisme</a></li>
           <li><a href="/#etapes">Comment ça marche</a></li>
           <li><a href="/tarifs/">Tarifs</a></li>
@@ -194,84 +238,154 @@
           </ul>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
-          <div class="prism-stage">
-          <svg class="prism-svg" viewBox="0 0 640 480" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+        <div class="hero__visual">
+          <div class="prism-stage" aria-hidden="true">
+            <svg class="light" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <defs>
-              <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#ffffff" stop-opacity=".28" />
-                <stop offset="1" stop-color="#ffffff" stop-opacity=".04" />
-              </linearGradient>
-              <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+              <linearGradient id="beamGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="46" y2="0">
                 <stop offset="0" stop-color="#ffffff" stop-opacity="0" />
-                <stop offset="1" stop-color="#ffffff" stop-opacity=".85" />
+                <stop offset="1" stop-color="#ffffff" stop-opacity=".9" />
               </linearGradient>
-              <radialGradient id="atmoGrad" cx="0.5" cy="0.5" r="0.5">
-                <stop offset="0" stop-color="#3a3f6b" stop-opacity=".55" />
-                <stop offset="1" stop-color="#3a3f6b" stop-opacity="0" />
-              </radialGradient>
-              <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-                <feGaussianBlur stdDeviation="4" result="b" />
-                <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
-              </filter>
-              <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
-                <feGaussianBlur stdDeviation="9" />
-              </filter>
             </defs>
-
-            <ellipse class="atmo" cx="248" cy="234" rx="200" ry="200" fill="url(#atmoGrad)" />
-
-            <g class="beam-in">
-              <polygon points="0,216 208,227 208,241 0,252" fill="url(#beamGrad)" filter="url(#glow)" />
-              <line x1="0" y1="234" x2="208" y2="234" stroke="#ffffff" stroke-width="2" filter="url(#glow)" />
-            </g>
-
+            <line class="beam" pathLength="100" x1="0" y1="50" x2="46" y2="50" stroke="url(#beamGrad)" stroke-width="4" vector-effect="non-scaling-stroke" />
             <g class="rays">
-            <g class="app" style="--i:0">
-              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="84" stroke="var(--brand-muto-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
-              <line class="hit" x1="292" y1="240" x2="470" y2="84" />
-              <circle class="node-dot" cx="470" cy="84" r="5" fill="var(--brand-muto-on-dark)" />
-              <text class="node-label" x="486" y="89" fill="var(--brand-muto-on-dark)">Muto</text>
-            </g>
-            <g class="app" style="--i:1">
-              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="146" stroke="var(--brand-quantify-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
-              <line class="hit" x1="292" y1="240" x2="470" y2="146" />
-              <circle class="node-dot" cx="470" cy="146" r="5" fill="var(--brand-quantify-on-dark)" />
-              <text class="node-label" x="486" y="151" fill="var(--brand-quantify-on-dark)">Quantify</text>
-            </g>
-            <g class="app" style="--i:2">
-              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="208" stroke="var(--brand-empreinte-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
-              <line class="hit" x1="292" y1="240" x2="470" y2="208" />
-              <circle class="node-dot" cx="470" cy="208" r="5" fill="var(--brand-empreinte-on-dark)" />
-              <text class="node-label" x="486" y="213" fill="var(--brand-empreinte-on-dark)">Empreinte</text>
-            </g>
-            <g class="app" style="--i:3">
-              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="270" stroke="var(--brand-atlas-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
-              <line class="hit" x1="292" y1="240" x2="470" y2="270" />
-              <circle class="node-dot" cx="470" cy="270" r="5" fill="var(--brand-atlas-on-dark)" />
-              <text class="node-label" x="486" y="275" fill="var(--brand-atlas-on-dark)">Atlas</text>
-            </g>
-            <g class="app" style="--i:4">
-              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="332" stroke="var(--brand-solvo-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
-              <line class="hit" x1="292" y1="240" x2="470" y2="332" />
-              <circle class="node-dot" cx="470" cy="332" r="5" fill="var(--brand-solvo-on-dark)" />
-              <text class="node-label" x="486" y="337" fill="var(--brand-solvo-on-dark)">Solvo</text>
-            </g>
-            <g class="app" style="--i:5">
-              <line class="ray" pathLength="100" x1="292" y1="240" x2="470" y2="394" stroke="var(--brand-cautio-on-dark)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
-              <line class="hit" x1="292" y1="240" x2="470" y2="394" />
-              <circle class="node-dot" cx="470" cy="394" r="5" fill="var(--brand-cautio-on-dark)" />
-              <text class="node-label" x="486" y="399" fill="var(--brand-cautio-on-dark)">Cautio</text>
-            </g>
-            </g>
-
-            <g class="prism">
-              <polygon points="248,146 328,322 168,322" fill="url(#glassGrad)" stroke="rgba(255,255,255,.6)" stroke-width="1.5" stroke-linejoin="round" filter="url(#softGlow)" />
-              <polygon points="248,146 328,322 168,322" fill="url(#glassGrad)" stroke="rgba(255,255,255,.85)" stroke-width="1.5" stroke-linejoin="round" />
-              <line x1="248" y1="146" x2="168" y2="322" stroke="#ffffff" stroke-width="1.5" opacity=".7" />
+            <line class="ray" style="--i:0; color:var(--brand-muto-on-dark)" pathLength="100" x1="50" y1="50" x2="101" y2="8.33"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+            <line class="ray" style="--i:1; color:var(--brand-quantify-on-dark)" pathLength="100" x1="50" y1="50" x2="101" y2="25.00"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+            <line class="ray" style="--i:2; color:var(--brand-empreinte-on-dark)" pathLength="100" x1="50" y1="50" x2="101" y2="41.67"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+            <line class="ray" style="--i:3; color:var(--brand-atlas-on-dark)" pathLength="100" x1="50" y1="50" x2="101" y2="58.33"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+            <line class="ray" style="--i:4; color:var(--brand-solvo-on-dark)" pathLength="100" x1="50" y1="50" x2="101" y2="75.00"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+            <line class="ray" style="--i:5; color:var(--brand-cautio-on-dark)" pathLength="100" x1="50" y1="50" x2="101" y2="91.67"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke" />
             </g>
           </svg>
-        </div>
+            <div class="pyramid">
+            <span class="pyramid__halo"></span>
+            <div class="pyramid__spin">
+              <span class="pyramid__face" style="--f:0">
+                <svg viewBox="0 0 170 181" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="pyrGlass0" x1="0" y1="0" x2=".65" y2="1">
+                      <stop offset="0" stop-color="#ffffff" stop-opacity=".34" />
+                      <stop offset="1" stop-color="#ffffff" stop-opacity=".05" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Chemin OUVERT (path, pas polygon) : le remplissage se ferme
+                       tout seul, mais l'arête basse n'est pas tracée. Sans ça,
+                       les quatre bases se superposent en un trait horizontal au
+                       pied du prisme, qui le fait lire comme un pictogramme. -->
+                  <path d="M2,179 L85,2 L168,179" fill="url(#pyrGlass0)" stroke="rgba(255,255,255,.34)" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span class="pyramid__face" style="--f:1">
+                <svg viewBox="0 0 170 181" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="pyrGlass1" x1="0" y1="0" x2=".65" y2="1">
+                      <stop offset="0" stop-color="#ffffff" stop-opacity=".34" />
+                      <stop offset="1" stop-color="#ffffff" stop-opacity=".05" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Chemin OUVERT (path, pas polygon) : le remplissage se ferme
+                       tout seul, mais l'arête basse n'est pas tracée. Sans ça,
+                       les quatre bases se superposent en un trait horizontal au
+                       pied du prisme, qui le fait lire comme un pictogramme. -->
+                  <path d="M2,179 L85,2 L168,179" fill="url(#pyrGlass1)" stroke="rgba(255,255,255,.34)" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span class="pyramid__face" style="--f:2">
+                <svg viewBox="0 0 170 181" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="pyrGlass2" x1="0" y1="0" x2=".65" y2="1">
+                      <stop offset="0" stop-color="#ffffff" stop-opacity=".34" />
+                      <stop offset="1" stop-color="#ffffff" stop-opacity=".05" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Chemin OUVERT (path, pas polygon) : le remplissage se ferme
+                       tout seul, mais l'arête basse n'est pas tracée. Sans ça,
+                       les quatre bases se superposent en un trait horizontal au
+                       pied du prisme, qui le fait lire comme un pictogramme. -->
+                  <path d="M2,179 L85,2 L168,179" fill="url(#pyrGlass2)" stroke="rgba(255,255,255,.34)" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span class="pyramid__face" style="--f:3">
+                <svg viewBox="0 0 170 181" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="pyrGlass3" x1="0" y1="0" x2=".65" y2="1">
+                      <stop offset="0" stop-color="#ffffff" stop-opacity=".34" />
+                      <stop offset="1" stop-color="#ffffff" stop-opacity=".05" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Chemin OUVERT (path, pas polygon) : le remplissage se ferme
+                       tout seul, mais l'arête basse n'est pas tracée. Sans ça,
+                       les quatre bases se superposent en un trait horizontal au
+                       pied du prisme, qui le fait lire comme un pictogramme. -->
+                  <path d="M2,179 L85,2 L168,179" fill="url(#pyrGlass3)" stroke="rgba(255,255,255,.34)" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span class="pyramid__base"></span>
+            </div>
+          </div>
+          </div>
+          <ul class="hero-apps" aria-label="Les applications de la plateforme">
+          <li class="hero-app" style="--c:var(--brand-muto-on-dark); --i:0">
+            <a href="/logiciel-travaux-modificatifs/">
+              <span class="app-mark app-mark--on-dark" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)" aria-hidden="true">M</span>
+              <span class="hero-app__body">
+                <span class="hero-app__name"><span class="logo logo--on-dark" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)"><span class="logo__ini">M</span><span class="logo__rest">uto</span></span></span>
+                <span class="hero-app__domain">Travaux Modificatifs</span>
+              </span>
+            </a>
+          </li>
+          <li class="hero-app" style="--c:var(--brand-quantify-on-dark); --i:1">
+            <a href="/chiffrage-moe-amo/">
+              <span class="app-mark app-mark--on-dark" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)" aria-hidden="true">Q</span>
+              <span class="hero-app__body">
+                <span class="hero-app__name"><span class="logo logo--on-dark" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)"><span class="logo__ini">Q</span><span class="logo__rest">uantify</span></span></span>
+                <span class="hero-app__domain">Chiffrage MOE/AMO</span>
+              </span>
+            </a>
+          </li>
+          <li class="hero-app" style="--c:var(--brand-empreinte-on-dark); --i:2">
+            <a href="/empreinte-carbone-renovation/">
+              <span class="app-mark app-mark--on-dark" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)" aria-hidden="true">E</span>
+              <span class="hero-app__body">
+                <span class="hero-app__name"><span class="logo logo--on-dark" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)"><span class="logo__ini">E</span><span class="logo__rest">mpreinte</span></span></span>
+                <span class="hero-app__domain">Carbone rénovation</span>
+              </span>
+            </a>
+          </li>
+          <li class="hero-app" style="--c:var(--brand-atlas-on-dark); --i:3">
+            <a href="/ged-documentaire-batiment/">
+              <span class="app-mark app-mark--on-dark" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)" aria-hidden="true">A</span>
+              <span class="hero-app__body">
+                <span class="hero-app__name"><span class="logo logo--on-dark" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)"><span class="logo__ini">A</span><span class="logo__rest">tlas</span></span></span>
+                <span class="hero-app__domain">GED documentaire</span>
+              </span>
+            </a>
+          </li>
+          <li class="hero-app" style="--c:var(--brand-solvo-on-dark); --i:4">
+            <a href="/suivi-financier-chantier/">
+              <span class="app-mark app-mark--on-dark" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)" aria-hidden="true">S</span>
+              <span class="hero-app__body">
+                <span class="hero-app__name"><span class="logo logo--on-dark" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)"><span class="logo__ini">S</span><span class="logo__rest">olvo</span></span></span>
+                <span class="hero-app__domain">Suivi Financier de Chantier</span>
+              </span>
+            </a>
+          </li>
+          <li class="hero-app" style="--c:var(--brand-cautio-on-dark); --i:5">
+            <a href="/garantie-parfait-achevement/">
+              <span class="app-mark app-mark--on-dark" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)" aria-hidden="true">C</span>
+              <span class="hero-app__body">
+                <span class="hero-app__name"><span class="logo logo--on-dark" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)"><span class="logo__ini">C</span><span class="logo__rest">autio</span></span></span>
+                <span class="hero-app__domain">Garantie de Parfait Achèvement</span>
+              </span>
+            </a>
+          </li>
+        </ul>
         </div>
       </div>
     </section>
@@ -301,10 +415,13 @@
         <div class="cards">
           <article class="card" style="--accent:var(--brand-muto)">
             <div class="card__head">
-              <span class="app-mark app-mark--lg" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)" aria-hidden="true">M</span>
+              <div class="card__ident">
+                <span class="app-mark app-mark--lg" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)" aria-hidden="true">M</span>
+                <h3 class="card__title"><a href="/logiciel-travaux-modificatifs/"><span class="logo" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)"><span class="logo__ini">M</span><span class="logo__rest">uto</span></span></a></h3>
+              </div>
               <span class="badge badge--ok">Disponible</span>
             </div>
-            <h3 class="card__title"><a href="/logiciel-travaux-modificatifs/"><span class="logo" style="--ini:var(--brand-muto); --ini-dark:var(--brand-muto-on-dark)"><span class="logo__ini">M</span><span class="logo__rest">uto</span></span> <span class="card__domain">Travaux Modificatifs</span></a></h3>
+            <p class="card__domain">Travaux Modificatifs</p>
             <p class="card__desc">Gérez le workflow complet des Fiches de Travaux Modificatifs : demande, chiffrage et validation entre MOEX, MOA et entreprises, avec une traçabilité complète.</p>
             <ul class="card__list">
               <li>Cycle demande → chiffrage → validation</li>
@@ -315,10 +432,13 @@
           </article>
           <article class="card" style="--accent:var(--brand-quantify)">
             <div class="card__head">
-              <span class="app-mark app-mark--lg" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)" aria-hidden="true">Q</span>
+              <div class="card__ident">
+                <span class="app-mark app-mark--lg" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)" aria-hidden="true">Q</span>
+                <h3 class="card__title"><a href="/chiffrage-moe-amo/"><span class="logo" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)"><span class="logo__ini">Q</span><span class="logo__rest">uantify</span></span></a></h3>
+              </div>
               <span class="badge badge--soon">Bientôt disponible</span>
             </div>
-            <h3 class="card__title"><a href="/chiffrage-moe-amo/"><span class="logo" style="--ini:var(--brand-quantify); --ini-dark:var(--brand-quantify-on-dark)"><span class="logo__ini">Q</span><span class="logo__rest">uantify</span></span> <span class="card__domain">Chiffrage MOE/AMO</span></a></h3>
+            <p class="card__domain">Chiffrage MOE/AMO</p>
             <p class="card__desc">Estimez et chiffrez vos opérations de rénovation : matrice de chiffrage, zones, aléas et remises, versions et résumés — le successeur moderne de Quanto.</p>
             <ul class="card__list">
               <li>Matrice de chiffrage détaillée</li>
@@ -329,10 +449,13 @@
           </article>
           <article class="card" style="--accent:var(--brand-empreinte)">
             <div class="card__head">
-              <span class="app-mark app-mark--lg" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)" aria-hidden="true">E</span>
+              <div class="card__ident">
+                <span class="app-mark app-mark--lg" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)" aria-hidden="true">E</span>
+                <h3 class="card__title"><a href="/empreinte-carbone-renovation/"><span class="logo" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)"><span class="logo__ini">E</span><span class="logo__rest">mpreinte</span></span></a></h3>
+              </div>
               <span class="badge badge--warn">Bêta</span>
             </div>
-            <h3 class="card__title"><a href="/empreinte-carbone-renovation/"><span class="logo" style="--ini:var(--brand-empreinte); --ini-dark:var(--brand-empreinte-on-dark)"><span class="logo__ini">E</span><span class="logo__rest">mpreinte</span></span> <span class="card__domain">Carbone rénovation</span></a></h3>
+            <p class="card__domain">Carbone rénovation</p>
             <p class="card__desc">Mesurez l'empreinte carbone de vos rénovations : import de devis, matching automatique FDES/INIES, enrichissement par IA et rapport CO₂ prêt à partager.</p>
             <ul class="card__list">
               <li>Import de devis et matching FDES/INIES</li>
@@ -343,10 +466,13 @@
           </article>
           <article class="card" style="--accent:var(--brand-atlas)">
             <div class="card__head">
-              <span class="app-mark app-mark--lg" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)" aria-hidden="true">A</span>
+              <div class="card__ident">
+                <span class="app-mark app-mark--lg" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)" aria-hidden="true">A</span>
+                <h3 class="card__title"><a href="/ged-documentaire-batiment/"><span class="logo" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)"><span class="logo__ini">A</span><span class="logo__rest">tlas</span></span></a></h3>
+              </div>
               <span class="badge badge--warn">Bêta</span>
             </div>
-            <h3 class="card__title"><a href="/ged-documentaire-batiment/"><span class="logo" style="--ini:var(--brand-atlas); --ini-dark:var(--brand-atlas-on-dark)"><span class="logo__ini">A</span><span class="logo__rest">tlas</span></span> <span class="card__domain">GED documentaire</span></a></h3>
+            <p class="card__domain">GED documentaire</p>
             <p class="card__desc">Centralisez la documentation de vos projets : codification paramétrable, dépôt de plans, visas annotés, diffusions avec accusé de réception et journal d'audit.</p>
             <ul class="card__list">
               <li>Codification et arborescence paramétrables</li>
@@ -357,10 +483,13 @@
           </article>
           <article class="card" style="--accent:var(--brand-solvo)">
             <div class="card__head">
-              <span class="app-mark app-mark--lg" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)" aria-hidden="true">S</span>
+              <div class="card__ident">
+                <span class="app-mark app-mark--lg" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)" aria-hidden="true">S</span>
+                <h3 class="card__title"><a href="/suivi-financier-chantier/"><span class="logo" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)"><span class="logo__ini">S</span><span class="logo__rest">olvo</span></span></a></h3>
+              </div>
               <span class="badge badge--ok">Disponible</span>
             </div>
-            <h3 class="card__title"><a href="/suivi-financier-chantier/"><span class="logo" style="--ini:var(--brand-solvo); --ini-dark:var(--brand-solvo-on-dark)"><span class="logo__ini">S</span><span class="logo__rest">olvo</span></span> <span class="card__domain">Suivi Financier de Chantier</span></a></h3>
+            <p class="card__domain">Suivi Financier de Chantier</p>
             <p class="card__desc">Pilotez la vie financière de vos marchés : situations de travaux, certificats de paiement, avenants et ordres de service, avec cascade automatique des montants.</p>
             <ul class="card__list">
               <li>Situations et certificats de paiement</li>
@@ -371,10 +500,13 @@
           </article>
           <article class="card" style="--accent:var(--brand-cautio)">
             <div class="card__head">
-              <span class="app-mark app-mark--lg" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)" aria-hidden="true">C</span>
+              <div class="card__ident">
+                <span class="app-mark app-mark--lg" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)" aria-hidden="true">C</span>
+                <h3 class="card__title"><a href="/garantie-parfait-achevement/"><span class="logo" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)"><span class="logo__ini">C</span><span class="logo__rest">autio</span></span></a></h3>
+              </div>
               <span class="badge badge--soon">Bientôt disponible</span>
             </div>
-            <h3 class="card__title"><a href="/garantie-parfait-achevement/"><span class="logo" style="--ini:var(--brand-cautio); --ini-dark:var(--brand-cautio-on-dark)"><span class="logo__ini">C</span><span class="logo__rest">autio</span></span> <span class="card__domain">Garantie de Parfait Achèvement</span></a></h3>
+            <p class="card__domain">Garantie de Parfait Achèvement</p>
             <p class="card__desc">Maîtrisez l'année de garantie : levée des réserves, désordres signalés, relances des entreprises et procès-verbaux, jusqu'à la clôture de la GPA.</p>
             <ul class="card__list">
               <li>Levée des réserves et désordres</li>
@@ -386,11 +518,7 @@
         </div>
 
         <div class="apps__hub">
-          <div class="apps__hub-mark" aria-hidden="true">
-  <svg viewBox="0 0 32 32" width="30" height="30" fill="none" aria-hidden="true">
-    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
-    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
-  </svg></div>
+          <div class="apps__hub-mark" aria-hidden="true"><span aria-hidden="true">BP</span></div>
           <div class="apps__hub-copy">
             <h3>Le Portail BatiPrisme, votre point d'entrée unique</h3>
             <p>Une seule connexion, un lanceur d'applications, la gestion de vos équipes et une facturation centralisée. Vos projets et votre annuaire de sociétés circulent d'une application à l'autre sans ressaisie.</p>
@@ -627,11 +755,7 @@
     <div class="container site-footer__inner">
       <div class="site-footer__brand">
         <a class="brand brand--footer" href="/" aria-label="Accueil BatiPrisme">
-        <span class="brand__mark">
-  <svg viewBox="0 0 32 32" width="20" height="20" fill="none" aria-hidden="true">
-    <polygon points="16,5 27,25 5,25" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
-    <line x1="16" y1="5" x2="16" y2="25" stroke="currentColor" stroke-width="1.6" opacity=".55" />
-  </svg></span>
+        <span class="brand__mark"><span aria-hidden="true">BP</span></span>
         <span class="logo brand__word" style="--ini:var(--brand-batiprisme); --ini-dark:var(--brand-batiprisme-on-dark)"><span class="logo__ini">B</span><span class="logo__rest">atiPrisme</span></span>
       </a>
         <p>La plateforme tout-en-un des métiers de la maîtrise d'œuvre et d'ouvrage.</p>

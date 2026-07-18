@@ -73,6 +73,13 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
+/* La règle `[hidden] { display: none }` de la feuille du navigateur a la
+   spécificité d'un sélecteur d'attribut : la moindre classe qui pose un
+   `display` la bat. C'est ce qui affichait « Envoyer » ET « Envoi… » pendant la
+   soumission du formulaire (`.btn-loading { display: inline-flex }` gagnait sur
+   le `hidden` posé par le JS). Le `!important` est ici la bonne réponse :
+   `hidden` est un état, pas une suggestion de mise en page. */
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
 body {
   margin: 0;
@@ -201,6 +208,14 @@ strong { font-weight: 600; color: var(--ink-900); }
   font-family: var(--font-display); font-weight: 800; font-size: 1.02rem; letter-spacing: -.03em;
 }
 .app-mark--lg { width: 44px; height: 44px; border-radius: 12px; font-size: 1.3rem; }
+/* Sur fond sombre, le fond blanc teinté de la pastille devient une tache : on
+   inverse le rapport (teinte de la marque sur le fond de la scène) et on passe
+   à la variante éclaircie, comme le fait déjà le logotype. */
+.app-mark--on-dark {
+  background: color-mix(in srgb, var(--ini-dark) 18%, transparent);
+  color: var(--ini-dark);
+  border-color: color-mix(in srgb, var(--ini-dark) 34%, transparent);
+}
 
 /* ---------- Fil d'ariane ---------- */
 .breadcrumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: .85rem; }
@@ -251,6 +266,7 @@ strong { font-weight: 600; color: var(--ink-900); }
 .brand__mark {
   display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px;
   background: var(--nuit-800); color: #fff;
+  font-family: var(--font-display); font-weight: 800; font-size: .92rem; letter-spacing: -.03em;
 }
 
 /* ---------- En-tête ----------
@@ -289,6 +305,55 @@ strong { font-weight: 600; color: var(--ink-900); }
 .site-header.is-scrolled .site-nav__menu a:hover,
 .site-header--solid .site-nav__menu a:hover { color: var(--ink-900); }
 
+/* ---------- Méga-menu « Applications » ----------
+   CSS pur : `:hover` et `:focus-within` sur le `<li>` révèlent le panneau, donc
+   utilisable au clavier (tabuler jusqu'au lien « Applications » l'ouvre, puis
+   les six liens suivent dans l'ordre du document) sans une ligne de JS.
+   Désactivé sous le point de rupture burger (1100px, re-mesuré — cf.
+   DECISIONS.md) : au doigt il n'y a pas de survol, l'entrée reste un lien
+   simple vers `/#apps` dans le menu déroulant. */
+.site-nav__mega { position: relative; }
+/* Comble les 18px entre le lien et le panneau : sans ce pont, un curseur qui
+   descend du lien vers le panneau traverse une zone qui n'appartient à aucun
+   des deux éléments — le survol du `<li>` se termine avant que le panneau
+   (encore `pointer-events: none` juste avant l'arrivée du curseur) ne le
+   récupère, donc le menu se referme sous la souris qui allait vers lui. Ce
+   pont est un descendant du `<li>` toujours présent (pas conditionné au
+   survol), donc il maintient l'état `:hover` pendant la traversée. */
+.site-nav__mega::before {
+  content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 18px;
+}
+.mega {
+  /* Ancré à gauche du déclencheur, pas centré dessous : « Applications » est le
+     premier item de nav, juste après la marque — un panneau centré sous son
+     centre déborderait hors viewport à gauche (mesuré : -65px à 1280px). */
+  position: absolute; top: calc(100% + 18px); left: 0;
+  transform: translateY(6px);
+  width: min(760px, 80vw);
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-lg); padding: 18px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .16s ease, transform .16s ease, visibility .16s;
+}
+.site-nav__mega:hover .mega,
+.site-nav__mega:focus-within .mega {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0);
+}
+.mega__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.mega__item {
+  display: flex; align-items: flex-start; gap: 12px; padding: 12px; border-radius: var(--radius-sm);
+  transition: background .15s ease;
+}
+.mega__item:hover, .mega__item:focus-visible { background: var(--bg-soft); }
+.mega__body { min-width: 0; }
+.mega__title { display: block; }
+/* Noms de modules plus lisibles dans le panneau (retour utilisateur direct). */
+.mega__title .logo { font-size: 1.18rem; }
+.mega__desc {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  margin-top: 4px; font-size: .8rem; line-height: 1.4; color: var(--ink-500);
+}
+
 /* ---------- Pied de page ---------- */
 .site-footer {
   background: var(--nuit-900); color: var(--ink-400); padding: 60px 0 28px;
@@ -321,7 +386,6 @@ strong { font-weight: 600; color: var(--ink-900); }
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
   box-shadow: var(--shadow-md); padding: 20px 22px;
 }
-.consent[hidden] { display: none; }
 .consent__inner {
   max-width: var(--maxw); margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
@@ -347,6 +411,7 @@ strong { font-weight: 600; color: var(--ink-900); }
   .site-header__actions { display: none; }
   .site-nav__cta { display: block; }
   .site-nav__cta a { font-weight: 600; color: var(--ink-900); }
+  .mega, .site-nav__mega::before { display: none; }
 
   .site-nav__toggle {
     display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
@@ -423,47 +488,142 @@ strong { font-weight: 600; color: var(--ink-900); }
   background: var(--brand-empreinte-on-dark) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/10px no-repeat;
 }
 
-/* ---------- Scène SVG du prisme ---------- */
-.hero__visual { display: flex; justify-content: center; min-width: 0; }
-.prism-stage { width: 100%; max-width: 560px; aspect-ratio: 4 / 3; min-width: 0; }
-/* `overflow: visible` laisse les halos de filtre déborder du cadre — joli, mais
-   ce débordement compte dans la largeur défilable du document et élargissait le
-   corps sur mobile. Le garde-fou est `overflow-x: clip` sur <body>. */
-.prism-svg { width: 100%; height: 100%; overflow: visible; }
-.prism-svg text {
-  font-family: var(--font-display); font-size: 15px; font-weight: 500;
-  letter-spacing: .01em; dominant-baseline: middle;
+/* ---------- Scène du prisme + lanceur d'applications ----------
+   Deux colonnes d'une même grille : à gauche la scène (faisceau, prisme 3D,
+   rayons), à droite les six applications. Les deux cases sont étirées à la même
+   hauteur — c'est ce qui permet aux rayons de viser les cartes sans mesure JS
+   (cf. `lightLayer()` dans templates/home.mjs). */
+.hero__visual { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 16px; min-width: 0; }
+
+.prism-stage { position: relative; min-width: 0; perspective: 900px; }
+
+/* La couche lumineuse déborde à droite de la gouttière de la grille : un rayon
+   doit toucher sa carte, pas s'arrêter au bord de sa colonne. Le garde-fou
+   contre l'élargissement du document reste `overflow-x: clip` sur <body>. */
+/* `width` / `height` explicites : un <svg> est un élément remplacé, sa hauteur
+   `auto` vaut sa hauteur intrinsèque et `bottom` est alors ignoré — le calque
+   se calait sur un carré de 224px au lieu de la hauteur de la colonne, et les
+   six rayons se tassaient sur le tiers haut. */
+.light { position: absolute; top: 0; left: 0; width: calc(100% + 16px); height: 100%; overflow: visible; }
+
+/* Le tracé se joue en `scale`, PAS en `stroke-dasharray` : avec
+   `vector-effect="non-scaling-stroke"`, le motif de tirets est calculé en espace
+   écran alors que `pathLength` normalise en espace utilisateur. Les deux ne
+   parlent pas la même unité et le rayon restait coupé en deux (un tiret, un
+   trou, la fin). Les six rayons partant du même point (50, 50), un `scale()`
+   avec cette origine les fait jaillir du prisme sans toucher à leur direction. */
+.ray {
+  transform-box: view-box; transform-origin: 50% 50%; transform: scale(0);
+  filter: drop-shadow(0 0 5px currentColor);
+}
+.beam {
+  transform-box: view-box; transform-origin: 0 50%; transform: scaleX(0);
+  filter: drop-shadow(0 0 9px rgba(255, 255, 255, .75));
 }
 
-.beam-in { transform: scaleX(0); transform-origin: left center; opacity: 0; }
-.prism { transform-box: fill-box; transform-origin: center; opacity: 0; }
-.ray { stroke-dasharray: 100; stroke-dashoffset: 100; }
-/* Cible de survol élargie : un trait de 3px ne s'attrape pas à la souris. */
-.hit { stroke: transparent; stroke-width: 26px; stroke-linecap: round; }
-.node-dot, .node-label { opacity: 0; }
+/* ---------- Le prisme : pyramide à base carrée, quatre faces en CSS 3D ----------
+   Géométrie détaillée dans `pyramid()` (templates/home.mjs). Les mesures vivent
+   ici : --l et --t se déduisent de --a et --h, mais CSS ne sait ni faire de
+   racine carrée ni d'arc tangente, d'où les valeurs figées. Si vous changez --a
+   ou --h, recalculez : --d = --a / 2, --l = √(h² + d²), --t = atan(d / h). */
+.pyramid {
+  --a: 170px;  /* côté de la base */
+  --h: 160px;  /* hauteur */
+  --d: 85px;   /* demi-base */
+  --l: 181px;  /* apothème */
+  --t: 28deg;  /* bascule des faces */
+  --scale: .74;
+  position: absolute; left: 46%; top: 50%;
+  width: var(--a); height: var(--l);
+  /* Plongée franche : vue de face, une pyramide se projette en triangle barré
+     d'un trait vertical (ses faces latérales vues de profil) — exactement le
+     pictogramme d'alerte que le monogramme BP avait servi à fuir. En regardant
+     d'au-dessus, la base s'ouvre et le volume se lit comme un volume. */
+  transform: translate(-50%, -50%) scale(var(--scale)) rotateX(19deg);
+  transform-style: preserve-3d;
+  opacity: 0;
+}
+/* Le halo remplace le `drop-shadow` qu'on aimerait poser sur la pyramide : un
+   filtre CSS aplatit son contexte 3D (les faces retomberaient toutes dans le
+   plan de l'écran). Il vit donc hors du groupe qui tourne, en arrière-plan. */
+.pyramid__halo {
+  position: absolute; left: 50%; top: 50%; width: 380px; height: 380px; border-radius: 50%;
+  transform: translate(-50%, -50%) translateZ(-90px);
+  background: radial-gradient(circle, rgba(140, 158, 255, .42), rgba(120, 140, 255, .12) 42%, rgba(120, 140, 255, 0) 70%);
+}
+.pyramid__spin {
+  position: absolute; inset: 0;
+  transform-origin: 50% 100%; transform-style: preserve-3d;
+  animation: pyramidSpin 24s linear infinite;
+}
+/* i × 90° autour de l'axe, D vers l'extérieur, puis bascule du sommet vers la
+   pointe. `transform-origin` au milieu de l'arête basse = l'axe de la pyramide. */
+.pyramid__face {
+  position: absolute; inset: 0;
+  transform-origin: 50% 100%;
+  transform: rotateY(calc(var(--f) * 90deg)) translateZ(var(--d)) rotateX(var(--t));
+}
+.pyramid__face svg { display: block; width: 100%; height: 100%; }
+.pyramid__base {
+  position: absolute; left: 0; bottom: 0; width: var(--a); height: var(--a);
+  transform-origin: 50% 100%; transform: translateZ(var(--d)) rotateX(90deg);
+  /* Sans bordure : la base n'a pas à ajouter un quadrilatère de traits sous un
+     volume dont les arêtes sont déjà dessinées par les faces. */
+  background: linear-gradient(rgba(255, 255, 255, .10), rgba(255, 255, 255, .03));
+}
 
-.app { cursor: default; }
-.rays:hover .app:not(:hover) { opacity: .32; }
-.app:hover .ray { stroke-width: 5; }
-.app:hover .node-dot { r: 6.5; }
-.rays .app { transition: opacity .25s ease; }
-.rays .app .ray, .rays .app .node-dot { transition: stroke-width .2s ease, r .2s ease; }
+@keyframes pyramidSpin { to { transform: rotateY(360deg); } }
 
 /* Allumage : JS pose .is-lit — cf. src/js/20-prism.js */
-.prism-stage.is-lit .beam-in { animation: beamIn .7s cubic-bezier(.22, .61, .36, 1) forwards; }
-.prism-stage.is-lit .prism { animation: prismIn .6s cubic-bezier(.22, .61, .36, 1) .35s forwards, prismFloat 7s ease-in-out 1.4s infinite; }
-.prism-stage.is-lit .ray { animation: rayDraw .8s cubic-bezier(.22, .61, .36, 1) forwards; animation-delay: calc(.75s + var(--i) * .12s); }
-.prism-stage.is-lit .node-dot { animation: nodeIn .5s ease forwards; animation-delay: calc(1.15s + var(--i) * .12s); }
-.prism-stage.is-lit .node-label { animation: labelIn .5s ease forwards; animation-delay: calc(1.25s + var(--i) * .12s); }
-.prism-stage.is-lit .rays { animation: raysBreathe 5s ease-in-out 2.2s infinite; }
+.prism-stage.is-lit .pyramid { animation: prismIn .8s ease .2s forwards; }
+.prism-stage.is-lit .beam { animation: beamOut .6s cubic-bezier(.22, .61, .36, 1) forwards; }
+.prism-stage.is-lit .ray {
+  animation: rayOut .8s cubic-bezier(.22, .61, .36, 1) forwards;
+  animation-delay: calc(.55s + var(--i) * .1s);
+}
+.prism-stage.is-lit .rays { animation: raysBreathe 5s ease-in-out 2.4s infinite; }
 
-@keyframes beamIn { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }
-@keyframes prismIn { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: scale(1); } }
-@keyframes prismFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
-@keyframes rayDraw { to { stroke-dashoffset: 0; } }
-@keyframes nodeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes labelIn { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes raysBreathe { 0%, 100% { opacity: 1; } 50% { opacity: .82; } }
+@keyframes prismIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes beamOut { to { transform: scaleX(1); } }
+@keyframes rayOut { to { transform: scale(1); } }
+@keyframes raysBreathe { 0%, 100% { opacity: 1; } 50% { opacity: .84; } }
+
+/* ---------- Lanceur : les six applications ----------
+   Ce sont de vrais liens, pas du décor : leur apparition est donc en `both`,
+   jouée par le seul CSS. Une carte qui n'existerait qu'une fois le JS exécuté
+   serait un contenu perdu pour qui bloque les scripts. */
+.hero-apps { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.hero-app {
+  position: relative; flex: 1 1 auto; border-radius: 13px; overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .09);
+  background:
+    radial-gradient(130px 100% at 0% 50%, color-mix(in srgb, var(--c) 26%, transparent), transparent 100%),
+    rgba(255, 255, 255, .035);
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+  animation: appIn .55s cubic-bezier(.22, .61, .36, 1) both;
+  animation-delay: calc(.7s + var(--i) * .1s);
+}
+/* L'arête que le rayon vient allumer. */
+.hero-app::before {
+  content: ""; position: absolute; left: 0; top: 16%; bottom: 16%; width: 2px; border-radius: 2px;
+  background: var(--c); box-shadow: 0 0 10px var(--c);
+}
+.hero-app a { display: flex; align-items: center; gap: 12px; height: 100%; padding: 11px 14px 11px 16px; }
+.hero-app:hover {
+  transform: translateX(3px);
+  border-color: color-mix(in srgb, var(--c) 45%, transparent);
+  background:
+    radial-gradient(150px 100% at 0% 50%, color-mix(in srgb, var(--c) 34%, transparent), transparent 100%),
+    rgba(255, 255, 255, .06);
+}
+.hero-app__body { display: grid; min-width: 0; }
+.hero-app__name { font-family: var(--font-display); font-size: 1.02rem; font-weight: 600; color: #fff; line-height: 1.25; }
+.hero-app__domain {
+  font-size: .76rem; line-height: 1.35; color: var(--c);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+@keyframes appIn { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
 
 /* ---------- Bande spectre ---------- */
 .spectrum-strip { border-bottom: 1px solid var(--line); background: var(--bg); }
@@ -495,13 +655,19 @@ strong { font-weight: 600; color: var(--ink-900); }
 }
 .card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--accent); }
 .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--accent) 42%, var(--line)); }
-.card__head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
-.card__title { font-size: 1.3rem; font-weight: 600; }
-.card__domain { font-size: .92rem; font-weight: 500; color: var(--ink-600); display: block; margin-top: 2px; }
+.card__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+/* L'icône et le titre sur la même ligne : c'est le nom du module qui identifie
+   la carte, pas son abréviation seule — le titre doit peser autant que l'icône. */
+.card__ident { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.card__title { font-size: 1.6rem; font-weight: 700; min-width: 0; }
+.card__domain {
+  margin-top: 10px; font-family: var(--font-display); font-size: .78rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--ink-500);
+}
 /* Le lien couvre la carte entière : toute la surface est cliquable, mais le
    nom reste le libellé annoncé aux lecteurs d'écran. */
 .card__title a::after { content: ""; position: absolute; inset: 0; }
-.card__desc { margin-top: 10px; color: var(--ink-600); font-size: .94rem; }
+.card__desc { margin-top: 14px; color: var(--ink-600); font-size: .94rem; }
 .card__list { margin-top: 18px; display: grid; gap: 9px; flex: 1; }
 .card__list li { position: relative; padding-left: 22px; font-size: .9rem; color: var(--ink-700); }
 .card__list li::before {
@@ -525,6 +691,7 @@ strong { font-weight: 600; color: var(--ink-900); }
 .apps__hub-mark {
   display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px; flex: none;
   background: rgba(255, 255, 255, .1); color: #fff;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.32rem; letter-spacing: -.03em;
 }
 .apps__hub-copy { flex: 1 1 320px; }
 .apps__hub-copy h3 { color: #fff; font-size: 1.25rem; font-weight: 600; }
@@ -567,10 +734,23 @@ strong { font-weight: 600; color: var(--ink-900); }
 .step h3 { font-size: 1.12rem; font-weight: 600; }
 .step p { margin-top: 8px; color: var(--ink-600); font-size: .94rem; }
 
+@media (max-width: 1100px) {
+  .pyramid { --scale: .62; }
+}
 @media (max-width: 960px) {
   .hero__inner { grid-template-columns: 1fr; gap: 8px; }
-  .hero__visual { order: -1; }
-  .prism-stage { max-width: 480px; }
+  /* `display: contents` dissout la colonne visuelle : la scène et le lanceur
+     deviennent des cases de `.hero__inner` et peuvent se placer de part et
+     d'autre de la copie — le prisme au-dessus du titre, les applications sous
+     les boutons. Sans ça, empiler la colonne entière repousserait les CTA sous
+     six cartes. */
+  .hero__visual { display: contents; }
+  .prism-stage { order: -1; min-height: clamp(200px, 44vw, 280px); }
+  .pyramid { --scale: .9; left: 50%; }
+  /* Les rayons ne visent plus rien : on les laisse se perdre en fondu plutôt
+     que de les couper net au bord de l'écran. */
+  .light { width: 100%; mask-image: linear-gradient(90deg, #000 38%, transparent 82%); }
+  .hero-apps { margin-top: 30px; display: grid; grid-template-columns: repeat(2, 1fr); }
   .cards, .features, .steps__list { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 720px) {
@@ -578,18 +758,21 @@ strong { font-weight: 600; color: var(--ink-900); }
   .apps__hub { text-align: center; justify-content: center; }
   .spectrum-strip__inner { justify-content: flex-start; }
 }
+@media (max-width: 520px) {
+  .hero-apps { grid-template-columns: 1fr; }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .card:hover, .feature:hover { transform: none; }
-  /* Prisme : on montre l'état final, sans jouer l'animation. */
-  .beam-in, .prism { opacity: 1; transform: none; }
-  .ray { stroke-dashoffset: 0; }
-  .node-dot, .node-label { opacity: 1; }
-  .prism-stage.is-lit .beam-in,
-  .prism-stage.is-lit .prism,
+  .card:hover, .feature:hover, .hero-app:hover { transform: none; }
+  /* Scène : on montre l'état final, sans jouer l'animation. Le prisme se fige
+     de trois quarts — l'angle où les quatre faces se lisent le mieux. */
+  .pyramid { opacity: 1; }
+  .pyramid__spin { animation: none; transform: rotateY(-28deg); }
+  .beam, .ray { transform: none; }
+  .hero-app { animation: none; }
+  .prism-stage.is-lit .pyramid,
+  .prism-stage.is-lit .beam,
   .prism-stage.is-lit .ray,
-  .prism-stage.is-lit .node-dot,
-  .prism-stage.is-lit .node-label,
   .prism-stage.is-lit .rays { animation: none; }
 }
 
@@ -813,6 +996,7 @@ strong { font-weight: 600; color: var(--ink-900); }
 .platform__mark {
   display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px; flex: none;
   background: var(--nuit-800); color: #fff;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.32rem; letter-spacing: -.03em;
 }
 .platform__intro h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); font-weight: 700; }
 .platform__intro p { margin-top: 12px; color: var(--ink-600); }
@@ -1013,6 +1197,65 @@ strong { font-weight: 600; color: var(--ink-900); }
   .modes, .project-prices { grid-template-columns: 1fr; }
   .price-line { align-items: flex-start; }
   .price-line__amount { width: 100%; text-align: right; }
+}
+
+/* ---------- Simulateur de tarif ---------- */
+.calculator { padding: clamp(48px, 6vw, 76px) 0; background: var(--bg-soft); }
+.calc { display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px; align-items: start; }
+
+.calc__panel {
+  padding: 28px 30px; border-radius: var(--radius);
+  background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+}
+.calc__modeSwitch { display: inline-flex; padding: 4px; border-radius: var(--radius-pill); background: var(--bg-soft); gap: 4px; }
+.calc__modeBtn {
+  font-family: var(--font-display); font-weight: 600; font-size: .88rem;
+  padding: 9px 18px; border-radius: var(--radius-pill); border: none; background: transparent;
+  color: var(--ink-500); cursor: pointer; transition: background .15s ease, color .15s ease;
+}
+.calc__modeBtn.is-active { background: var(--nuit-900); color: #fff; }
+
+.calc__field { margin-top: 22px; }
+.calc__field label { display: block; font-family: var(--font-display); font-weight: 600; font-size: .88rem; margin-bottom: 8px; }
+.calc__field input[type="number"] {
+  width: 140px; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--line);
+  font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--ink-900);
+}
+.calc__field input[type="number"]:focus-visible { outline: 2px solid var(--brand-atlas); outline-offset: 1px; }
+
+.calc__modules { margin-top: 26px; border: none; padding: 0; }
+.calc__modules legend { font-family: var(--font-display); font-weight: 600; font-size: .88rem; margin-bottom: 12px; padding: 0; }
+.calc__moduleList { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.calc__module {
+  display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line); cursor: pointer; transition: background .15s ease, border-color .15s ease;
+}
+.calc__module:has(input:checked) { background: color-mix(in srgb, var(--accent) 8%, #fff); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+.calc__module.is-disabled { opacity: .45; cursor: not-allowed; }
+.calc__module .app-mark { width: 28px; height: 28px; font-size: .85rem; }
+.calc__moduleName { font-size: .92rem; font-weight: 500; color: var(--ink-700); }
+.calc__modulesHint { margin-top: 12px; font-size: .82rem; color: var(--ink-500); font-style: italic; }
+
+.calc__result {
+  padding: 28px 30px; border-radius: var(--radius); background: var(--nuit-900); color: #fff;
+  position: sticky; top: calc(var(--header-h) + 20px);
+}
+.calc__resultLabel { font-family: var(--font-display); font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255, 255, 255, .5); }
+.calc__resultAmount { margin-top: 8px; font-family: var(--font-display); }
+.calc__resultAmount b { font-size: clamp(2rem, 4.4vw, 2.6rem); font-weight: 700; letter-spacing: -.02em; }
+.calc__resultAmount span { font-size: .9rem; color: rgba(255, 255, 255, .55); }
+.calc__breakdown { margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .14); display: grid; gap: 10px; }
+.calc__breakdown li { display: flex; justify-content: space-between; gap: 12px; font-size: .86rem; color: rgba(255, 255, 255, .75); }
+.calc__breakdown li b { color: #fff; font-weight: 600; white-space: nowrap; }
+.calc__note { margin-top: 18px; font-size: .8rem; line-height: 1.5; color: rgba(255, 255, 255, .5); }
+.calc__result .btn { margin-top: 20px; }
+
+@media (max-width: 900px) {
+  .calc { grid-template-columns: 1fr; }
+  .calc__result { position: static; }
+}
+@media (max-width: 560px) {
+  .calc__moduleList { grid-template-columns: 1fr; }
 }
 
 /* ===== 50-content.css ===== */
